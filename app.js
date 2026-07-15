@@ -54,8 +54,6 @@ const state = {
   loadingProgress: 0,
   loadingTarget: 0,
   loadingStartedAt: null,
-  loadingPhase: 0,
-  loadingPhaseStartedAt: null,
   exerciseQuery: "",
   exercises: [],
   foods: [],
@@ -157,13 +155,6 @@ const loadingStepSets = {
 
 const loadingStepThresholds = [0, 18, 38, 64, 84];
 
-// Each real generation phase owns a percentage range. The bar moves naturally
-// inside that range and never makes an early phase appear to be final review.
-const loadingPhaseDurations = {
-  combined: [12, 12, 55, 25, 110],
-  single: [12, 15, 50, 25, 80]
-};
-
 const iconMap = {
   back: "←",
   chevron: "→",
@@ -233,8 +224,8 @@ const arabicUi = {
   "Goal matched": "متوافقة مع الهدف",
   "Equipment filtered": "مناسبة للمعدات",
   "Meals balanced": "وجبات متوازنة",
-  "Workout Plan": "خطة التمارين",
-  "Nutrition Plan": "خطة التغذية",
+  "Workout Plan": "خطة تمارين",
+  "Nutrition Plan": "خطة تغذية",
   "How it works": "كيف تعمل الخدمة",
   "Starting is easy.": "ابدأ بخطوات بسيطة.",
   "Workout and nutrition, without the guesswork.": "خطة تمارين وتغذية مصممة خصيصاً لك",
@@ -413,14 +404,16 @@ function finishLocalizedRender() {
   document.body.classList.toggle("is-rtl", state.language === "ar");
   localizeRenderedScope(app);
 
-  const switcher = document.createElement("button");
-  switcher.type = "button";
-  switcher.className = "language-switcher";
-  switcher.dataset.action = "language";
-  switcher.dataset.value = state.language === "ar" ? "en" : "ar";
-  switcher.textContent = state.language === "ar" ? "English" : "العربية";
-  switcher.setAttribute("aria-label", state.language === "ar" ? "Switch to English" : "التبديل إلى العربية");
-  app.appendChild(switcher);
+  if (state.step !== "loading") {
+    const switcher = document.createElement("button");
+    switcher.type = "button";
+    switcher.className = "language-switcher";
+    switcher.dataset.action = "language";
+    switcher.dataset.value = state.language === "ar" ? "en" : "ar";
+    switcher.textContent = state.language === "ar" ? "English" : "العربية";
+    switcher.setAttribute("aria-label", state.language === "ar" ? "Switch to English" : "التبديل إلى العربية");
+    app.appendChild(switcher);
+  }
   mountTurnstile();
 }
 
@@ -1295,46 +1288,14 @@ function combinedPlanProgress() {
   const nutritionStatus = inferredPlanProgress("nutrition");
   return `
     <div class="loading-plan-progress" aria-label="Individual plan progress">
-      <div data-plan-kind="workout"><span class="loading-status-dot ${workoutStatus.className}"></span><strong>Workout</strong><small>${workoutStatus.label}</small></div>
-      <div data-plan-kind="nutrition"><span class="loading-status-dot ${nutritionStatus.className}"></span><strong>Nutrition</strong><small>${nutritionStatus.label}</small></div>
+      <div data-plan-kind="workout"><span class="loading-status-dot ${workoutStatus.className}"></span><strong>${uiText("Workout Plan")}</strong><small>${workoutStatus.label}</small></div>
+      <div data-plan-kind="nutrition"><span class="loading-status-dot ${nutritionStatus.className}"></span><strong>${uiText("Nutrition Plan")}</strong><small>${nutritionStatus.label}</small></div>
     </div>
   `;
 }
 
 function generationEventsText(status = state.apiStatus) {
   return JSON.stringify(status?.generation_events || []).toLowerCase();
-}
-
-function loadingPhaseIndex(apiStatus = state.apiStatus) {
-  const events = generationEventsText(apiStatus);
-  const status = apiStatus?.status || "";
-  const isFinalizing = status === "rendering_pdf"
-    || ["ready", "partial_ready"].includes(status)
-    || events.includes("pdf_render_started")
-    || events.includes("arabic_localization_started")
-    || events.includes("arabic_localization_ready")
-    || events.includes('"status":"rendering"');
-
-  if (isFinalizing) return 4;
-
-  if (state.planType === "Workout + Nutrition") {
-    if (events.includes("nutrition_started") || events.includes("nutrition_local_ready") || events.includes("nutrition_openai_valid")) return 3;
-    if (events.includes("workout_started") || events.includes("workout_local_ready") || events.includes("workout_openai_valid")) return 2;
-    if (events.includes("provider_generation_started") || events.includes("local_generation_started") || events.includes('"status":"started"')) return 1;
-    return 0;
-  }
-
-  const kind = state.planType === "Nutrition Only" ? "nutrition" : "workout";
-  if (events.includes(`${kind}_openai_valid`)) return 3;
-  if (events.includes(`${kind}_local_ready`)) return 2;
-  if (events.includes(`${kind}_started`)) return 1;
-  return 0;
-}
-
-function loadingPhaseProgressCap() {
-  const phaseIndex = loadingPhaseIndex();
-  const nextThreshold = loadingStepThresholds[phaseIndex + 1];
-  return nextThreshold == null ? 98 : nextThreshold - 0.5;
 }
 
 function displayedLoadingPhase(progress = state.loadingProgress) {
@@ -1344,26 +1305,23 @@ function displayedLoadingPhase(progress = state.loadingProgress) {
   );
 }
 
-function syncLoadingPhase(apiStatus = state.apiStatus) {
-  const phaseIndex = loadingPhaseIndex(apiStatus);
-  if (phaseIndex <= state.loadingPhase && state.loadingPhaseStartedAt) return;
-
-  state.loadingPhase = phaseIndex;
-  state.loadingPhaseStartedAt = Date.now();
-}
-
 function loadingProgressForCurrentPhase() {
-  const phaseIndex = loadingPhaseIndex();
-  const phaseStart = loadingStepThresholds[phaseIndex];
-  const phaseEnd = loadingPhaseProgressCap();
   const durations = state.planType === "Workout + Nutrition"
-    ? loadingPhaseDurations.combined
-    : loadingPhaseDurations.single;
-  const duration = durations[phaseIndex] || 60;
-  const startedAt = state.loadingPhaseStartedAt || state.loadingStartedAt || Date.now();
-  const elapsedSeconds = Math.max(0, (Date.now() - startedAt) / 1000);
-  const ratio = Math.min(elapsedSeconds / duration, 1);
-  return phaseStart + (phaseEnd - phaseStart) * ratio;
+    ? [12, 22, 35, 28, 75]
+    : [12, 20, 35, 25, 55];
+  let remainingSeconds = Math.max(0, (Date.now() - (state.loadingStartedAt || Date.now())) / 1000);
+
+  for (let index = 0; index < loadingStepThresholds.length; index += 1) {
+    const duration = durations[index];
+    const start = loadingStepThresholds[index];
+    const end = index === loadingStepThresholds.length - 1 ? 98 : loadingStepThresholds[index + 1] - 0.5;
+    if (remainingSeconds <= duration) {
+      return start + (end - start) * Math.min(remainingSeconds / duration, 1);
+    }
+    remainingSeconds -= duration;
+  }
+
+  return 98;
 }
 
 function inferredPlanProgress(kind) {
@@ -1372,7 +1330,7 @@ function inferredPlanProgress(kind) {
   if (status === "failed") return { label: "Needs another pass", className: "failed" };
 
   const events = generationEventsText();
-  const actualRank = status === "ready" || events.includes(`${kind}_openai_valid`)
+  let actualRank = status === "ready" || events.includes(`${kind}_openai_valid`)
     ? 2
     : events.includes(`${kind}_started`) || events.includes(`${kind}_local_ready`)
       ? 1
@@ -1381,6 +1339,7 @@ function inferredPlanProgress(kind) {
   const allowedRank = kind === "workout"
     ? visiblePhase < 2 ? 0 : visiblePhase < 3 ? 1 : 2
     : visiblePhase < 3 ? 0 : visiblePhase < 4 ? 1 : 2;
+  if (!state.apiStatus) actualRank = allowedRank;
   const visibleRank = Math.min(actualRank, allowedRank);
 
   if (visibleRank === 2) return { label: "Final review", className: "building" };
@@ -1579,8 +1538,6 @@ function runLoading() {
   state.loadingProgress = 3;
   state.loadingTarget = 8;
   state.loadingStartedAt = Date.now();
-  state.loadingPhase = 0;
-  state.loadingPhaseStartedAt = state.loadingStartedAt;
   state.apiError = "";
   state.apiSessionId = null;
   state.apiStatus = null;
@@ -1607,10 +1564,9 @@ function runLoading() {
 function startLoadingAnimation() {
   return window.setInterval(() => {
     const phaseTarget = loadingProgressForCurrentPhase();
-    const phaseCap = loadingPhaseProgressCap();
     const effectiveTarget = state.loadingTarget >= 100
       ? 100
-      : Math.min(98, phaseCap, Math.max(state.loadingTarget, phaseTarget));
+      : Math.min(98, Math.max(state.loadingTarget, phaseTarget));
     const distance = effectiveTarget - state.loadingProgress;
 
     if (distance > 0.05) {
@@ -1649,7 +1605,6 @@ function completeLoadingProgress(timer) {
 }
 
 async function startApiGeneration() {
-  state.loadingTarget = 24;
   let result;
   try {
     result = await apiPost("/api/generate", {
@@ -1678,34 +1633,30 @@ async function downloadStatelessPdf(kind, button) {
   const original = button.innerHTML;
   button.disabled = true;
   button.textContent = uiText("Preparing download");
-  try {
-    const response = await fetch(`${API_BASE}/api/render-pdf`, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ payload: download.payload, signature: download.signature })
-    });
-    if (!response.ok) {
-      const error = await response.json().catch(() => ({}));
-      throw new Error(error.message || "We could not prepare this PDF right now.");
-    }
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = `fitnet-${kind}-plan.pdf`;
-    document.body.appendChild(anchor);
-    anchor.click();
-    anchor.remove();
-    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
-  } catch (error) {
-    state.apiError = error.message;
-    render();
-  } finally {
+
+  const form = document.createElement("form");
+  form.method = "POST";
+  form.action = `${API_BASE}/api/render-pdf`;
+  form.target = "_blank";
+  form.rel = "noopener";
+  form.style.display = "none";
+  [["payload", download.payload], ["signature", download.signature]].forEach(([name, value]) => {
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = name;
+    input.value = value;
+    form.appendChild(input);
+  });
+  document.body.appendChild(form);
+  form.submit();
+  form.remove();
+
+  window.setTimeout(() => {
     if (button.isConnected) {
       button.disabled = false;
       button.innerHTML = original;
     }
-  }
+  }, 1200);
 }
 
 function updateLoadingMilestone(status = {}) {
@@ -1727,7 +1678,6 @@ function updateLoadingMilestone(status = {}) {
 
   if (events.includes("openai_valid") || events.includes("succeeded")) target = Math.max(target, 82);
   state.loadingTarget = Math.max(state.loadingTarget, target);
-  syncLoadingPhase(status);
 }
 
 async function apiPost(path, body) {

@@ -8,6 +8,7 @@ import tempfile
 import time
 from http.server import BaseHTTPRequestHandler
 from pathlib import Path
+from urllib.parse import parse_qs
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -26,7 +27,7 @@ class handler(BaseHTTPRequestHandler):
             length = int(self.headers.get("content-length", "0"))
             if length <= 0 or length > MAX_BODY_BYTES:
                 return self._json(413, {"error": "request_too_large"})
-            request = json.loads(self.rfile.read(length))
+            request = parse_request_body(self.rfile.read(length), self.headers.get("content-type", ""))
             payload = str(request.get("payload", ""))
             signature = str(request.get("signature", ""))
             envelope = verify_envelope(payload, signature)
@@ -45,7 +46,7 @@ class handler(BaseHTTPRequestHandler):
                 pdf = output_path.read_bytes()
 
             self.send_response(200)
-            self.send_header("Content-Type", "application/pdf")
+            self.send_header("Content-Type", "application/octet-stream")
             self.send_header("Content-Disposition", f'attachment; filename="fitnet-{kind}-plan.pdf"')
             self.send_header("Content-Length", str(len(pdf)))
             self.send_header("Cache-Control", "no-store")
@@ -108,3 +109,10 @@ def verify_envelope(payload, signature):
     if bool(envelope.get("workout_plan")) == bool(envelope.get("nutrition_plan")):
         raise ValueError("invalid_pdf_payload")
     return envelope
+
+
+def parse_request_body(raw_body, content_type):
+    if content_type.startswith("application/x-www-form-urlencoded"):
+        fields = parse_qs(raw_body.decode("utf-8"), keep_blank_values=True)
+        return {key: values[0] if values else "" for key, values in fields.items()}
+    return json.loads(raw_body)

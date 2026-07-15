@@ -92,6 +92,9 @@ function readBody(request) {
     request.on("end", () => {
       const raw = Buffer.concat(chunks).toString("utf8").trim();
       if (!raw) return resolve({});
+      if (String(request.headers["content-type"] || "").startsWith("application/x-www-form-urlencoded")) {
+        return resolve(Object.fromEntries(new URLSearchParams(raw)));
+      }
       try {
         resolve(JSON.parse(raw));
       } catch {

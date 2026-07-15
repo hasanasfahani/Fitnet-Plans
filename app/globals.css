@@ -1297,6 +1297,16 @@ input:focus-visible {
   margin-bottom: 4px;
 }
 
+.pulse-orbit .fitnet-logo {
+  width: 100%;
+  margin-inline: auto;
+  justify-content: center;
+}
+
+.pulse-orbit .fitnet-logo img {
+  object-position: center;
+}
+
 .loading-plan-type {
   padding: 7px 12px;
   border: 1px solid rgba(0, 133, 76, 0.14);
@@ -1508,7 +1518,21 @@ input:focus-visible {
   }
 
   .loading-plan-progress {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .loading-plan-progress > div {
+    column-gap: 6px;
+    padding: 10px 8px;
+  }
+
+  .loading-plan-progress strong {
+    font-size: 12px;
+  }
+
+  .loading-plan-progress small {
+    font-size: 10px;
   }
 
   .loading-item {
