@@ -201,7 +201,7 @@ function render() {
       <div class="ambient ambient-left"></div>
       <div class="ambient ambient-right"></div>
       <section class="phone-frame">
-        ${funnelHeader(progress)}
+        ${state.step === "preview" ? resultsHeader() : funnelHeader(progress)}
         ${state.securityError ? securityNotice(state.securityError) : ""}
         ${activeScreen()}
         ${state.step !== "preview" ? stickyAction() : ""}
@@ -404,7 +404,7 @@ function finishLocalizedRender() {
   document.body.classList.toggle("is-rtl", state.language === "ar");
   localizeRenderedScope(app);
 
-  if (state.step !== "loading") {
+  if (state.step !== "loading" && state.step !== "preview") {
     const switcher = document.createElement("button");
     switcher.type = "button";
     switcher.className = "language-switcher";
@@ -607,6 +607,16 @@ function funnelHeader(progress) {
       <div class="progress-track" aria-label="Progress">
         <div class="progress-fill" style="width: ${Math.min(progress, 100)}%"></div>
       </div>
+    </header>
+  `;
+}
+
+function resultsHeader() {
+  return `
+    <header class="funnel-header results-header">
+      <button class="results-home-button" data-action="home" type="button" aria-label="Start a new Fitnet plan">
+        ${fitnetLogo(true)}
+      </button>
     </header>
   `;
 }
@@ -996,8 +1006,8 @@ function workoutDurationSummary(days) {
 }
 
 function calorieTargetSummary(calories) {
-  const value = localizedResultValue(calories);
-  return state.language === "ar" ? `${value} سعرة حرارية مستهدفة تقريباً` : `Approx. ${value} kcal target`;
+  const value = formattedCalorieValue(calories);
+  return state.language === "ar" ? `حوالي ${value} سعرة حرارية يومياً` : `Approx. ${value} kcal/day`;
 }
 
 function trainingDaysFact(days) {
@@ -1006,8 +1016,35 @@ function trainingDaysFact(days) {
 }
 
 function calorieFact(calories) {
-  const value = localizedResultValue(calories);
-  return state.language === "ar" ? `${value} سعرة حرارية` : `${value} kcal`;
+  const value = formattedCalorieValue(calories);
+  return state.language === "ar" ? `هدف السعرات اليومي: ${value} سعرة حرارية` : `Daily calorie target: ${value} kcal`;
+}
+
+function formattedCalorieValue(calories) {
+  const numeric = Number(calories);
+  if (!Number.isFinite(numeric) || numeric <= 0) return "—";
+  return Math.round(numeric).toLocaleString(state.language === "ar" ? "ar-AE" : "en-US");
+}
+
+function resultNutritionCalorieTarget(nutritionSummary = {}) {
+  const serverTarget = [
+    nutritionSummary.daily_calorie_target,
+    nutritionSummary.average_daily_calories,
+    nutritionSummary.daily_totals?.calories
+  ].map(Number).find((value) => Number.isFinite(value) && value > 0);
+  if (serverTarget) return Math.round(serverTarget);
+
+  try {
+    const calculation = window.FitnetNutritionEngine?.calculateCalorieTarget(
+      generationProfile(),
+      state.goal,
+      state.nutrition.activityLevel
+    );
+    const clientTarget = Number(calculation?.daily_calorie_target);
+    return Number.isFinite(clientTarget) && clientTarget > 0 ? Math.round(clientTarget) : null;
+  } catch {
+    return null;
+  }
 }
 
 function mealsPerDayFact(meals) {
@@ -1049,7 +1086,7 @@ function previewScreen() {
   const workoutDays = state.workout.days || workoutSummary.days || "Auto";
   // The results card describes the calculated target. Individual menu days can
   // vary slightly around it and must not replace the target with day 1's total.
-  const nutritionCalories = nutritionSummary.daily_calorie_target || nutritionSummary.daily_totals?.calories || "Balanced";
+  const nutritionCalories = resultNutritionCalorieTarget(nutritionSummary);
   const nutritionMeals = nutritionSummary.meals || state.nutrition.meals || "Auto";
 
   return `
@@ -1990,6 +2027,11 @@ document.addEventListener("click", (event) => {
   if (action === "start") {
     state.securityError = "";
     setStep("goal");
+  }
+
+  if (action === "home") {
+    window.location.assign(`${window.location.origin}/`);
+    return;
   }
 
   if (action === "next" && canContinue()) {
