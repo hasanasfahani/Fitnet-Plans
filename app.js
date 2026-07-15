@@ -74,6 +74,8 @@ const state = {
   apiStatus: null,
   apiPreview: null,
   apiError: "",
+  apiErrorCode: "",
+  apiRequestId: "",
   downloadUrl: "",
   downloadUrls: [],
 };
@@ -680,7 +682,7 @@ function updateContinueButton() {
 }
 
 function securityNotice(message) {
-  return `<div class="security-notice">${message}</div>`;
+  return `<div class="security-notice">${escapeHtml(message)}</div>`;
 }
 
 function birthDateParts() {
@@ -1052,23 +1054,40 @@ function mealsPerDayFact(meals) {
   return state.language === "ar" ? `${value} وجبات يومياً` : `${value} meals/day`;
 }
 
-function localizedGenerationError(error, kind = "generation") {
-  if (state.language !== "ar") return error;
+function localizedGenerationError(error, kind = "generation", code = "", requestId = "") {
+  let message;
 
-  const value = String(error || "").toLowerCase();
-  if (/timed out|taking longer|timeout/.test(value)) {
-    return "استغرق إنشاء خطتك وقتاً أطول من المتوقع. حاول مرة أخرى.";
-  }
-  if (/api server|failed to fetch|network|connection/.test(value)) {
-    return "تعذر الاتصال بخادم إنشاء الخطط. تأكد من تشغيل الخادم ثم حاول مرة أخرى.";
-  }
-  if (/blocked|rate limit|too many/.test(value)) {
-    return "تعذر إنشاء الخطة حالياً. انتظر قليلاً ثم حاول مرة أخرى.";
+  if (state.language !== "ar") {
+    if (code === "nutrition_safety_referral_required") {
+      message = "An automated nutrition plan is not suitable for the selected profile. Please review the safety selections or consult a qualified healthcare professional.";
+    } else if (["workout_strategy_invalid", "workout_candidates_invalid"].includes(code)) {
+      message = "We could not build a valid workout from these selections. Please adjust the workout preferences and try again.";
+    } else {
+      message = error;
+    }
+  } else {
+    const value = String(error || "").toLowerCase();
+    if (code === "nutrition_safety_referral_required") {
+      message = "لا تناسب خطة التغذية الآلية البيانات الصحية المحددة. راجع اختيارات السلامة أو استشر مختصاً صحياً مؤهلاً.";
+    } else if (["workout_strategy_invalid", "workout_candidates_invalid"].includes(code)) {
+      message = "تعذر إنشاء برنامج تمارين صالح بهذه الاختيارات. عدّل تفضيلات التمارين ثم حاول مرة أخرى.";
+    } else if (/timed out|taking longer|timeout/.test(value)) {
+      message = "استغرق إنشاء خطتك وقتاً أطول من المتوقع. حاول مرة أخرى.";
+    } else if (/api server|failed to fetch|network|connection/.test(value)) {
+      message = "تعذر الاتصال بخادم إنشاء الخطط. حاول مرة أخرى بعد قليل.";
+    } else if (/blocked|rate limit|too many/.test(value)) {
+      message = "تعذر إنشاء الخطة حالياً. انتظر قليلاً ثم حاول مرة أخرى.";
+    } else {
+      message = kind === "plan"
+        ? "تعذر إنشاء نسخة صالحة من هذه الخطة حتى الآن. حاول مرة أخرى."
+        : "تعذر إكمال إنشاء خطتك. يمكنك المحاولة مرة أخرى.";
+    }
   }
 
-  return kind === "plan"
-    ? "تعذر إنشاء نسخة صالحة من هذه الخطة حتى الآن. حاول مرة أخرى."
-    : "تعذر إكمال إنشاء خطتك. يمكنك المحاولة مرة أخرى.";
+  if (!requestId) return message;
+  return state.language === "ar"
+    ? `${message} رقم المرجع: ${requestId}`
+    : `${message} Reference: ${requestId}`;
 }
 
 function previewScreen() {
@@ -1094,7 +1113,7 @@ function previewScreen() {
       ${partialReady ? `<span class="eyebrow success">Some plans ready</span>` : ""}
       <h1>${partialReady ? "One plan needs another pass." : "Your Fitnet plans are ready."}</h1>
       ${partialReady ? "<p>Download the ready plan now, or retry the failed one.</p>" : ""}
-      ${state.apiError ? securityNotice(localizedGenerationError(state.apiError)) : ""}
+      ${state.apiError ? securityNotice(localizedGenerationError(state.apiError, "generation", state.apiErrorCode, state.apiRequestId)) : ""}
       <div class="summary-grid">
         ${summaryCard("Goal", state.goal || "Personalized", "target")}
         ${summaryCard("Plan type", state.planType || "Fitnet plan", "zap")}
@@ -1168,7 +1187,7 @@ function resultPlanCard({ iconName, title, description, facts, link, failed = fa
         </div>
       </div>
       <p>${uiText(description)}</p>
-      ${failed ? `<div class="security-notice">${escapeHtml(localizedGenerationError(error, "plan") || uiText("We could not generate a valid version of this plan yet."))}</div>` : ""}
+      ${failed ? `<div class="security-notice">${escapeHtml(localizedGenerationError(error, "plan", "", state.apiStatus?.request_id || "") || uiText("We could not generate a valid version of this plan yet."))}</div>` : ""}
       <div class="result-facts">
         ${facts.map((fact) => `<span>${uiText(fact)}</span>`).join("")}
       </div>
@@ -1576,6 +1595,8 @@ function runLoading() {
   state.loadingTarget = 8;
   state.loadingStartedAt = Date.now();
   state.apiError = "";
+  state.apiErrorCode = "";
+  state.apiRequestId = "";
   state.apiSessionId = null;
   state.apiStatus = null;
   state.apiPreview = null;
@@ -1594,6 +1615,8 @@ function runLoading() {
     .catch((error) => {
       window.clearInterval(visualTimer);
       state.apiError = error.message || "We could not prepare your real plan yet. Please make sure the API server is running.";
+      state.apiErrorCode = error.code || "";
+      state.apiRequestId = error.requestId || "";
       setStep("preview");
     });
 }
@@ -1738,7 +1761,10 @@ async function apiRequest(path, options) {
   const payload = await response.json();
 
   if (!response.ok) {
-    throw new Error(payload.message || payload.error || "Fitnet API request failed.");
+    const error = new Error(payload.message || payload.error || "Fitnet API request failed.");
+    error.code = payload.error || "api_error";
+    error.requestId = payload.request_id || response.headers.get("x-fitnet-request-id") || "";
+    throw error;
   }
 
   return payload;
@@ -2103,6 +2129,8 @@ document.addEventListener("click", (event) => {
 
   if (action === "retryFailedPlan") {
     state.apiError = "";
+    state.apiErrorCode = "";
+    state.apiRequestId = "";
     const path = getPath();
     setStep(path[Math.max(0, path.indexOf("loading") - 1)]);
   }

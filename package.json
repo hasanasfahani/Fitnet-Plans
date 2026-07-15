@@ -61,6 +61,7 @@
     "validate:workout-pdf-content": "node scripts/validate-workout-pdf-content.js",
     "validate:arabic-pdf-shaping": "node scripts/validate-arabic-pdf-shaping.js",
     "validate:security": "node scripts/validate-security-demo.js",
+    "validate:observability": "node scripts/validate-generation-observability.js",
     "dev:api": "node scripts/dev-api-server.js",
     "validate:api": "node scripts/validate-api-demo.js",
     "validate:stateless-api": "node scripts/validate-stateless-api.js",
