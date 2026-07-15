@@ -9,7 +9,7 @@ import time
 from http.server import BaseHTTPRequestHandler
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from render_plan_pdf import render  # noqa: E402
