@@ -63,6 +63,7 @@
     "validate:security": "node scripts/validate-security-demo.js",
     "dev:api": "node scripts/dev-api-server.js",
     "validate:api": "node scripts/validate-api-demo.js",
+    "validate:stateless-api": "node scripts/validate-stateless-api.js",
     "validate:acceptance": "node scripts/validate-acceptance.js",
     "validate:generation-quality-harness": "node scripts/validate-generation-quality-harness.js",
     "validate:live-generation": "node scripts/validate-live-openai-generation.js",
@@ -75,6 +76,7 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1075.0",
     "@aws-sdk/s3-request-presigner": "^3.1075.0",
+    "@upstash/redis": "^1.38.0",
     "@vercel/blob": "^2.4.1",
     "dotenv": "^17.4.2",
     "openai": "^6.44.0",

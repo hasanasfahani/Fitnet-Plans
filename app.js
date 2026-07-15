@@ -56,7 +56,6 @@ const state = {
   loadingStartedAt: null,
   loadingPhase: 0,
   loadingPhaseStartedAt: null,
-  accessOpen: false,
   exerciseQuery: "",
   exercises: [],
   foods: [],
@@ -79,13 +78,6 @@ const state = {
   apiError: "",
   downloadUrl: "",
   downloadUrls: [],
-  accessSubmitting: false,
-  leadForm: {
-    name: "",
-    email: "",
-    captcha: "",
-    website: ""
-  }
 };
 
 const goals = [
@@ -209,12 +201,6 @@ function render() {
     return;
   }
 
-  if (state.step === "confirmation") {
-    app.innerHTML = confirmationScreen();
-    finishLocalizedRender();
-    return;
-  }
-
   const path = getPath();
   const progressIndex = Math.max(path.indexOf(state.step), 0);
   const progress = Math.round((progressIndex / Math.max(path.length - 2, 1)) * 100);
@@ -229,7 +215,6 @@ function render() {
         ${activeScreen()}
         ${state.step !== "preview" ? stickyAction() : ""}
       </section>
-      ${state.accessOpen ? accessModal() : ""}
     </main>
   `;
   finishLocalizedRender();
@@ -1126,16 +1111,16 @@ function previewScreen() {
 }
 
 function directDownloadLinks() {
-  return (state.apiStatus?.download_urls || state.apiPreview?.download_urls || []).map((item) => ({
+  return (state.apiStatus?.pdf_downloads || state.apiPreview?.pdf_downloads || state.apiStatus?.download_urls || []).map((item) => ({
     ...item,
-    absolute_url: item.absolute_url || `${API_BASE}${item.url}`
+    ...(item.url ? { absolute_url: item.absolute_url || `${API_BASE}${item.url}` } : {})
   }));
 }
 
 function setDownloadLinks(items = []) {
   state.downloadUrls = items.map((item) => ({
     ...item,
-    absolute_url: item.absolute_url || `${API_BASE}${item.url}`
+    ...(item.url ? { absolute_url: item.absolute_url || `${API_BASE}${item.url}` } : {})
   }));
   state.downloadUrl = state.downloadUrls[0]?.absolute_url || "";
 }
@@ -1159,7 +1144,9 @@ function resultPlanCard({ iconName, title, description, facts, link, failed = fa
       </div>
       ${
         link
-          ? `<a class="primary-button" href="${escapeAttribute(link.absolute_url)}" target="_blank" rel="noopener">${downloadLabel} ${icon("chevron")}</a>`
+          ? link.payload
+            ? `<button class="primary-button" data-action="downloadPdf" data-kind="${escapeAttribute(link.kind)}" type="button">${downloadLabel} ${icon("chevron")}</button>`
+            : `<a class="primary-button" href="${escapeAttribute(link.absolute_url)}" target="_blank" rel="noopener">${downloadLabel} ${icon("chevron")}</a>`
           : failed
             ? `<button class="primary-button" data-action="retryFailedPlan" type="button">${uiText("Try again")}</button>`
           : `<button class="primary-button" disabled>${uiText("Preparing download")}</button>`
@@ -1237,47 +1224,6 @@ function summaryCard(label, value, iconName) {
 
 function previewLine(title, detail) {
   return `<div class="preview-line"><span>${title}</span><strong>${detail}</strong></div>`;
-}
-
-function accessModal() {
-  const captcha = state.securityPolicy?.captcha;
-  return `
-    <div class="modal-overlay" role="dialog" aria-modal="true">
-      <button class="modal-backdrop" data-action="closeModal" aria-label="Close modal"></button>
-      <div class="modal-card">
-        <button class="modal-close" data-action="closeModal" aria-label="Close">x</button>
-        <div class="modal-icon">${icon("lock")}</div>
-        <h2>Send my plans</h2>
-        <p>We will email your workout and nutrition plans so you can save them, open them later, and never lose your progress.</p>
-        ${state.securityError ? securityNotice(state.securityError) : ""}
-        <form class="lead-form" id="lead-form">
-          <label class="input-field">
-            <span>Name</span>
-            <input name="name" data-action="leadInput" data-field="name" value="${escapeAttribute(state.leadForm.name)}" placeholder="Your name" required />
-          </label>
-          <label class="input-field">
-            <span>Email</span>
-            <input name="email" data-action="leadInput" data-field="email" value="${escapeAttribute(state.leadForm.email)}" type="email" placeholder="you@example.com" required />
-          </label>
-          <label class="input-field honeypot-field" aria-hidden="true">
-            <span>Website</span>
-            <input name="website" data-action="leadInput" data-field="website" value="${escapeAttribute(state.leadForm.website)}" tabindex="-1" autocomplete="off" />
-          </label>
-          ${
-            captcha?.enabled
-              ? `<label class="input-field">
-                  <span>${captcha.challenge}</span>
-                  <input name="captcha" data-action="leadInput" data-field="captcha" value="${escapeAttribute(state.leadForm.captcha)}" placeholder="${captcha.expected_answer}" required />
-                </label>`
-              : ""
-          }
-          <button class="primary-button" type="submit" ${state.accessSubmitting ? "disabled" : ""}>
-            ${state.accessSubmitting ? "Sending..." : `Send My Plan ${icon("mail")}`}
-          </button>
-        </form>
-      </div>
-    </div>
-  `;
 }
 
 function loadingScreen() {
@@ -1482,37 +1428,6 @@ function updateLoadingView() {
   });
 }
 
-function confirmationScreen() {
-  return `
-    <main class="confirmation-screen">
-      <section class="confirmation-card">
-        ${fitnetLogo()}
-        <div class="confirmation-icon">${icon("mail")}</div>
-        <h1>Your plan is on its way</h1>
-        <p>We sent your Fitnet plans to your email so you can come back to them anytime. Continue in the app for coaching, tracking, and progress updates.</p>
-        ${
-          state.downloadUrls.length
-            ? state.downloadUrls
-                .map(
-                  (item) =>
-                    `<a class="primary-button" href="${escapeAttribute(item.absolute_url)}" target="_blank" rel="noopener">Download ${item.label} ${icon("chevron")}</a>`
-                )
-                .join("")
-            : state.downloadUrl
-              ? `<a class="primary-button" href="${escapeAttribute(state.downloadUrl)}" target="_blank" rel="noopener">Download My Plan ${icon("chevron")}</a>`
-              : ""
-        }
-        <button class="primary-button">Download Fitnet App for more</button>
-        <div class="store-row">
-          <div class="store-badge">${appStoreIcon()}<div><span>Download on the</span><strong>App Store</strong></div></div>
-          <div class="store-badge">${googlePlayIcon()}<div><span>Get it on</span><strong>Google Play</strong></div></div>
-        </div>
-        <button class="text-link" data-action="back">Back to preview</button>
-      </section>
-    </main>
-  `;
-}
-
 function fitnetLogo(compact = false, white = false) {
   return `
     <div class="${compact ? "fitnet-logo compact" : "fitnet-logo"}">
@@ -1592,7 +1507,6 @@ function canContinue() {
 function setStep(step) {
   state.securityError = "";
   state.step = step;
-  state.accessOpen = false;
   render();
 
   if (step === "loading") {
@@ -1640,11 +1554,6 @@ function nutritionEligibilityMessage() {
 }
 
 function backStep() {
-  if (state.step === "confirmation") {
-    setStep("preview");
-    return;
-  }
-
   const path = getPath();
   const index = path.indexOf(state.step);
   setStep(path[index - 1] || "landing");
@@ -1661,7 +1570,7 @@ function getPath() {
     path.push("nutrition");
   }
 
-  path.push("loading", "preview", "confirmation");
+  path.push("loading", "preview");
   return path;
 }
 
@@ -1740,68 +1649,63 @@ function completeLoadingProgress(timer) {
 }
 
 async function startApiGeneration() {
-  const session = await apiPost("/api/generation/session", { language: state.language });
-  const sessionId = session.session_id;
-  state.apiSessionId = sessionId;
-  state.loadingTarget = 12;
-
-  await apiPost("/api/generation/goal", {
-    session_id: sessionId,
-    goal: state.goal
-  });
-  await apiPost("/api/generation/profile", {
-    session_id: sessionId,
-    profile: generationProfile()
-  });
-  state.loadingTarget = 20;
-  await apiPost("/api/generation/plan-type", {
-    session_id: sessionId,
-    plan_type: state.planType
-  });
-
-  if (state.planType.includes("Workout")) {
-    await apiPost("/api/generation/workout-inputs", {
-      session_id: sessionId,
-      workout: state.workout
+  state.loadingTarget = 24;
+  let result;
+  try {
+    result = await apiPost("/api/generate", {
+      language: state.language,
+      goal: state.goal,
+      profile: generationProfile(),
+      plan_type: state.planType,
+      workout: state.planType.includes("Workout") ? state.workout : null,
+      nutrition: state.planType.includes("Nutrition") ? generationNutrition() : null,
+      turnstile_token: state.turnstile.token
     });
+  } finally {
+    state.turnstile.token = "";
   }
-
-  if (state.planType.includes("Nutrition")) {
-    await apiPost("/api/generation/nutrition-inputs", {
-      session_id: sessionId,
-      nutrition: generationNutrition()
-    });
-  }
-
-  state.apiStatus = await apiPost("/api/generation/start", {
-    session_id: sessionId,
-    turnstile_token: state.turnstile.token
-  });
-  state.turnstile.token = "";
-  updateLoadingMilestone(state.apiStatus);
-  state.apiStatus = await pollApiStatus(sessionId);
-
-  if (!["ready", "partial_ready"].includes(state.apiStatus.status)) {
-    throw new Error(state.apiStatus.error || "Your plan did not finish generating.");
-  }
-
-  state.apiPreview = await apiGet(`/api/generation/preview/${sessionId}`);
-  setDownloadLinks(state.apiPreview.download_urls || state.apiStatus.download_urls || []);
+  state.apiSessionId = result.session_id;
+  state.apiStatus = result;
+  state.apiPreview = result;
+  updateLoadingMilestone(result);
+  setDownloadLinks(result.pdf_downloads || []);
 }
 
-async function pollApiStatus(sessionId) {
-  for (let attempt = 0; attempt < 300; attempt += 1) {
-    const status = await apiGet(`/api/generation/status/${sessionId}`);
-    state.apiStatus = status;
-    updateLoadingMilestone(status);
-    if (state.step === "loading") updateLoadingView();
-    if (["ready", "partial_ready", "failed", "timed_out", "blocked"].includes(status.status)) {
-      return status;
-    }
-    await sleep(1200);
-  }
+async function downloadStatelessPdf(kind, button) {
+  const download = state.downloadUrls.find((item) => item.kind === kind);
+  if (!download?.payload || !download?.signature) return;
 
-  throw new Error(`Plan generation is taking longer than expected. Session: ${sessionId}`);
+  const original = button.innerHTML;
+  button.disabled = true;
+  button.textContent = uiText("Preparing download");
+  try {
+    const response = await fetch(`${API_BASE}/api/render-pdf`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ payload: download.payload, signature: download.signature })
+    });
+    if (!response.ok) {
+      const error = await response.json().catch(() => ({}));
+      throw new Error(error.message || "We could not prepare this PDF right now.");
+    }
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = `fitnet-${kind}-plan.pdf`;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  } catch (error) {
+    state.apiError = error.message;
+    render();
+  } finally {
+    if (button.isConnected) {
+      button.disabled = false;
+      button.innerHTML = original;
+    }
+  }
 }
 
 function updateLoadingMilestone(status = {}) {
@@ -2032,16 +1936,6 @@ function validateGenerationGuard() {
   return result;
 }
 
-function validateLeadGuard(form) {
-  if (!window.FitnetSecurityGuards || !state.securityState) {
-    return { allowed: true };
-  }
-
-  const result = window.FitnetSecurityGuards.validateLeadSubmission(state.securityState, form);
-  collectSecurityEvents();
-  return result;
-}
-
 function collectSecurityEvents() {
   if (!window.FitnetSecurityGuards || !state.securityState) {
     return;
@@ -2210,47 +2104,15 @@ document.addEventListener("click", (event) => {
     renderPreservingScroll();
   }
 
-  if (action === "access") {
-    state.securityError = "";
-    state.accessOpen = true;
-    render();
-  }
-
-  if (action === "closeModal") {
-    state.accessOpen = false;
-    render();
+  if (action === "downloadPdf") {
+    downloadStatelessPdf(button.dataset.kind, button);
+    return;
   }
 
   if (action === "retryFailedPlan") {
-    if (!state.apiSessionId) return;
     state.apiError = "";
-    state.step = "loading";
-    state.loadingProgress = 12;
-    state.loadingTarget = 24;
-    state.loadingStartedAt = Date.now();
-    state.loadingPhase = 0;
-    state.loadingPhaseStartedAt = state.loadingStartedAt;
-    document.title = "Fitnet is building your plans";
-    render();
-    const retryVisualTimer = startLoadingAnimation();
-    apiPost("/api/generation/retry", { session_id: state.apiSessionId })
-      .then(() => pollApiStatus(state.apiSessionId))
-      .then(async (status) => {
-        state.apiStatus = status;
-        if (!["ready", "partial_ready"].includes(status.status)) {
-          throw new Error(status.error || "The retry did not finish generating.");
-        }
-        state.apiPreview = await apiGet(`/api/generation/preview/${state.apiSessionId}`);
-        setDownloadLinks(state.apiPreview.download_urls || state.apiStatus.download_urls || []);
-        await completeLoadingProgress(retryVisualTimer);
-        await sleep(450);
-        setStep("preview");
-      })
-      .catch((error) => {
-        window.clearInterval(retryVisualTimer);
-        state.apiError = error.message || "Retry failed.";
-        setStep("preview");
-      });
+    const path = getPath();
+    setStep(path[Math.max(0, path.indexOf("loading") - 1)]);
   }
 });
 
@@ -2277,11 +2139,6 @@ document.addEventListener("input", (event) => {
     return;
   }
 
-  if (event.target.dataset.action === "leadInput") {
-    state.leadForm[event.target.dataset.field] = event.target.value;
-    return;
-  }
-
   if (event.target.id === "exercise-search") {
     state.exerciseQuery = event.target.value;
     updateExerciseResults();
@@ -2294,68 +2151,6 @@ document.addEventListener("change", (event) => {
     resetGeneratedWorkout();
     resetGeneratedNutrition();
     renderPreservingScroll();
-  }
-});
-
-document.addEventListener("submit", async (event) => {
-  if (event.target.id !== "lead-form") {
-    return;
-  }
-
-  event.preventDefault();
-  if (state.accessSubmitting) {
-    return;
-  }
-
-  const form = new FormData(event.target);
-  state.leadForm = {
-    name: String(form.get("name") || ""),
-    email: String(form.get("email") || ""),
-    captcha: String(form.get("captcha") || ""),
-    website: String(form.get("website") || "")
-  };
-  const guard = validateLeadGuard({
-    name: state.leadForm.name,
-    email: state.leadForm.email,
-    consent: true,
-    captcha: state.leadForm.captcha,
-    honeypot: state.leadForm.website
-  });
-
-  if (!guard.allowed) {
-    state.securityError = securityMessage(guard.reason);
-    state.accessOpen = true;
-    render();
-    return;
-  }
-
-  if (!state.apiSessionId) {
-    state.securityError = state.apiError || "Your real plan is not connected yet. Please start the flow again with the API server running.";
-    state.accessOpen = true;
-    render();
-    return;
-  }
-
-  state.securityError = "";
-  state.accessSubmitting = true;
-  render();
-  try {
-    const access = await apiPost("/api/generation/access", {
-      session_id: state.apiSessionId,
-      name: state.leadForm.name,
-      email: state.leadForm.email,
-      consent: true,
-      captcha: state.leadForm.captcha,
-      website: state.leadForm.website
-    });
-    setDownloadLinks(access.download_urls || (access.download_url ? [{ url: access.download_url, label: "Fitnet Plan" }] : []));
-    state.accessSubmitting = false;
-    setStep("confirmation");
-  } catch (error) {
-    state.accessSubmitting = false;
-    state.securityError = error.message || "We could not send your plan yet. Please try again.";
-    state.accessOpen = true;
-    render();
   }
 });
 

@@ -1,13 +1,16 @@
 const fs = require("fs");
 const http = require("http");
 const path = require("path");
+const os = require("os");
+const crypto = require("crypto");
+const { spawnSync } = require("child_process");
 const { URL } = require("url");
 const { createFitnetApi } = require("../lib/api-core");
 const { createProductionServices } = require("../lib/production-services");
 
 const root = path.join(__dirname, "..");
 const port = Number(process.env.PORT || 3002);
-const maxBodyBytes = Number(process.env.MAX_REQUEST_BODY_BYTES || 64 * 1024);
+const maxBodyBytes = Number(process.env.MAX_REQUEST_BODY_BYTES || 4 * 1024 * 1024);
 const allowedOrigins = new Set(
   String(process.env.ALLOWED_ORIGINS || "")
     .split(",")
@@ -41,6 +44,11 @@ const server = http.createServer(async (request, response) => {
     }
 
     const body = await readBody(request);
+    if (request.method === "POST" && url.pathname === "/api/render-pdf") {
+      const result = renderStatelessPdfLocally(body);
+      send(response, { ...result, headers: { ...cors, ...securityHeaders(), ...result.headers } });
+      return;
+    }
     const result = await Promise.resolve(api.handleApiRequest({
       method: request.method,
       pathname: url.pathname,
@@ -196,4 +204,53 @@ function localSecurityPolicy() {
     },
     blocked_disposable_email_domains: []
   };
+}
+
+function renderStatelessPdfLocally(body) {
+  const payload = String(body.payload || "");
+  const signature = String(body.signature || "");
+  const secret = String(process.env.PDF_SIGNING_SECRET || "fitnet-local-pdf-secret");
+  const expected = crypto.createHmac("sha256", secret).update(payload).digest("hex");
+  if (!payload || signature.length !== expected.length || !crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))) {
+    return { status: 400, body: { error: "invalid_pdf_signature" } };
+  }
+
+  let envelope;
+  try {
+    envelope = JSON.parse(Buffer.from(payload, "base64url").toString("utf8"));
+  } catch {
+    return { status: 400, body: { error: "invalid_pdf_payload" } };
+  }
+  if (envelope.version !== "fitnet.stateless-pdf.v1" || Date.parse(envelope.expires_at) <= Date.now()) {
+    return { status: 400, body: { error: "pdf_link_expired" } };
+  }
+
+  const kind = envelope.workout_plan ? "workout" : "nutrition";
+  const temp = fs.mkdtempSync(path.join(os.tmpdir(), "fitnet-local-pdf-"));
+  try {
+    const input = path.join(temp, "plan.json");
+    const output = path.join(temp, `fitnet-${kind}-plan.pdf`);
+    fs.writeFileSync(input, JSON.stringify(envelope));
+    const rendered = spawnSync(process.env.FITNET_PYTHON || "python3", [
+      path.join(root, "scripts", "render_plan_pdf.py"),
+      "--payload", input,
+      "--output", output,
+      "--exercises", path.join(root, "data", "exercise_library.json"),
+      "--foods", path.join(root, "data", "food_library.json")
+    ], { encoding: "utf8" });
+    if (rendered.status !== 0 || !fs.existsSync(output)) {
+      return { status: 500, body: { error: "pdf_render_failed", message: "We could not prepare this PDF right now." } };
+    }
+    return {
+      status: 200,
+      headers: {
+        "content-type": "application/pdf",
+        "content-disposition": `attachment; filename="fitnet-${kind}-plan.pdf"`,
+        "cache-control": "no-store"
+      },
+      body: fs.readFileSync(output)
+    };
+  } finally {
+    fs.rmSync(temp, { recursive: true, force: true });
+  }
 }
