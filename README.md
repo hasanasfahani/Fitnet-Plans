@@ -35,6 +35,7 @@ At minimum, configure:
 - `OPENAI_API_KEY`
 - `TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY`
 - `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`
+  - Vercel Marketplace aliases `UPSTASH_REDIS_REST_KV_REST_API_URL` and `UPSTASH_REDIS_REST_KV_REST_API_TOKEN` are also accepted.
 - `PDF_SIGNING_SECRET` (a long random value used by both Vercel Functions)
 - `RATE_LIMIT_SALT` (a different long random value is recommended)
 
