@@ -1,15 +1,19 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
   "functions": {
     "api/generate.js": {
       "maxDuration": 300,
       "includeFiles": "data/**"
     },
-    "api/render-pdf/index.py": {
+    "api/index.py": {
       "maxDuration": 120,
       "includeFiles": "{scripts,assets,data,vendor}/**"
     }
   },
+  "rewrites": [
+    { "source": "/api/render-pdf", "destination": "/api" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
