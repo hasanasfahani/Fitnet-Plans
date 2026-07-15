@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fitnet.workout.output.v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["program_summary", "plan_days", "repeat_instruction", "safety_notes"],
+  "properties": {
+    "program_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["goal", "split", "days_per_week", "session_duration_minutes", "workout_place", "available_equipment", "focus_muscles", "injuries", "coaching_rationale"],
+      "properties": {
+        "goal": { "type": "string", "minLength": 1 },
+        "split": { "type": "string", "minLength": 1 },
+        "days_per_week": { "type": "integer", "minimum": 2, "maximum": 6 },
+        "session_duration_minutes": { "type": "integer", "minimum": 20, "maximum": 120 },
+        "workout_place": { "type": "string" },
+        "available_equipment": { "type": "array", "items": { "type": "string" } },
+        "focus_muscles": { "type": "array", "items": { "type": "string" } },
+        "injuries": { "type": "array", "items": { "type": "string" } },
+        "disliked_exercises": { "type": "array", "items": { "type": "string" } },
+        "coaching_rationale": { "type": "string", "minLength": 1 }
+      }
+    },
+    "plan_days": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["day_index", "day_name", "day_focus", "exercises"],
+        "properties": {
+          "day_index": { "type": "integer", "minimum": 1, "maximum": 6 },
+          "day_name": { "type": "string", "minLength": 1 },
+          "day_focus": { "type": "string", "minLength": 1 },
+          "exercises": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 8,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["slot_id", "exercise_id", "exercise_name", "exercise_category", "movement_pattern", "muscle_group", "sets", "reps", "rest", "notes"],
+              "properties": {
+                "slot_id": { "type": "string", "minLength": 1 },
+                "exercise_id": { "type": "integer", "minimum": 1 },
+                "exercise_name": { "type": "string", "minLength": 1 },
+                "exercise_category": { "enum": ["strength", "cardio"] },
+                "movement_pattern": { "type": "string" },
+                "muscle_group": { "type": "string" },
+                "sets": { "type": "integer", "minimum": 1, "maximum": 5 },
+                "reps": { "type": "string", "minLength": 1 },
+                "rest": { "type": "string" },
+                "notes": { "type": "string" },
+                "duplicate_reason": { "type": ["string", "null"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "repeat_instruction": { "type": "string", "minLength": 1 },
+    "safety_notes": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+  }
+}

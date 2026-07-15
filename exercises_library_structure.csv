@@ -1,0 +1,424 @@
+exercise_id,full_name,category,sub_muscles,muscle_ids,equipment
+242,Assisted Close grip Underhand Chin up,Back,Middle Back,16,Assisted pull-up/dip machine
+224,Assisted Pull Up,Back,Middle Back,16,Assisted pull-up/dip machine
+255,Back Extension,Back,Lower Back,17,Roman chair / hyperextension bench
+225,Barbell Bent Over Row,Back,Middle Back,16,Barbell
+226,Barbell Deadlift,Back,Lower Back,17,Barbell
+259,Barbell Incline Rear Delt Row,Back,Upper Back,15,Adjustable bench | Barbell
+227,Barbell Incline Row,Back,Middle Back,16,Adjustable bench | Barbell
+228,Barbell One Arm Bent Over Row,Back,Middle Back,16,Barbell
+569,Barbell Pendlay Row,Back,Middle Back,16,Barbell
+571,Barbell Pullover,Back,Middle Back,16,Adjustable bench | Barbell
+564,Barbell Shrug,Back,Upper Back,15,Barbell
+381,Barbell Straight Leg Deadlift (RDL),Back,Lower Back,17,Barbell
+229,Cable Bar Lateral Pulldown,Back,Middle Back,16,Lat pulldown station
+570,Cable Bent Over,Back,Middle Back,16,Single high/low pulley
+572,Cable Bent Over Row with Rope,Back,Middle Back,16,Cable attachment: rope | Single high/low pulley
+386,Cable Close Grip Front Lat Pulldown,Back,Middle Back,16,Cable attachment: V-bar / close-grip | Lat pulldown station
+230,Cable Cross over Lateral Pulldown,Back,Middle Back,16,Lat pulldown station
+579,Cable Deadlift,Back,Lower Back,17,Single high/low pulley
+241,Cable Elevated Row,Back,Middle Back,16,Single high/low pulley
+565,Cable High Row kneeling,Back,Upper Back,15,Single high/low pulley
+243,Cable Incline Bench Row,Back,Middle Back,16,Adjustable bench | Single high/low pulley
+231,Cable Incline Pushdown,Back,Middle Back,16,Adjustable bench | Single high/low pulley
+258,Cable Kneeling Leaning Forward One Arm Row,Back,Middle Back,16,Cable attachment: single handle | Single high/low pulley
+257,Cable Kneeling One Arm Lat Pulldown,Back,Middle Back,16,Cable attachment: single handle | Lat pulldown station
+399,Cable Kneeling One Arm Row,Back,Middle Back,16,Cable attachment: single handle | Single high/low pulley
+246,Cable Lat Pulldown,Back,Middle Back,16,Lat pulldown station
+391,Cable Lat Pulldown Full Range Of Motion,Back,Middle Back,16,Lat pulldown station
+392,Cable Lateral Pulldown with V bar,Back,Middle Back,16,Cable attachment: V-bar / close-grip | Lat pulldown station
+254,Cable Low Row - Rope,Back,Middle Back,16,Cable attachment: rope | Single high/low pulley
+383,Cable Low Seated Row,Back,Middle Back,16,Seated cable row station
+384,Cable One Arm Bent over Row,Back,Upper Back,15,Cable attachment: single handle | Single high/low pulley
+250,Cable Rear Delt Row,Back,Upper Back,15,Single high/low pulley
+397,Cable Reverse Grip Pulldown,Back,Middle Back,16,Lat pulldown station
+252,Cable Seated Rear Delt Fly - Chest Support,Back,Upper Back,15,Chest-supported row bench | Dual adjustable pulley / cable crossover
+567,Cable Seated Row,Back,Middle Back,16,Seated cable row station
+247,Cable Seated Row - V bar,Back,Middle Back,16,Cable attachment: V-bar / close-grip | Seated cable row station
+385,Cable Seated Wide grip Row,Back,Middle Back,16,Seated cable row station
+632,Cable Split Stance Single Arm Row,Back,Middle Back | Upper Back,16 | 15,Cable attachment: single handle | Single high/low pulley
+398,Cable Standing Close Grip Row,Back,Middle Back,16,Cable attachment: V-bar / close-grip | Single high/low pulley
+401,Cable Straight Arm Pulldown,Back,Middle Back,16,Cable attachment: straight bar | Lat pulldown station
+566,Cable Straight Arm Pulldown,Back,Middle Back,16,Cable attachment: straight bar | Lat pulldown station
+568,Cable Upper Row,Back,Upper Back,15,Single high/low pulley
+244,Cable Wide Grip Behind Neck Pulldown,Back,Middle Back,16,Lat pulldown station
+395,Cable Wide Neutral Grip Pull Down,Back,Middle Back,16,Single high/low pulley
+232,Cable Wide Pulldown,Back,Middle Back,16,Lat pulldown station
+249,Dumbbell Bent Over Reverse Row,Back,Middle Back,16,Dumbbells
+394,Dumbbell Bent Over Reverse Row,Back,Middle Back,16,Dumbbells
+233,Dumbbell Bent over Row,Back,Middle Back,16,Dumbbells
+400,Dumbbell Bent Over Row with Chest Support,Back,Middle Back,16,Chest-supported row bench | Dumbbells
+578,Dumbbell Deadlift,Back,Lower Back,17,Dumbbells
+576,Dumbbell Deadlift (neutral grip),Back,Lower Back,17,Dumbbells
+234,Dumbbell Incline Row,Back,Upper Back,15,Adjustable bench | Dumbbells
+245,Dumbbell Lying Rear Delt Row,Back,Middle Back,16,Dumbbells | Adjustable bench
+235,Dumbbell Rear Fly,Back,Upper Back,15,Dumbbells
+237,Dumbbell Rear Lateral Raise,Back,Upper Back,15,Dumbbells
+575,Dumbbell Standing Scapular External Rotation,Back,Upper Back,15,Dumbbells
+388,EZ Bar Reverse Grip Bent Over Row,Back,Middle Back,16,EZ-curl bar
+390,Hammer Grip Pull up on Dip Cage,Back,Middle Back,16,Dip bars / parallel bars | Pull-up bar
+577,Kettlebell deadlift,Back,Lower Back,17,Kettlebells
+239,Lever Back Extension,Back,Lower Back,17,Back-extension machine
+393,Lever Bent over Row with V bar,Back,Middle Back,16,V-bar | Barbell | Weight plates
+630,Lever Bent Over Single Arm Wide Grip,Back,Upper Back,15,Bent Over Wide Grip Row Lever
+629,Lever Bent Over Wide Grip Row,Back,Upper Back,15,Bent Over Wide Grip Row Lever
+256,Lever Bent over Wide Row,Back,Middle Back,16,Straight bar | Barbell | Weight plates
+616,Lever Cable Rear Pulldown,Back,Upper Back | Middle Back,15 | 16,Lat pulldown station | Lat pulldown machine (plate-loaded)
+631,Lever Cross Lat Pulldown,Back,Upper Back | Middle Back,15 | 16,Lat pulldown machine (plate-loaded)
+601,Lever Front Pulldown,Back,Middle Back,16,Lat pulldown machine (plate-loaded)
+615,Lever Gripless Shrug,Back,Upper Back,15,Shrug machine
+240,Lever High Row,Back,Middle Back,16,High row machine
+617,Lever Lateral Pulldown,Back,Upper Back | Middle Back,15 | 16,Lat pulldown machine (plate-loaded)
+621,Lever Lateral Wide Pulldown,Back,Middle Back,16,Lat pulldown machine (plate-loaded)
+624,Lever Low Row,Back,Middle Back | Upper Back,16 | 15,Low row machine
+623,Lever Lying Banded T bar,Back,Middle Back | Upper Back,16 | 15,T-bar row machine
+605,Lever Lying T bar Row,Back,Upper Back | Middle Back,15 | 16,T-bar row machine
+602,Lever Neutral Grip Seated Row,Back,Middle Back | Upper Back,16 | 15,Seated row machine
+614,Lever One Arm Lateral High,Back,Middle Back | Upper Back,16 | 15,Lateral High Lever
+609,Lever One Arm Lateral Wide Pulldown,Back,Middle Back,16,Lat pulldown machine (plate-loaded)
+625,Lever One Arm Low Row,Back,Middle Back | Upper Back,16 | 15,Low row machine
+607,Lever One Arm Seated Row,Back,Upper Back | Middle Back,15 | 16,Seated row machine
+627,Lever Pronated Grip Seated Row,Back,Middle Back | Upper Back,16 | 15,Seated row machine
+628,Lever Pronated Grip Seated Scapular,Back,Upper Back,15,Pronated Grip Seated Scapular Lever
+619,Lever Pullove,Back,Middle Back,16,Pullover machine
+610,Lever Reverse Grip,Back,Middle Back | Upper Back,16 | 15,Reverse Grip Lever
+626,Lever Reverse Grip High Row,Back,Middle Back | Upper Back,16 | 15,High row machine
+622,Lever Reverse grip Lateral Pulldown,Back,Middle Back,16,Lat pulldown machine (plate-loaded)
+611,Lever Reverse T Bar Row,Back,Middle Back | Upper Back,16 | 15,T-bar row machine
+248,Lever Seated Row,Back,Middle Back,16,Seated row machine
+612,Lever Seated Row,Back,Middle Back | Upper Back,16 | 15,Seated row machine
+618,Lever Seated Row,Back,Upper Back | Middle Back,15 | 16,Seated row machine
+620,Lever Seated Row,Back,Middle Back | Upper Back,16 | 15,Seated row machine
+603,Lever Shrug,Back,Upper Back,15,Shrug machine
+606,Lever Shrug,Back,Upper Back,15,Shrug machine
+600,Lever Single Arm Neutral Grip Seated Row,Back,Middle Back,16,Seated row machine
+613,Lever T Bar Reverse Grip Row,Back,Middle Back | Upper Back,16 | 15,T-bar row machine
+604,Lever T bar Row,Back,Upper Back | Middle Back,15 | 16,T-bar row machine
+608,Lever Unilateral Row,Back,Upper Back | Middle Back,15 | 16,Unilateral Row Lever
+389,Smith Bent Over Pronated Grip Row,Back,Middle Back,16,Smith machine
+61,Barbell Curl,Biceps,Short Head | Long Head,6 | 7,Barbell
+62,Barbell Lying Preacher Curl,Biceps,Long Head,7,Barbell | Preacher curl bench
+63,Barbell Prone Incline Curl,Biceps,Long Head,7,Adjustable bench | Barbell | Chest-supported row bench
+66,Barbell Seated Close grip Concentration Curl,Biceps,Short Head,6,Barbell
+89,Barbell Standing Concentration Curl,Biceps,Long Head,7,Barbell
+76,Cable Biceps Curl - SZ bar,Biceps,Short Head,6,Cable attachment: EZ/SZ bar | Single high/low pulley
+77,Cable Concentration Curl,Biceps,Short Head,6,Single high/low pulley
+74,Cable Curl,Biceps,Short Head,6,Single high/low pulley
+67,Cable Hammer Curl - Rope,Biceps,Long Head,7,Cable attachment: rope | Single high/low pulley
+92,Cable Incline Close Grip Curl,Biceps,Short Head,6,Adjustable bench | Single high/low pulley
+412,Cable Kneeling Preacher Curl,Biceps,Short Head,6,Preacher curl bench | Single high/low pulley
+79,Cable Lying Bicep Curl,Biceps,Long Head,7,Single high/low pulley
+69,Cable Lying Close rip Curl,Biceps,Short Head,6,Single high/low pulley
+75,Cable one arm inner biceps curl,Biceps,Short Head,6,Cable attachment: single handle | Single high/low pulley
+78,Cable One Arm Preacher Curl,Biceps,Long Head,7,Cable attachment: single handle | Preacher curl bench | Single high/low pulley
+80,Cable Overhead Curl,Biceps,Short Head,6,Single high/low pulley
+402,Cable Preacher Curl,Biceps,Long Head,7,Preacher curl bench | Single high/low pulley
+404,Cable Reverse One Arm Curl,Biceps,Long Head,7,Cable attachment: single handle | Single high/low pulley
+413,Cable Standing One Arm Hammer Curl with Rope Attachment,Biceps,Long Head,7,Cable attachment: rope | Cable attachment: single handle | Single high/low pulley
+81,Cable Two Arm Curl on Incline Bench,Biceps,Short Head,6,Adjustable bench | Single high/low pulley
+93,Cable Unilateral Bicep Curl,Biceps,Long Head,7,Cable attachment: single handle | Single high/low pulley
+70,Dumbbell Alternate Biceps Curl,Biceps,Short Head | Long Head,6 | 7,Dumbbells
+406,Dumbbell Alternate Hammer Preacher Curl,Biceps,Long Head,7,Dumbbells | Preacher curl bench
+408,Dumbbell Alternate Preacher Curl,Biceps,Long Head,7,Dumbbells | Preacher curl bench
+403,Dumbbell Biceps Curl,Biceps,Short Head,6,Dumbbells
+411,Dumbbell Close Grip Curl,Biceps,Short Head,6,Dumbbells
+71,Dumbbell Concentration Curl,Biceps,Short Head,6,Dumbbells
+325,Dumbbell Cross Body Hammer Curl,Biceps,Long Head,7,Dumbbells
+87,Dumbbell High Curl,Biceps,Short Head,6,Dumbbells
+90,Dumbbell Incline Alternate Bicep Curl,Biceps,Long Head,7,Adjustable bench | Dumbbells
+72,Dumbbell Incline Inner Biceps Curl,Biceps,Long Head,7,Adjustable bench | Dumbbells
+83,Dumbbell Lying Supine Biceps Curl,Biceps,Long Head,7,Dumbbells
+84,Dumbbell Lying Wide Curl,Biceps,Short Head,6,Dumbbells
+86,Dumbbell One Arm Hammer Preacher Curl,Biceps,Long Head,7,Dumbbells | Preacher curl bench
+94,Dumbbell Preacher Curl,Biceps,Short Head,6,Dumbbells | Preacher curl bench
+409,Dumbbell Seated Bicep Curl,Biceps,Short Head,6,Dumbbells
+414,EZ Barbell Preacher Curl,Biceps,Short Head,6,EZ-curl bar | Preacher curl bench
+91,Lever Biceps Curl,Biceps,Short Head,6,Biceps Curl Lever
+88,Lever Preacher Curl,Biceps,Short Head,6,Preacher curl bench
+95,Lever Preacher Curl,Biceps,Short Head,6,Preacher curl bench
+73,Olympic Barbell Hammer Curl,Biceps,Long Head,7,Barbell
+410,Smith Machine Bicep Curl,Biceps,Short Head,6,Smith machine
+590,Assault Bike Run,Cardio,Cardio,26,Air/Assault bike
+591,Assault Run,Cardio,Cardio,26,Assault Run
+584,Bicycle Recline Walk,Cardio,Cardio,26,Recumbent bike
+588,Cycle Cross Trainer,Cardio,Cardio,26,Elliptical / cross-trainer
+589,Double Under Jump Rope,Cardio,Cardio,26,Jump rope
+583,Elliptical Machine Walk,Cardio,Cardio,26,Elliptical / cross-trainer
+582,Rowing,Cardio,Cardio,26,Rowing ergometer
+581,Running Treadmill,Cardio,Cardio,26,Treadmill
+586,Stationary Bike Run,Cardio,Cardio,26,Upright stationary bike
+587,Stepmill,Cardio,Cardio,26,Stepmill / stair climber
+585,Walking on Treadmill,Cardio,Cardio,26,Treadmill
+28,Barbell Bench Press Chest,Chest,Middle Chest,2,Adjustable bench | Barbell
+30,Barbell Decline Bench Press,Chest,Lower Chest,3,Adjustable bench | Barbell
+437,Barbell Decline Pullover,Chest,Lower Chest,3,Adjustable bench | Barbell
+535,Barbell Front Raise and Pullover,Chest,Upper Chest,1,Adjustable bench | Barbell
+31,Barbell Incline Bench Press,Chest,Upper Chest,1,Adjustable bench | Barbell
+561,Barbell Reverse Grip Bench Press,Chest,Middle Chest,2,Adjustable bench | Barbell
+546,Barbell Reverse Grip Decline Bench Press,Chest,Lower Chest,3,Adjustable bench | Barbell
+547,Barbell Reverse Grip Incline Bench Press,Chest,Upper Chest,1,Adjustable bench | Barbell
+536,Cable Bench Press,Chest,Middle Chest,2,Adjustable bench | Dual adjustable pulley / cable crossover
+32,Cable Decline Fly,Chest,Inner Chest,4,Adjustable bench | Dual adjustable pulley / cable crossover
+548,Cable Decline Press,Chest,Lower Chest,3,Adjustable bench | Single high/low pulley
+54,Cable Fly with Chest Supported,Chest,Middle Chest,2,Chest-supported row bench | Dual adjustable pulley / cable crossover
+537,Cable Incline Bench Press,Chest,Upper Chest,1,Adjustable bench | Dual adjustable pulley / cable crossover
+538,Cable Incline Fly,Chest,Upper Chest,1,Adjustable bench | Dual adjustable pulley / cable crossover
+56,Cable Low Chest Press,Chest,Lower Chest,3,Single high/low pulley
+33,Cable Low Fly,Chest,Upper Chest,1,Dual adjustable pulley / cable crossover
+34,Cable Lying Fly,Chest,Middle Chest,2,Dual adjustable pulley / cable crossover
+35,Cable Middle Fly,Chest,Middle Chest,2,Dual adjustable pulley / cable crossover
+556,Cable Seated Chest Fly,Chest,Middle Chest,2,Dual adjustable pulley / cable crossover
+552,Cable Seated Chest Press,Chest,Middle Chest,2,Single high/low pulley
+560,Cable Standing Alternate Low Fly,Chest,Outer Chest,5,Dual adjustable pulley / cable crossover
+52,Cable Standing Chest Press,Chest,Middle Chest,2,Single high/low pulley
+36,Cable Standing Fly,Chest,Middle Chest,2,Dual adjustable pulley / cable crossover
+332,Cable Standing Single-Arm Fly,Chest,Middle Chest,2,Cable attachment: single handle | Dual adjustable pulley / cable crossover
+48,Cable Standing Up Straight Crossovers,Chest,Middle Chest,2,Dual adjustable pulley / cable crossover
+37,Chest Dip,Chest,Lower Chest,3,Dip bars / parallel bars
+442,Dumbbell Alternate Bench Press,Chest,Middle Chest,2,Adjustable bench | Dumbbells
+429,Dumbbell Around Pullover,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+327,Dumbbell Bench Press,Chest,Middle Chest,2,Adjustable bench | Dumbbells
+38,Dumbbell Decline Bench Press,Chest,Lower Chest,3,Adjustable bench | Dumbbells
+39,Dumbbell Decline Fly,Chest,Lower Chest,3,Adjustable bench | Dumbbells
+40,Dumbbell Decline Hammer Press,Chest,Lower Chest,3,Adjustable bench | Dumbbells
+41,Dumbbell Decline Twist Fly,Chest,Lower Chest,3,Adjustable bench | Dumbbells
+559,Dumbbell Flat Around the World,Chest,Middle Chest,2,Dumbbells
+42,Dumbbell Fly,Chest,Middle Chest,2,Dumbbells
+441,Dumbbell Incline Alternate Press,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+558,Dumbbell Incline Around the World,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+431,Dumbbell Incline Bench Press,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+432,Dumbbell Incline Breeding,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+43,Dumbbell Incline Fly,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+329,Dumbbell Incline Hammer Press,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+443,Dumbbell Incline Low Fly,Chest,Lower Chest,3,Adjustable bench | Dumbbells
+438,Dumbbell Incline One Arm Fly,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+434,Dumbbell Incline Palm in Press,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+545,Dumbbell Incline reverse grip bench press,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+444,Dumbbell Incline Twist Press,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+435,Dumbbell Incline Twisted Flies,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+557,Dumbbell Low Fly,Chest,Upper Chest,1,Dumbbells
+539,Dumbbell Lying Hammer Press,Chest,Middle Chest,2,Dumbbells
+330,Dumbbell Pullover,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+551,Dumbbell Reverse Bench Press,Chest,Outer Chest,5,Adjustable bench | Dumbbells
+53,Dumbbell Squeeze Bench Press,Chest,Inner Chest,4,Adjustable bench | Dumbbells
+555,Dumbbell Squeeze Bench Press,Chest,Inner Chest,4,Adjustable bench | Dumbbells
+440,Dumbbell Straight Arm Pullover,Chest,Upper Chest,1,Adjustable bench | Dumbbells
+55,Dumbbell Twisted Fly,Chest,Middle Chest,2,Dumbbells
+562,Incline Push Up,Chest,Middle Chest | Outer Chest,2 | 5,Adjustable bench | Bodyweight / floor only
+44,Lever Chest Press,Chest,Middle Chest,2,Chest press machine (flat)
+540,Lever Chest Press,Chest,Middle Chest,2,Chest press machine (flat)
+550,Lever Chest Press,Chest,Middle Chest,2,Chest press machine (flat)
+51,Lever Crossovers,Chest,Middle Chest,2,Crossovers Lever
+549,Lever Decline Chest Press,Chest,Lower Chest,3,Adjustable bench | Chest press machine (decline)
+553,Lever Decline Chest Press,Chest,Lower Chest,3,Adjustable bench | Chest press machine (decline)
+50,Lever Incline Chest Press,Chest,Upper Chest,1,Adjustable bench | Chest press machine (incline)
+47,Lever Incline Hammer Chest Press,Chest,Upper Chest,1,Adjustable bench | Chest press machine (incline)
+436,Lever Lying Chest Press,Chest,Middle Chest,2,Chest press machine (flat)
+563,Lever One Arm Side Chest Press,Chest,Middle Chest | Inner Chest,2 | 4,Chest press machine (flat)
+544,Lever Parallel Chest Press,Chest,Middle Chest,2,Chest press machine (flat)
+46,Lever Pec Deck Fly,Chest,Inner Chest,4,Pec-deck / chest fly machine
+633,Lever Pullover,Chest,Lower Chest,3,Pullover machine
+45,Lever Seated Fly,Chest,Inner Chest,4,Pec-deck / chest fly machine
+49,Leverage Incline Chest Press,Chest,Upper Chest,1,Adjustable bench | Chest press machine (incline)
+541,Smith Decline Bench Press,Chest,Lower Chest,3,Adjustable bench | Smith machine
+542,Smith Decline Reverse grip Press,Chest,Lower Chest,3,Adjustable bench | Smith machine
+554,Smith Hex Press,Chest,Inner Chest,4,Smith machine
+543,Smith Incline Bench Press,Chest,Upper Chest,1,Adjustable bench | Smith machine
+261,Cable Kneeling Crunch,Core,Abs,23,Single high/low pulley
+262,Decline Crunch,Core,Abs,23,Ab bench | Adjustable bench
+272,Decline Leg Hip Raise,Core,Abs,23,Ab bench | Adjustable bench
+263,Decline Sit up,Core,Abs,23,Ab bench | Adjustable bench
+264,Dumbbell Side Bend,Core,Obliques,24,Dumbbells
+273,Dumbbell Side Bridge with Bent Leg,Core,Obliques,24,Dumbbells
+265,Hanging Straight Leg Raise,Core,Abs,23,Pull-up bar
+269,Incline Twisting Sit up,Core,Abs | Obliques,23 | 24,Ab bench | Adjustable bench
+266,Lever Seated Crunch,Core,Abs,23,Abdominal crunch machine
+271,Lever Seated Crunch,Core,Abs,23,Abdominal crunch machine
+274,Plank on Hands,Core,Abs | Obliques,23 | 24,Bodyweight / floor only
+267,Seated Leg Raise,Core,Abs,23,Adjustable bench
+268,Vertical Leg Raise,Core,Abs,23,Captain’s chair / VKR
+270,Weighted Crunch,Core,Abs,23,Abdominal crunch machine
+59,Barbell Palms Down Wrist Curl Over A Bench,Forearms,Rear,22,Adjustable bench | Barbell
+60,Barbell Palms Up Wrist Curl Over A Bench,Forearms,Front,21,Adjustable bench | Barbell
+65,Barbell Reverse Preacher Curl,Forearms,Rear,22,Barbell | Preacher curl bench
+57,Barbell Standing Back Wrist Curl,Forearms,Front,21,Adjustable bench | Barbell
+68,Cable Hammer Curl - Rope,Forearms,Rear,22,Cable attachment: rope | Single high/low pulley
+405,Cable Reverse One Arm Curl,Forearms,Rear,22,Cable attachment: single handle | Single high/low pulley
+407,Dumbbell Alternate Hammer Preacher Curl,Forearms,Rear,22,Dumbbells | Preacher curl bench
+58,Dumbbell Over Bench Wrist Curl,Forearms,Rear,22,Adjustable bench | Dumbbells
+495,Barbell Bench Front Squat,Legs,Quads | Glutes,11 | 13,Barbell | Squat rack / stands
+496,Barbell Bench Squat,Legs,Quads | Glutes,11 | 13,Barbell | Squat rack / stands
+144,Barbell Curtsey Lunge,Legs,Quads | Glutes,11 | 13,Barbell
+511,Barbell Decline Bench Lunge,Legs,Quads,11,Adjustable bench | Barbell
+522,Barbell Elevated Heel Squat,Legs,Glutes | Quads,13 | 11,Barbell | Squat rack / stands
+139,Barbell Front Rack Lunge,Legs,Quads,11,Barbell
+109,Barbell Front Squat,Legs,Quads,11,Barbell | Squat rack / stands
+110,Barbell Full Squat,Legs,Quads,11,Barbell | Squat rack / stands
+142,Barbell Glute Bridge Two Legs on Bench,Legs,Glutes | Hamstrings,13 | 12,Barbell | Bench/box for hip thrusts
+111,Barbell Good Morning,Legs,Hamstrings,12,Barbell | Squat rack / stands
+497,Barbell Hack Squat,Legs,Quads,11,Barbell | Squat rack / stands
+126,Barbell Hip Thrust,Legs,Glutes,13,Barbell | Bench/box for hip thrusts
+112,Barbell Jefferson Squat,Legs,Quads,11,Barbell | Squat rack / stands
+127,Barbell Lateral Lunge,Legs,Quads,11,Barbell
+530,Barbell Low Split Squat,Legs,Quads,11,Barbell | Squat rack / stands
+113,Barbell Lunge,Legs,Quads,11,Barbell
+498,Barbell One Leg Squat,Legs,Quads | Glutes,11 | 13,Barbell | Squat rack / stands
+114,Barbell Rear Lunge,Legs,Quads,11,Barbell
+499,Barbell Seated Good Morning,Legs,Hamstrings | Glutes,12 | 13,Barbell | Squat rack / stands
+382,Barbell Straight Leg Deadlift (RDL),Legs,Hamstrings,12,Barbell
+115,Barbell Sumo Deadlift,Legs,Hamstrings | Glutes,12 | 13,Barbell
+116,Barbell Wide Squat,Legs,Quads,11,Barbell | Squat rack / stands
+141,Bodyweight Pulse Squat,Legs,Quads,11,Bodyweight / floor only
+500,Cable Deadlift,Legs,Glutes | Hamstrings,13 | 12,Single high/low pulley
+138,Cable Front Squat,Legs,Quads,11,Single high/low pulley
+501,Cable Pull Through,Legs,Glutes | Hamstrings,13 | 12,Single high/low pulley
+502,Cable Standing Hip Extension,Legs,Glutes,13,Single high/low pulley
+503,Dumbbell Deadlift,Legs,Glutes | Hamstrings,13 | 12,Dumbbells
+525,Dumbbell Deadlift (neutral grip),Legs,Glutes | Hamstrings,13 | 12,Dumbbells
+143,Dumbbell Gobelt Curtsey Lunge,Legs,Quads | Glutes,11 | 13,Dumbbells
+521,Dumbbell Goblet Box Squat,Legs,Glutes | Quads,13 | 11,Dumbbells
+526,Dumbbell Goblet Split Squat,Legs,Quads,11,Dumbbells
+512,Dumbbell Goblet Squat,Legs,Glutes | Quads,13 | 11,Dumbbells
+117,Dumbbell Rear Lunge,Legs,Quads | Glutes,11 | 13,Dumbbells
+534,Dumbbell Reverse Lunge from Deficit,Legs,Quads,11,Dumbbells
+140,Dumbbell Side Lunge,Legs,Quads,11,Dumbbells
+524,Dumbbell Single Leg Glute Bridge,Legs,Glutes | Hamstrings,13 | 12,Dumbbells | Bench/box for hip thrusts
+504,Dumbbell Single Leg Split Squat,Legs,Glutes | Quads,13 | 11,Dumbbells
+136,Dumbbell Split Squat,Legs,Quads,11,Dumbbells
+128,Dumbbell Squat,Legs,Quads,11,Dumbbells
+527,Dumbbell Sumo Squat,Legs,Quads | Inner Thigh,11 | 25,Dumbbells
+129,Dumbbell Walking Lunges,Legs,Quads,11,Dumbbells
+130,Dumbbell Wall Squat,Legs,Quads,11,Dumbbells
+519,Glute Bridge Two Legs on Bench,Legs,Glutes,13,Bench/box for hip thrusts
+118,Hanging Leg Raise,Legs,Quads,11,Pull-up bar
+513,Hyperextension,Legs,Glutes | Hamstrings,13 | 12,Roman chair / hyperextension bench
+518,Kettlebell Deadlift,Legs,Glutes | Hamstrings,13 | 12,Kettlebells
+146,Landmine Front Squat,Legs,Quads,11,Barbell | Landmine base
+148,Landmine Hack Squat,Legs,Quads | Glutes,11 | 13,Barbell | Landmine base
+145,Landmine Rear Lunge,Legs,Quads,11,Barbell | Landmine base
+137,Landmine Squat and Press,Legs,Quads,11,Barbell | Landmine base
+125,Leg Press,Legs,Quads,11,Leg Press Machine
+516,Lever Alternate Leg Press,Legs,Quads,11,Leg press (45° sled)
+517,Lever Belt Squat,Legs,Quads,11,Belt squat machine
+119,Lever Deadlift - plate loaded,Legs,Quads | Glutes,11 | 13,Deadlift machine (plate-loaded)
+531,Lever Glute Press,Legs,Glutes,13,Glute press / standing hip extension machine
+529,Lever Hack Squat,Legs,Quads,11,Hack squat machine
+515,Lever Hip Extension,Legs,Glutes,13,Hip Extension Lever
+120,Lever Kneeling Leg Curl - plate loaded,Legs,Hamstrings,12,Leg curl machine (kneeling)
+121,Lever Leg Extension,Legs,Quads,11,Leg extension machine
+122,Lever Lying Leg Curl,Legs,Hamstrings,12,Leg curl machine (lying)
+134,Lever Lying Single Leg Curl,Legs,Hamstrings,12,Leg curl machine (lying)
+131,Lever One Leg Extension,Legs,Quads,11,Leg extension machine
+317,Lever Seated Calf Raise,Legs,Calves,14,Seated calf raise machine
+505,Lever Seated Hip Abduction,Legs,Inner Thigh,25,Hip abduction machine
+514,Lever Seated Hip Abduction,Legs,Inner Thigh,25,Hip abduction machine
+123,Lever Seated Hip Adduction,Legs,Inner Thigh,25,Hip adduction machine
+124,Lever Seated Leg Curl,Legs,Hamstrings,12,Leg curl machine (seated)
+133,Lever Seated One Leg Curl,Legs,Hamstrings,12,Leg curl machine (seated)
+507,Lever Side Hip Abduction,Legs,Glutes,13,Hip abduction machine
+508,Lever Side Hip Adduction,Legs,Inner Thigh,25,Hip adduction machine
+506,Lever Standing Hip Extension,Legs,Glutes,13,Standing hip extension machine
+509,Lever Standing Leg Raise,Legs,Inner Thigh | Quads,25 | 11,Standing Leg Raise Lever
+510,Lever Standing Rear Kick,Legs,Glutes,13,Standing hip extension machine
+532,Resistance Band Lateral Walk,Legs,Inner Thigh | Quads,25 | 11,Resistance Bend
+533,Resistance Band Seated Hip Abduction,Legs,Inner Thigh | Glutes,25 | 13,Resistance Bend
+523,Resistance Band Shuttle,Legs,Glutes | Quads | Inner Thigh,13 | 11 | 25,Resistance Bend
+316,Sled Calf Press On Leg Press,Legs,Calves,14,Leg press (45° sled)
+314,Sled Forward Angled Calf Raise,Legs,Calves,14,Leg press (45° sled)
+135,Sled Full Hack Squat,Legs,Quads,11,Hack squat machine
+132,Sled Reverse Hack Squat,Legs,Quads,11,Reverse hack squat (sled)
+147,Sled Vertical Leg Press,Legs,Quads,11,Vertical leg press
+315,Smith Calf Raise,Legs,Calves,14,Smith machine
+528,Trap Bar Squat,Legs,Quads | Glutes,11 | 13,Trap/hex bar
+177,Barbell Front Raise,Shoulders,Front,18,Barbell
+212,Barbell Incline Lying Rear Delt Raise,Shoulders,Rear,20,Adjustable bench | Barbell
+178,Barbell Rear Delt Raise,Shoulders,Rear,20,Barbell
+179,Barbell Seated Behind Head Military Press,Shoulders,Front,18,Barbell | Squat rack / stands
+180,Barbell Seated Overhead Press,Shoulders,Front,18,Barbell | Squat rack / stands
+220,Barbell Shoulder Grip Upright Row,Shoulders,Middle,19,Barbell
+204,Barbell Standing Close Grip Military Press,Shoulders,Front,18,Barbell | Squat rack / stands
+219,Barbell Standing Shoulders Press,Shoulders,Front,18,Barbell | Squat rack / stands
+181,Cable Alternate Shoulder Press,Shoulders,Front,18,Single high/low pulley
+214,Cable Bent Over One Arm Lateral Raise,Shoulders,Middle,19,Cable attachment: single handle | Single high/low pulley
+182,Cable Cross over Revers Fly,Shoulders,Rear,20,Dual adjustable pulley / cable crossover
+183,Cable Front Raise,Shoulders,Front,18,Single high/low pulley
+184,Cable Front Shoulder Raise,Shoulders,Front,18,Single high/low pulley
+215,Cable Incline Cross Rear Fly,Shoulders,Rear,20,Adjustable bench | Dual adjustable pulley / cable crossover
+185,Cable Lateral Raise,Shoulders,Middle,19,Single high/low pulley
+213,Cable Leaning Lateral Raise,Shoulders,Middle,19,Single high/low pulley
+186,Cable One Arm Lateral Raise,Shoulders,Middle,19,Cable attachment: single handle | Single high/low pulley
+251,Cable Rear Delt Row,Shoulders,Rear,20,Single high/low pulley
+253,Cable Seated Rear Delt Fly - Chest Support,Shoulders,Rear,20,Chest-supported row bench | Dual adjustable pulley / cable crossover
+187,Cable Seated Rear Lateral Raise,Shoulders,Rear,20,Single high/low pulley
+222,Cable Standing Face Pull - with rope,Shoulders,Rear,20,Cable attachment: rope | Single high/low pulley
+188,Cable Supine Reverse Fly,Shoulders,Rear,20,Dual adjustable pulley / cable crossover
+189,Cable Upright Row,Shoulders,Middle,19,Single high/low pulley
+206,Dumbbell Arnold Press,Shoulders,Front,18,Dumbbells
+190,Dumbbell Bench Seated Press,Shoulders,Front,18,Adjustable bench | Dumbbells
+221,Dumbbell Bent Arm Lateral Raise,Shoulders,Middle,19,Dumbbells
+211,Dumbbell Bent Over Alternate Rear Delt Fly,Shoulders,Rear,20,Dumbbells
+223,Dumbbell Bent Over Face Pull,Shoulders,Rear,20,Dumbbells
+191,Dumbbell Front Raise,Shoulders,Front,18,Dumbbells
+192,Dumbbell Full Can Lateral Raise,Shoulders,Middle,19,Dumbbells
+580,Dumbbell Incline Around the World,Shoulders,Front,18,Adjustable bench | Dumbbells
+218,Dumbbell Incline Shoulders Press,Shoulders,Front,18,Adjustable bench | Dumbbells
+210,Dumbbell Incline T Raise,Shoulders,Rear,20,Adjustable bench | Dumbbells
+193,Dumbbell Lateral Raise,Shoulders,Middle,19,Dumbbells
+194,Dumbbell Raise,Shoulders,Middle,19,Dumbbells
+236,Dumbbell Rear Fly,Shoulders,Rear,20,Dumbbells
+238,Dumbbell Rear Lateral Raise,Shoulders,Rear,20,Dumbbells
+195,Dumbbell Seated Alternate Press,Shoulders,Front,18,Dumbbells
+196,Dumbbell Shrug,Shoulders,Rear,20,Dumbbells
+216,Dumbbell Single Arm Underhand Front Raise,Shoulders,Front,18,Dumbbells
+197,Dumbbell W Press,Shoulders,Middle,19,Dumbbells
+205,Lever Cable Shoulder Press,Shoulders,Front,18,Shoulder press machine | Single high/low pulley
+634,Lever Gripless Shrug,Shoulders,Rear,20,Shrug machine
+209,Lever Lateral Raise,Shoulders,Middle,19,Lateral raise machine
+198,Lever Military Press,Shoulders,Front,18,Shoulder press machine
+208,Lever Seated Hammer Grip Shoulder Press,Shoulders,Front,18,Shoulder press machine
+199,Lever Seated Reverse Fly,Shoulders,Rear,20,Seated Reverse Fly Lever
+202,Lever Shoulder Press,Shoulders,Front,18,Shoulder press machine
+207,Lever Shoulder Press,Shoulders,Front,18,Shoulder press machine
+635,Lever Shrug,Shoulders,Rear,20,Shrug machine
+636,Lever Shrug,Shoulders,Rear,20,Shrug machine
+203,Push Press Shoulders,Shoulders,Front,18,Barbell
+200,Smith Seated Shoulder Press,Shoulders,Front,18,Smith machine
+201,Weighted Round Arm,Shoulders,Front,18,Weight plates
+149,Barbell Close Grip Bench,Triceps,Medial Head,8,Barbell
+150,Barbell Decline Close Grip To Skull,Triceps,Long Head,10,Adjustable bench | Barbell
+151,Barbell Incline Reverse grip Press,Triceps,Long Head,10,Adjustable bench | Barbell
+172,Barbell Incline Triceps Extension Skull Crusher,Triceps,Long Head,10,Adjustable bench | Barbell
+152,Barbell Lying Triceps Extension,Triceps,Long Head,10,Barbell
+164,Bench Dip on Floor,Triceps,Medial Head,8,Adjustable bench
+153,Cable Alternate Triceps Extension,Triceps,Lateral Head,9,Single high/low pulley
+154,Cable Concentration Extension - on knee,Triceps,Lateral Head,9,Single high/low pulley
+167,Cable High Pulley Overhead Triceps Extension,Triceps,Long Head,10,Single high/low pulley
+174,Cable High Triceps Extension,Triceps,Long Head,10,Single high/low pulley
+155,Cable Incline Triceps Extension,Triceps,Long Head,10,Adjustable bench | Single high/low pulley
+169,Cable Kneeling Triceps Extension,Triceps,Long Head,10,Single high/low pulley
+173,Cable Neutral Grip Kickback,Triceps,Lateral Head,9,Single high/low pulley
+165,Cable One Arm Side Triceps Pushdown,Triceps,Lateral Head,9,Cable attachment: single handle | Single high/low pulley
+156,Cable Pushdown - rope attachment,Triceps,Lateral Head,9,Cable attachment: rope | Single high/low pulley
+157,Cable Rear Drive,Triceps,Medial Head,8,Single high/low pulley
+158,Cable Reverse grip Pushdown,Triceps,Medial Head,8,Single high/low pulley
+423,Cable Single Arm Triceps Pushdown (Rope Attachment),Triceps,Lateral Head,9,Cable attachment: rope | Cable attachment: single handle | Single high/low pulley
+425,Cable Standing Crossover Overhead Triceps Extension,Triceps,Long Head,10,Dual adjustable pulley / cable crossover
+171,Cable Standing High Cross Triceps Extension,Triceps,Lateral Head,9,Single high/low pulley
+416,Cable Standing One Arm Triceps Extension,Triceps,Lateral Head,9,Cable attachment: single handle | Single high/low pulley
+168,Dumbbell Close Grip Press,Triceps,Medial Head,8,Dumbbells
+424,Dumbbell Incline Squeeze Press,Triceps,Medial Head,8,Adjustable bench | Dumbbells
+159,Dumbbell Lying Extension - across face,Triceps,Long Head,10,Dumbbells
+418,Dumbbell Lying One Arm Supinated Triceps Extension,Triceps,Medial Head,8,Dumbbells
+160,Dumbbell One Arm Triceps Extension,Triceps,Lateral Head,9,Dumbbells
+421,Dumbbell Palm In Incline Bench Press,Triceps,Lateral Head,9,Adjustable bench | Dumbbells
+426,Dumbbell Seated Alternate Overhead Triceps Extension,Triceps,Long Head,10,Dumbbells
+161,Dumbbell Seated Bench Extension,Triceps,Long Head,10,Dumbbells
+427,Dumbbell Standing French Press,Triceps,Long Head,10,Dumbbells
+162,Dumbbell Standing Kickback,Triceps,Lateral Head,9,Dumbbells
+419,EZ Barbell Seated Triceps Extension,Triceps,Lateral Head,9,EZ-curl bar
+170,Lever Triceps Dip,Triceps,Medial Head,8,Dip bars / parallel bars
+420,Smith Close Grip Bench Press,Triceps,Lateral Head,9,Adjustable bench | Smith machine
+422,Smith Machine Incline Tricep Extension,Triceps,Long Head,10,Adjustable bench | Smith machine
+163,Triceps Dip,Triceps,Medial Head,8,Dip bars / parallel bars
+175,Weighted Incline Svend Press,Triceps,Medial Head,8,Adjustable bench
+176,Weighted Incline Svend Press - Low,Triceps,Medial Head,8,Adjustable bench

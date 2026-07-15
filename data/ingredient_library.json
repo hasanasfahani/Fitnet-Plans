@@ -1,0 +1,2650 @@
+[
+  {
+    "ingredient_id": "egg_whole_cooked",
+    "name_en": "Cooked eggs",
+    "aliases": [
+      "eggs",
+      "boiled eggs"
+    ],
+    "category": "Protein",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 155,
+      "protein_g": 13,
+      "carbs_g": 1.1,
+      "fat_g": 11,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "egg"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Protein",
+    "household_unit": "egg",
+    "household_unit_grams": 50,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "egg_white_cooked",
+    "name_en": "Cooked egg whites",
+    "aliases": [
+      "egg whites"
+    ],
+    "category": "Protein",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 52,
+      "protein_g": 11,
+      "carbs_g": 0.7,
+      "fat_g": 0.2,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "egg"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Protein",
+    "household_unit": "egg white",
+    "household_unit_grams": 33,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "chicken_breast_cooked",
+    "name_en": "Halal chicken breast",
+    "aliases": [
+      "chicken breast",
+      "cooked chicken breast"
+    ],
+    "category": "Protein",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 165,
+      "protein_g": 31,
+      "carbs_g": 0,
+      "fat_g": 3.6,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "requires_halal_certified_source",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1.33,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Protein",
+    "household_unit": "fillet",
+    "household_unit_grams": 170,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "chicken_thigh_cooked",
+    "name_en": "Halal chicken thigh",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 209,
+      "protein_g": 26,
+      "carbs_g": 0,
+      "fat_g": 10.9,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "requires_halal_certified_source",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1.33,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Protein",
+    "household_unit": "fillet",
+    "household_unit_grams": 170,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "turkey_breast_cooked",
+    "name_en": "Halal turkey breast",
+    "aliases": [
+      "turkey slices",
+      "turkey breast"
+    ],
+    "category": "Protein",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 147,
+      "protein_g": 30,
+      "carbs_g": 0,
+      "fat_g": 2.1,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "requires_halal_certified_source",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1.33,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Protein",
+    "household_unit": "fillet",
+    "household_unit_grams": 170,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "beef_lean_cooked",
+    "name_en": "Halal lean beef",
+    "aliases": [
+      "lean beef steak",
+      "lean beef strips",
+      "lean beef mince",
+      "lean beef kofta"
+    ],
+    "category": "Protein",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 217,
+      "protein_g": 27,
+      "carbs_g": 0,
+      "fat_g": 11.8,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "requires_halal_certified_source",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1.33,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Protein",
+    "household_unit": "fillet",
+    "household_unit_grams": 170,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "lamb_lean_cooked",
+    "name_en": "Halal lean lamb",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 206,
+      "protein_g": 28,
+      "carbs_g": 0,
+      "fat_g": 9.2,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "requires_halal_certified_source",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1.33,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Protein",
+    "household_unit": "fillet",
+    "household_unit_grams": 170,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "salmon_cooked",
+    "name_en": "Cooked salmon",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 206,
+      "protein_g": 22,
+      "carbs_g": 0,
+      "fat_g": 12,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "fish"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1.25,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Protein",
+    "household_unit": "fillet",
+    "household_unit_grams": 170,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "smoked_salmon",
+    "name_en": "Smoked salmon",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "ready_to_eat",
+    "nutrition_per_100g": {
+      "calories": 117,
+      "protein_g": 18,
+      "carbs_g": 0,
+      "fat_g": 4.3,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 670
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "fish"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "high",
+    "purchase_state": "ready_to_eat",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Protein",
+    "household_unit": "slice",
+    "household_unit_grams": 30,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "tuna_water_drained",
+    "name_en": "Tuna in water",
+    "aliases": [
+      "tuna in water"
+    ],
+    "category": "Protein",
+    "default_state": "drained",
+    "nutrition_per_100g": {
+      "calories": 116,
+      "protein_g": 26,
+      "carbs_g": 0,
+      "fat_g": 0.8,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "fish"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "moderate",
+    "purchase_state": "packaged",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Protein",
+    "household_unit": "can",
+    "household_unit_grams": 130,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "white_fish_cooked",
+    "name_en": "Cooked white fish",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 128,
+      "protein_g": 26,
+      "carbs_g": 0,
+      "fat_g": 2.7,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "fish"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1.25,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Protein",
+    "household_unit": "fillet",
+    "household_unit_grams": 170,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "shrimp_cooked",
+    "name_en": "Cooked shrimp",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 99,
+      "protein_g": 24,
+      "carbs_g": 0.2,
+      "fat_g": 0.3,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "shellfish"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1.2,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Protein",
+    "household_unit": "cup",
+    "household_unit_grams": 150,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "tofu_firm",
+    "name_en": "Firm tofu",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "ready_to_cook",
+    "nutrition_per_100g": {
+      "calories": 144,
+      "protein_g": 17,
+      "carbs_g": 2.8,
+      "fat_g": 8.7,
+      "fiber_g": 2.3,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "soy"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [
+      "vegetarian"
+    ],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "ready_to_cook",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Protein",
+    "household_unit": "block",
+    "household_unit_grams": 300,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "lentils_cooked",
+    "name_en": "Cooked lentils",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 116,
+      "protein_g": 9,
+      "carbs_g": 20,
+      "fat_g": 0.4,
+      "fiber_g": 7.9,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [
+      "vegetarian"
+    ],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 0.4,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Carbohydrates",
+    "household_unit": "cup",
+    "household_unit_grams": 198,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "chickpeas_cooked",
+    "name_en": "Cooked chickpeas",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 164,
+      "protein_g": 8.9,
+      "carbs_g": 27.4,
+      "fat_g": 2.6,
+      "fiber_g": 7.6,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [
+      "vegetarian"
+    ],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 0.4,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Carbohydrates",
+    "household_unit": "cup",
+    "household_unit_grams": 164,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "greek_yogurt_plain",
+    "name_en": "Plain Greek yogurt",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "ready_to_eat",
+    "nutrition_per_100g": {
+      "calories": 73,
+      "protein_g": 10,
+      "carbs_g": 3.9,
+      "fat_g": 1.9,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "dairy"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "ready_to_eat",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Dairy",
+    "household_unit": "cup",
+    "household_unit_grams": 240,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "cottage_cheese",
+    "name_en": "Cottage cheese",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "ready_to_eat",
+    "nutrition_per_100g": {
+      "calories": 98,
+      "protein_g": 11.1,
+      "carbs_g": 3.4,
+      "fat_g": 4.3,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "dairy"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "moderate",
+    "purchase_state": "ready_to_eat",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Dairy",
+    "household_unit": "cup",
+    "household_unit_grams": 240,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "labneh",
+    "name_en": "Labneh",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "ready_to_eat",
+    "nutrition_per_100g": {
+      "calories": 152,
+      "protein_g": 9,
+      "carbs_g": 6,
+      "fat_g": 10,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "dairy"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "moderate",
+    "purchase_state": "ready_to_eat",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Dairy",
+    "household_unit": "tablespoon",
+    "household_unit_grams": 15,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "halloumi",
+    "name_en": "Halal halloumi",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "ready_to_cook",
+    "nutrition_per_100g": {
+      "calories": 321,
+      "protein_g": 21,
+      "carbs_g": 2.2,
+      "fat_g": 25,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "dairy"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "requires_halal_certified_source",
+    "sodium_risk": "high",
+    "purchase_state": "ready_to_cook",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Dairy",
+    "household_unit": "slice",
+    "household_unit_grams": 30,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "whey_halal",
+    "name_en": "Halal whey protein",
+    "aliases": [],
+    "category": "Protein",
+    "default_state": "powder",
+    "nutrition_per_100g": {
+      "calories": 375,
+      "protein_g": 75,
+      "carbs_g": 9,
+      "fat_g": 6,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "dairy"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "requires_halal_certified_source",
+    "sodium_risk": "low",
+    "purchase_state": "powder",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Protein",
+    "household_unit": "scoop",
+    "household_unit_grams": 32,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "rice_brown_cooked",
+    "name_en": "Cooked brown rice",
+    "aliases": [],
+    "category": "Carbohydrates",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 123,
+      "protein_g": 2.7,
+      "carbs_g": 25.6,
+      "fat_g": 1,
+      "fiber_g": 1.6,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 0.35,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Carbohydrates",
+    "household_unit": "cup",
+    "household_unit_grams": 195,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "rice_basmati_cooked",
+    "name_en": "Cooked basmati rice",
+    "aliases": [
+      "cooked rice"
+    ],
+    "category": "Carbohydrates",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 130,
+      "protein_g": 2.7,
+      "carbs_g": 28,
+      "fat_g": 0.3,
+      "fiber_g": 0.4,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 0.35,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Carbohydrates",
+    "household_unit": "cup",
+    "household_unit_grams": 186,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "quinoa_cooked",
+    "name_en": "Cooked quinoa",
+    "aliases": [],
+    "category": "Carbohydrates",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 120,
+      "protein_g": 4.4,
+      "carbs_g": 21.3,
+      "fat_g": 1.9,
+      "fiber_g": 2.8,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 0.33,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Carbohydrates",
+    "household_unit": "cup",
+    "household_unit_grams": 185,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "bulgur_cooked",
+    "name_en": "Cooked bulgur",
+    "aliases": [],
+    "category": "Carbohydrates",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 83,
+      "protein_g": 3.1,
+      "carbs_g": 18.6,
+      "fat_g": 0.2,
+      "fiber_g": 4.5,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "gluten"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 0.34,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Carbohydrates",
+    "household_unit": "cup",
+    "household_unit_grams": 180,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "couscous_cooked",
+    "name_en": "Cooked couscous",
+    "aliases": [],
+    "category": "Carbohydrates",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 112,
+      "protein_g": 3.8,
+      "carbs_g": 23.2,
+      "fat_g": 0.2,
+      "fiber_g": 1.4,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "gluten"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 0.4,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Carbohydrates",
+    "household_unit": "cup",
+    "household_unit_grams": 180,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "pasta_wholewheat_cooked",
+    "name_en": "Cooked whole-wheat pasta",
+    "aliases": [],
+    "category": "Carbohydrates",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 149,
+      "protein_g": 6,
+      "carbs_g": 30,
+      "fat_g": 1.7,
+      "fiber_g": 3.9,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "gluten"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 0.45,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Carbohydrates",
+    "household_unit": "cup",
+    "household_unit_grams": 140,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "potato_roasted",
+    "name_en": "Roasted potatoes",
+    "aliases": [],
+    "category": "Carbohydrates",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 149,
+      "protein_g": 2.5,
+      "carbs_g": 25,
+      "fat_g": 4.8,
+      "fiber_g": 2.2,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1.1,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Carbohydrates",
+    "household_unit": "cup",
+    "household_unit_grams": 150,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "sweet_potato_cooked",
+    "name_en": "Cooked sweet potato",
+    "aliases": [],
+    "category": "Carbohydrates",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 90,
+      "protein_g": 2,
+      "carbs_g": 20.7,
+      "fat_g": 0.2,
+      "fiber_g": 3.3,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1.1,
+    "purchase_conversion_reviewed": true,
+    "grocery_category": "Carbohydrates",
+    "household_unit": "medium potato",
+    "household_unit_grams": 180,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "corn_tortilla",
+    "name_en": "Corn tortilla",
+    "aliases": [],
+    "category": "Carbohydrates",
+    "default_state": "ready_to_eat",
+    "nutrition_per_100g": {
+      "calories": 218,
+      "protein_g": 5.7,
+      "carbs_g": 44.6,
+      "fat_g": 2.9,
+      "fiber_g": 6.3,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "ready_to_eat",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Carbohydrates",
+    "household_unit": "tortilla",
+    "household_unit_grams": 28,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "pita_wholewheat",
+    "name_en": "Whole-wheat pita",
+    "aliases": [],
+    "category": "Carbohydrates",
+    "default_state": "ready_to_eat",
+    "nutrition_per_100g": {
+      "calories": 266,
+      "protein_g": 9.8,
+      "carbs_g": 55,
+      "fat_g": 2.6,
+      "fiber_g": 7.4,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "gluten"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "ready_to_eat",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Carbohydrates",
+    "household_unit": "pita",
+    "household_unit_grams": 60,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "cucumber",
+    "name_en": "Cucumber",
+    "aliases": [
+      "cucumber rounds",
+      "cucumber sticks"
+    ],
+    "category": "Vegetables",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 15,
+      "protein_g": 0.7,
+      "carbs_g": 3.6,
+      "fat_g": 0.1,
+      "fiber_g": 0.5,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "small cucumber",
+    "household_unit_grams": 100,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "tomato",
+    "name_en": "Tomato",
+    "aliases": [
+      "cherry tomatoes"
+    ],
+    "category": "Vegetables",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 18,
+      "protein_g": 0.9,
+      "carbs_g": 3.9,
+      "fat_g": 0.2,
+      "fiber_g": 1.2,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "medium tomato",
+    "household_unit_grams": 123,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "spinach",
+    "name_en": "Spinach",
+    "aliases": [],
+    "category": "Vegetables",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 23,
+      "protein_g": 2.9,
+      "carbs_g": 3.6,
+      "fat_g": 0.4,
+      "fiber_g": 2.2,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "cup",
+    "household_unit_grams": 30,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "lettuce",
+    "name_en": "Lettuce",
+    "aliases": [
+      "lettuce leaves",
+      "lettuce cups",
+      "romaine lettuce"
+    ],
+    "category": "Vegetables",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 15,
+      "protein_g": 1.4,
+      "carbs_g": 2.9,
+      "fat_g": 0.2,
+      "fiber_g": 1.3,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "cup",
+    "household_unit_grams": 47,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "mushrooms",
+    "name_en": "Mushrooms",
+    "aliases": [],
+    "category": "Vegetables",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 22,
+      "protein_g": 3.1,
+      "carbs_g": 3.3,
+      "fat_g": 0.3,
+      "fiber_g": 1,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "cup",
+    "household_unit_grams": 70,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "broccoli",
+    "name_en": "Broccoli",
+    "aliases": [],
+    "category": "Vegetables",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 35,
+      "protein_g": 2.4,
+      "carbs_g": 7.2,
+      "fat_g": 0.4,
+      "fiber_g": 3.3,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "cooked",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "cup",
+    "household_unit_grams": 156,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "zucchini",
+    "name_en": "Zucchini",
+    "aliases": [],
+    "category": "Vegetables",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 17,
+      "protein_g": 1.2,
+      "carbs_g": 3.1,
+      "fat_g": 0.3,
+      "fiber_g": 1,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "cooked",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "cup",
+    "household_unit_grams": 180,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "bell_pepper",
+    "name_en": "Bell pepper",
+    "aliases": [
+      "bell peppers"
+    ],
+    "category": "Vegetables",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 31,
+      "protein_g": 1,
+      "carbs_g": 6,
+      "fat_g": 0.3,
+      "fiber_g": 2.1,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "pepper",
+    "household_unit_grams": 120,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "onion",
+    "name_en": "Onion",
+    "aliases": [],
+    "category": "Vegetables",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 40,
+      "protein_g": 1.1,
+      "carbs_g": 9.3,
+      "fat_g": 0.1,
+      "fiber_g": 1.7,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "small onion",
+    "household_unit_grams": 70,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "green_beans",
+    "name_en": "Green beans",
+    "aliases": [],
+    "category": "Vegetables",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 35,
+      "protein_g": 1.9,
+      "carbs_g": 7.9,
+      "fat_g": 0.3,
+      "fiber_g": 3.2,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "cooked",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "cup",
+    "household_unit_grams": 125,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "cauliflower",
+    "name_en": "Cauliflower",
+    "aliases": [],
+    "category": "Vegetables",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 23,
+      "protein_g": 1.8,
+      "carbs_g": 4.1,
+      "fat_g": 0.5,
+      "fiber_g": 2.3,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "cooked",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "cup",
+    "household_unit_grams": 124,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "eggplant",
+    "name_en": "Eggplant",
+    "aliases": [],
+    "category": "Vegetables",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 35,
+      "protein_g": 0.8,
+      "carbs_g": 8.7,
+      "fat_g": 0.2,
+      "fiber_g": 2.5,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "cooked",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "cup",
+    "household_unit_grams": 99,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "carrot",
+    "name_en": "Carrot",
+    "aliases": [],
+    "category": "Vegetables",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 41,
+      "protein_g": 0.9,
+      "carbs_g": 9.6,
+      "fat_g": 0.2,
+      "fiber_g": 2.8,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "medium carrot",
+    "household_unit_grams": 61,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "mixed_vegetables",
+    "name_en": "Mixed vegetables",
+    "aliases": [
+      "grilled vegetables",
+      "stir-fry vegetables",
+      "zucchini and peppers"
+    ],
+    "category": "Vegetables",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 65,
+      "protein_g": 3,
+      "carbs_g": 12,
+      "fat_g": 0.5,
+      "fiber_g": 4,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "cooked",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "cup",
+    "household_unit_grams": 160,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "mixed_salad",
+    "name_en": "Mixed salad",
+    "aliases": [
+      "side salad",
+      "cucumber tomato salad",
+      "leafy greens"
+    ],
+    "category": "Vegetables",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 25,
+      "protein_g": 1.2,
+      "carbs_g": 4.5,
+      "fat_g": 0.3,
+      "fiber_g": 2,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "cup",
+    "household_unit_grams": 100,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "avocado",
+    "name_en": "Avocado",
+    "aliases": [],
+    "category": "Fats",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 160,
+      "protein_g": 2,
+      "carbs_g": 8.5,
+      "fat_g": 14.7,
+      "fiber_g": 6.7,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Fats",
+    "household_unit": "avocado",
+    "household_unit_grams": 150,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "olive_oil",
+    "name_en": "Olive oil",
+    "aliases": [],
+    "category": "Fats",
+    "default_state": "ready_to_use",
+    "nutrition_per_100g": {
+      "calories": 884,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 100,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "ready_to_use",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Fats",
+    "household_unit": "tablespoon",
+    "household_unit_grams": 14,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "almonds",
+    "name_en": "Almonds",
+    "aliases": [],
+    "category": "Fats",
+    "default_state": "ready_to_eat",
+    "nutrition_per_100g": {
+      "calories": 579,
+      "protein_g": 21.2,
+      "carbs_g": 21.6,
+      "fat_g": 49.9,
+      "fiber_g": 12.5,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "nuts"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "ready_to_eat",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Fats",
+    "household_unit": "small handful",
+    "household_unit_grams": 28,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "walnuts",
+    "name_en": "Walnuts",
+    "aliases": [],
+    "category": "Fats",
+    "default_state": "ready_to_eat",
+    "nutrition_per_100g": {
+      "calories": 654,
+      "protein_g": 15.2,
+      "carbs_g": 13.7,
+      "fat_g": 65.2,
+      "fiber_g": 6.7,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "nuts"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "ready_to_eat",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Fats",
+    "household_unit": "small handful",
+    "household_unit_grams": 28,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "tahini",
+    "name_en": "Tahini",
+    "aliases": [],
+    "category": "Fats",
+    "default_state": "ready_to_use",
+    "nutrition_per_100g": {
+      "calories": 595,
+      "protein_g": 17,
+      "carbs_g": 21,
+      "fat_g": 54,
+      "fiber_g": 9.3,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "sesame"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "ready_to_use",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Fats",
+    "household_unit": "tablespoon",
+    "household_unit_grams": 15,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "hummus",
+    "name_en": "Hummus",
+    "aliases": [],
+    "category": "Fats",
+    "default_state": "ready_to_eat",
+    "nutrition_per_100g": {
+      "calories": 166,
+      "protein_g": 7.9,
+      "carbs_g": 14.3,
+      "fat_g": 9.6,
+      "fiber_g": 6,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "sesame"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [
+      "vegetarian"
+    ],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "moderate",
+    "purchase_state": "ready_to_eat",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Fats",
+    "household_unit": "tablespoon",
+    "household_unit_grams": 15,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "tomato_sauce",
+    "name_en": "Tomato sauce",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "cooked",
+    "nutrition_per_100g": {
+      "calories": 38,
+      "protein_g": 1.4,
+      "carbs_g": 7.3,
+      "fat_g": 0.4,
+      "fiber_g": 1.5,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "moderate",
+    "purchase_state": "cooked",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "cup",
+    "household_unit_grams": 245,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "yogurt_cucumber_sauce",
+    "name_en": "Yogurt cucumber sauce",
+    "aliases": [],
+    "category": "Dairy",
+    "default_state": "ready_to_use",
+    "nutrition_per_100g": {
+      "calories": 75,
+      "protein_g": 4.5,
+      "carbs_g": 5,
+      "fat_g": 4,
+      "fiber_g": 0.3,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "dairy"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "moderate",
+    "purchase_state": "ready_to_use",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Dairy",
+    "household_unit": "tablespoon",
+    "household_unit_grams": 15,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "soy_free_stir_sauce",
+    "name_en": "Soy-free stir-fry sauce",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "ready_to_use",
+    "nutrition_per_100g": {
+      "calories": 80,
+      "protein_g": 1,
+      "carbs_g": 14,
+      "fat_g": 2,
+      "fiber_g": 0.5,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "high",
+    "purchase_state": "ready_to_use",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "tablespoon",
+    "household_unit_grams": 15,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "light_caesar_dressing",
+    "name_en": "Light Caesar dressing",
+    "aliases": [],
+    "category": "Dairy",
+    "default_state": "ready_to_use",
+    "nutrition_per_100g": {
+      "calories": 180,
+      "protein_g": 3,
+      "carbs_g": 10,
+      "fat_g": 14,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "dairy",
+      "egg"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "high",
+    "purchase_state": "ready_to_use",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Dairy",
+    "household_unit": "tablespoon",
+    "household_unit_grams": 15,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "lemon_juice",
+    "name_en": "Lemon juice",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 22,
+      "protein_g": 0.4,
+      "carbs_g": 6.9,
+      "fat_g": 0.2,
+      "fiber_g": 0.3,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "tablespoon",
+    "household_unit_grams": 15,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "zaatar",
+    "name_en": "Za'atar",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "dry",
+    "nutrition_per_100g": {
+      "calories": 250,
+      "protein_g": 10,
+      "carbs_g": 35,
+      "fat_g": 12,
+      "fiber_g": 20,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [
+      "sesame"
+    ],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "teaspoon",
+    "household_unit_grams": 3,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "herbs_spices",
+    "name_en": "Herbs and spices",
+    "aliases": [
+      "seasoning"
+    ],
+    "category": "Pantry",
+    "default_state": "dry",
+    "nutrition_per_100g": {
+      "calories": 100,
+      "protein_g": 4,
+      "carbs_g": 18,
+      "fat_g": 2,
+      "fiber_g": 8,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "teaspoon",
+    "household_unit_grams": 3,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "garlic",
+    "name_en": "Garlic",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 149,
+      "protein_g": 6.4,
+      "carbs_g": 33.1,
+      "fat_g": 0.5,
+      "fiber_g": 2.1,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "clove",
+    "household_unit_grams": 3,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "ground_cumin",
+    "name_en": "Ground cumin",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "dry",
+    "nutrition_per_100g": {
+      "calories": 375,
+      "protein_g": 17.8,
+      "carbs_g": 44.2,
+      "fat_g": 22.3,
+      "fiber_g": 10.5,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "teaspoon",
+    "household_unit_grams": 2,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "paprika",
+    "name_en": "Paprika",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "dry",
+    "nutrition_per_100g": {
+      "calories": 282,
+      "protein_g": 14.1,
+      "carbs_g": 54,
+      "fat_g": 12.9,
+      "fiber_g": 34.9,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "teaspoon",
+    "household_unit_grams": 2,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "black_pepper",
+    "name_en": "Black pepper",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "dry",
+    "nutrition_per_100g": {
+      "calories": 251,
+      "protein_g": 10.4,
+      "carbs_g": 64,
+      "fat_g": 3.3,
+      "fiber_g": 25.3,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "teaspoon",
+    "household_unit_grams": 2,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "parsley",
+    "name_en": "Fresh parsley",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 36,
+      "protein_g": 3,
+      "carbs_g": 6.3,
+      "fat_g": 0.8,
+      "fiber_g": 3.3,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "tablespoon",
+    "household_unit_grams": 4,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "mint",
+    "name_en": "Fresh mint",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 44,
+      "protein_g": 3.3,
+      "carbs_g": 8.4,
+      "fat_g": 0.7,
+      "fiber_g": 6.8,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "tablespoon",
+    "household_unit_grams": 3,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "shawarma_spice",
+    "name_en": "Shawarma spice blend",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "dry",
+    "nutrition_per_100g": {
+      "calories": 100,
+      "protein_g": 4,
+      "carbs_g": 18,
+      "fat_g": 2,
+      "fiber_g": 8,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "teaspoon",
+    "household_unit_grams": 3,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "kofta_spice",
+    "name_en": "Kofta spice blend",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "dry",
+    "nutrition_per_100g": {
+      "calories": 100,
+      "protein_g": 4,
+      "carbs_g": 18,
+      "fat_g": 2,
+      "fiber_g": 8,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "teaspoon",
+    "household_unit_grams": 3,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "kabsa_spice",
+    "name_en": "Kabsa spice blend",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "dry",
+    "nutrition_per_100g": {
+      "calories": 100,
+      "protein_g": 4,
+      "carbs_g": 18,
+      "fat_g": 2,
+      "fiber_g": 8,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "teaspoon",
+    "household_unit_grams": 3,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "fajita_spice",
+    "name_en": "Fajita spice blend",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "dry",
+    "nutrition_per_100g": {
+      "calories": 100,
+      "protein_g": 4,
+      "carbs_g": 18,
+      "fat_g": 2,
+      "fiber_g": 8,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "teaspoon",
+    "household_unit_grams": 3,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "italian_herbs",
+    "name_en": "Italian herb blend",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "dry",
+    "nutrition_per_100g": {
+      "calories": 100,
+      "protein_g": 4,
+      "carbs_g": 18,
+      "fat_g": 2,
+      "fiber_g": 8,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "teaspoon",
+    "household_unit_grams": 3,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "cumin_coriander_spice",
+    "name_en": "Cumin and coriander blend",
+    "aliases": [],
+    "category": "Pantry",
+    "default_state": "dry",
+    "nutrition_per_100g": {
+      "calories": 100,
+      "protein_g": 4,
+      "carbs_g": 18,
+      "fat_g": 2,
+      "fiber_g": 8,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dry",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Pantry",
+    "household_unit": "teaspoon",
+    "household_unit_grams": 3,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "berries",
+    "name_en": "Mixed berries",
+    "aliases": [],
+    "category": "Fruit",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 50,
+      "protein_g": 0.7,
+      "carbs_g": 12,
+      "fat_g": 0.3,
+      "fiber_g": 4,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Fruit",
+    "household_unit": "cup",
+    "household_unit_grams": 140,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "apple",
+    "name_en": "Apple",
+    "aliases": [],
+    "category": "Fruit",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 52,
+      "protein_g": 0.3,
+      "carbs_g": 13.8,
+      "fat_g": 0.2,
+      "fiber_g": 2.4,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Fruit",
+    "household_unit": "medium apple",
+    "household_unit_grams": 182,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "banana",
+    "name_en": "Banana",
+    "aliases": [],
+    "category": "Fruit",
+    "default_state": "raw",
+    "nutrition_per_100g": {
+      "calories": 89,
+      "protein_g": 1.1,
+      "carbs_g": 22.8,
+      "fat_g": 0.3,
+      "fiber_g": 2.6,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "raw",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Fruit",
+    "household_unit": "medium banana",
+    "household_unit_grams": 118,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "dates",
+    "name_en": "Dates",
+    "aliases": [],
+    "category": "Fruit",
+    "default_state": "dried",
+    "nutrition_per_100g": {
+      "calories": 282,
+      "protein_g": 2.5,
+      "carbs_g": 75,
+      "fat_g": 0.4,
+      "fiber_g": 8,
+      "sugar_g": 0,
+      "sodium_mg": 0
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "low",
+    "purchase_state": "dried",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Fruit",
+    "household_unit": "date",
+    "household_unit_grams": 8,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  },
+  {
+    "ingredient_id": "pickles",
+    "name_en": "Pickles",
+    "aliases": [],
+    "category": "Vegetables",
+    "default_state": "ready_to_eat",
+    "nutrition_per_100g": {
+      "calories": 12,
+      "protein_g": 0.5,
+      "carbs_g": 2.4,
+      "fat_g": 0.3,
+      "fiber_g": 1,
+      "sugar_g": 0,
+      "sodium_mg": 800
+    },
+    "source": {
+      "type": "fitnet_curated_reference",
+      "external_id": null,
+      "source_name": "Fitnet reviewed standard food reference"
+    },
+    "allergens": [],
+    "avoid_tags": [],
+    "diet_tags": [],
+    "halal_status": "inherently_halal",
+    "sodium_risk": "high",
+    "purchase_state": "ready_to_eat",
+    "purchase_multiplier": 1,
+    "purchase_conversion_reviewed": false,
+    "grocery_category": "Vegetables",
+    "household_unit": "spear",
+    "household_unit_grams": 35,
+    "verified_by_fitnet": true,
+    "notes": "Nutrition values use the listed preparation state."
+  }
+]

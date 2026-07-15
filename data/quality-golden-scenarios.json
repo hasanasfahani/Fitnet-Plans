@@ -1,0 +1,86 @@
+[
+  {
+    "label": "weight_loss_4_day_45_minute",
+    "goal": "Lose Weight",
+    "profile": { "gender": "Male", "birth_date": "2003-08-10", "height_cm": "170", "weight_kg": "80", "experience": "Intermediate" },
+    "workout": { "days": "4", "duration": "45 minutes", "place": "Full Equipment Gym", "split": "Auto", "focusAreas": ["Full Body"], "equipment": [], "injuries": ["None"] },
+    "nutrition": { "meals": "3", "dietStyle": "High Protein", "restrictions": ["None"], "allergies": ["None"], "cookingTime": "Moderate", "budget": "Medium", "preferences": ["Chicken", "Rice"] }
+  },
+  {
+    "label": "muscle_gain_4_day_60_minute",
+    "goal": "Build Muscle",
+    "profile": { "gender": "Male", "birth_date": "2000-04-12", "height_cm": "180", "weight_kg": "82", "experience": "Intermediate" },
+    "workout": { "days": "4", "duration": "60 minutes", "place": "Full Equipment Gym", "split": "Auto", "focusAreas": ["Full Body"], "equipment": [], "injuries": ["None"] },
+    "nutrition": { "meals": "4", "dietStyle": "Balanced", "restrictions": ["None"], "allergies": ["None"], "cookingTime": "Flexible", "budget": "Flexible", "preferences": ["Beef", "Salads"] }
+  },
+  {
+    "label": "general_fitness_3_day_home",
+    "goal": "Improve Fitness",
+    "profile": { "gender": "Female", "birth_date": "1997-01-20", "height_cm": "165", "weight_kg": "65", "experience": "Beginner" },
+    "workout": { "days": "3", "duration": "30 minutes", "place": "Home", "split": "Auto", "focusAreas": ["Full Body"], "equipment": ["Bodyweight", "Dumbbells"], "injuries": ["None"] },
+    "nutrition": { "meals": "4", "dietStyle": "Mediterranean", "restrictions": ["None"], "allergies": ["None"], "cookingTime": "Minimal", "budget": "Low", "preferences": ["Chicken", "Salads"] }
+  },
+  {
+    "label": "strength_6_day_75_minute",
+    "goal": "Gain Strength",
+    "profile": { "gender": "Male", "birth_date": "1992-03-18", "height_cm": "185", "weight_kg": "92", "experience": "Advanced" },
+    "workout": { "days": "6", "duration": "75 minutes", "place": "Full Equipment Gym", "split": "Auto", "focusAreas": ["Back"], "equipment": [], "injuries": ["None"] },
+    "nutrition": { "meals": "6", "dietStyle": "High Protein", "restrictions": ["None"], "allergies": ["None"], "cookingTime": "Flexible", "budget": "Flexible", "preferences": ["Beef", "Chicken"] }
+  },
+  {
+    "label": "weight_loss_3_day_building_dairy_free",
+    "goal": "Lose Weight",
+    "profile": { "gender": "Female", "birth_date": "1989-11-02", "height_cm": "160", "weight_kg": "74", "experience": "Beginner" },
+    "workout": { "days": "3", "duration": "30 minutes", "place": "Building Gym", "split": "Auto", "focusAreas": ["Full Body"], "equipment": [], "injuries": ["None"] },
+    "nutrition": { "meals": "3", "dietStyle": "Balanced", "restrictions": ["Dairy Free"], "allergies": ["Dairy"], "cookingTime": "Minimal", "budget": "Low", "preferences": ["Chicken"] }
+  },
+  {
+    "label": "muscle_gain_5_day_two_meal_preference",
+    "goal": "Build Muscle",
+    "profile": { "gender": "Male", "birth_date": "1998-06-21", "height_cm": "178", "weight_kg": "86", "experience": "Intermediate" },
+    "workout": { "days": "5", "duration": "60 minutes", "place": "Building Gym", "split": "Auto", "focusAreas": ["Chest", "Back"], "equipment": [], "injuries": ["None"] },
+    "nutrition": { "meals": "2", "dietStyle": "High Protein", "restrictions": ["None"], "allergies": ["None"], "cookingTime": "Moderate", "budget": "Medium", "preferences": ["Chicken", "Rice"] }
+  },
+  {
+    "label": "vegetarian_4_day_45_minute",
+    "goal": "Improve Fitness",
+    "profile": { "gender": "Female", "birth_date": "1995-05-14", "height_cm": "168", "weight_kg": "68", "experience": "Intermediate" },
+    "workout": { "days": "4", "duration": "45 minutes", "place": "Full Equipment Gym", "split": "Auto", "focusAreas": ["Full Body"], "equipment": [], "injuries": ["None"] },
+    "nutrition": { "meals": "4", "dietStyle": "Vegetarian", "restrictions": ["Vegetarian"], "allergies": ["None"], "cookingTime": "Flexible", "budget": "Medium", "preferences": ["Salads"] }
+  },
+  {
+    "label": "low_carb_2_day_home",
+    "goal": "Lose Weight",
+    "profile": { "gender": "Female", "birth_date": "1985-09-09", "height_cm": "158", "weight_kg": "70", "experience": "Beginner" },
+    "workout": { "days": "2", "duration": "30 minutes", "place": "Home", "split": "Auto", "focusAreas": ["Full Body"], "equipment": ["Bodyweight", "Dumbbells", "Resistance bands", "Bench"], "injuries": ["None"] },
+    "nutrition": { "meals": "4", "dietStyle": "Low Carb", "restrictions": ["None"], "allergies": ["None"], "cookingTime": "Minimal", "budget": "Low", "preferences": ["Chicken", "Salads"] }
+  },
+  {
+    "label": "gluten_free_4_day_60_minute",
+    "goal": "Build Muscle",
+    "profile": { "gender": "Male", "birth_date": "1990-12-01", "height_cm": "175", "weight_kg": "78", "experience": "Intermediate" },
+    "workout": { "days": "4", "duration": "60 minutes", "place": "Full Equipment Gym", "split": "Auto", "focusAreas": ["Legs"], "equipment": [], "injuries": ["None"] },
+    "nutrition": { "meals": "5", "dietStyle": "Balanced", "restrictions": ["Gluten Free"], "allergies": ["Gluten"], "cookingTime": "Moderate", "budget": "Flexible", "preferences": ["Beef", "Rice"] }
+  },
+  {
+    "label": "egg_allergy_3_day_45_minute",
+    "goal": "Lose Weight",
+    "profile": { "gender": "Male", "birth_date": "2001-07-07", "height_cm": "172", "weight_kg": "88", "experience": "Beginner" },
+    "workout": { "days": "3", "duration": "45 minutes", "place": "Building Gym", "split": "Auto", "focusAreas": ["Full Body"], "equipment": [], "injuries": ["None"] },
+    "nutrition": { "meals": "4", "dietStyle": "High Protein", "restrictions": ["None"], "allergies": ["Eggs"], "cookingTime": "Moderate", "budget": "Medium", "preferences": ["Chicken", "Beef"] }
+  },
+  {
+    "label": "mediterranean_5_day_45_minute",
+    "goal": "Improve Body Shape",
+    "profile": { "gender": "Female", "birth_date": "1994-02-26", "height_cm": "170", "weight_kg": "72", "experience": "Intermediate" },
+    "workout": { "days": "5", "duration": "45 minutes", "place": "Full Equipment Gym", "split": "Auto", "focusAreas": ["Glutes", "Shoulders"], "equipment": [], "injuries": ["None"] },
+    "nutrition": { "meals": "4", "dietStyle": "Mediterranean", "restrictions": ["None"], "allergies": ["None"], "cookingTime": "Flexible", "budget": "Flexible", "preferences": ["Salads"] }
+  },
+  {
+    "label": "high_calorie_6_day_60_minute",
+    "goal": "Build Muscle",
+    "profile": { "gender": "Male", "birth_date": "1996-10-10", "height_cm": "190", "weight_kg": "105", "experience": "Advanced" },
+    "workout": { "days": "6", "duration": "60 minutes", "place": "Full Equipment Gym", "split": "Auto", "focusAreas": ["Full Body"], "equipment": [], "injuries": ["None"] },
+    "nutrition": { "meals": "3", "dietStyle": "Balanced", "restrictions": ["None"], "allergies": ["None"], "cookingTime": "Flexible", "budget": "Flexible", "preferences": ["Chicken", "Beef", "Rice"] }
+  }
+]

@@ -1,0 +1,529 @@
+[
+  {
+    "food_id": 1001,
+    "name": "Grilled Chicken Breast",
+    "category": "protein",
+    "diet_tags": [
+      "balanced",
+      "high_protein",
+      "low_carb",
+      "halal_friendly"
+    ],
+    "allergy_tags": [],
+    "protein_g": 31,
+    "carbs_g": 0,
+    "fat_g": 4,
+    "calories": 165,
+    "meal_type": [
+      "lunch",
+      "dinner"
+    ],
+    "fiber_g": 0,
+    "serving_grams": 120,
+    "household_unit": "serving",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Protein"
+  },
+  {
+    "food_id": 1002,
+    "name": "Lean Beef Strips",
+    "category": "protein",
+    "diet_tags": [
+      "balanced",
+      "high_protein",
+      "low_carb",
+      "halal_friendly"
+    ],
+    "allergy_tags": [],
+    "protein_g": 26,
+    "carbs_g": 0,
+    "fat_g": 8,
+    "calories": 180,
+    "meal_type": [
+      "lunch",
+      "dinner"
+    ],
+    "fiber_g": 0,
+    "serving_grams": 120,
+    "household_unit": "serving",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Protein"
+  },
+  {
+    "food_id": 1003,
+    "name": "Baked Salmon",
+    "category": "protein",
+    "diet_tags": [
+      "balanced",
+      "high_protein",
+      "mediterranean",
+      "low_carb"
+    ],
+    "allergy_tags": [
+      "fish"
+    ],
+    "protein_g": 25,
+    "carbs_g": 0,
+    "fat_g": 12,
+    "calories": 220,
+    "meal_type": [
+      "lunch",
+      "dinner"
+    ],
+    "fiber_g": 0,
+    "serving_grams": 120,
+    "household_unit": "serving",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Protein"
+  },
+  {
+    "food_id": 1004,
+    "name": "Greek Yogurt",
+    "category": "protein",
+    "diet_tags": [
+      "balanced",
+      "high_protein",
+      "vegetarian",
+      "mediterranean"
+    ],
+    "allergy_tags": [
+      "dairy"
+    ],
+    "protein_g": 18,
+    "carbs_g": 7,
+    "fat_g": 0,
+    "calories": 100,
+    "meal_type": [
+      "breakfast",
+      "snack"
+    ],
+    "fiber_g": 0,
+    "serving_grams": 120,
+    "household_unit": "serving",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Protein"
+  },
+  {
+    "food_id": 1005,
+    "name": "Boiled Eggs",
+    "category": "protein",
+    "diet_tags": [
+      "balanced",
+      "high_protein",
+      "low_carb",
+      "vegetarian"
+    ],
+    "allergy_tags": [
+      "eggs"
+    ],
+    "protein_g": 13,
+    "carbs_g": 1,
+    "fat_g": 10,
+    "calories": 155,
+    "meal_type": [
+      "breakfast",
+      "snack"
+    ],
+    "fiber_g": 0,
+    "serving_grams": 120,
+    "household_unit": "serving",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Protein"
+  },
+  {
+    "food_id": 1006,
+    "name": "Tofu Cubes",
+    "category": "protein",
+    "diet_tags": [
+      "balanced",
+      "high_protein",
+      "vegetarian",
+      "low_carb"
+    ],
+    "allergy_tags": [
+      "soy"
+    ],
+    "protein_g": 17,
+    "carbs_g": 3,
+    "fat_g": 9,
+    "calories": 145,
+    "meal_type": [
+      "lunch",
+      "dinner"
+    ],
+    "fiber_g": 0,
+    "serving_grams": 120,
+    "household_unit": "serving",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Protein"
+  },
+  {
+    "food_id": 1101,
+    "name": "Cooked Basmati Rice",
+    "category": "carbohydrate",
+    "diet_tags": [
+      "balanced",
+      "high_protein",
+      "halal_friendly"
+    ],
+    "allergy_tags": [],
+    "protein_g": 3,
+    "carbs_g": 28,
+    "fat_g": 0,
+    "calories": 130,
+    "meal_type": [
+      "lunch",
+      "dinner"
+    ],
+    "fiber_g": 3,
+    "serving_grams": 100,
+    "household_unit": "cup",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Carbohydrates"
+  },
+  {
+    "food_id": 1102,
+    "name": "Roasted Sweet Potato",
+    "category": "carbohydrate",
+    "diet_tags": [
+      "balanced",
+      "mediterranean",
+      "vegetarian"
+    ],
+    "allergy_tags": [],
+    "protein_g": 2,
+    "carbs_g": 27,
+    "fat_g": 0,
+    "calories": 114,
+    "meal_type": [
+      "lunch",
+      "dinner"
+    ],
+    "fiber_g": 3,
+    "serving_grams": 100,
+    "household_unit": "cup",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Carbohydrates"
+  },
+  {
+    "food_id": 1103,
+    "name": "Rolled Oats",
+    "category": "carbohydrate",
+    "diet_tags": [
+      "balanced",
+      "high_protein",
+      "vegetarian"
+    ],
+    "allergy_tags": [
+      "gluten"
+    ],
+    "protein_g": 5,
+    "carbs_g": 27,
+    "fat_g": 3,
+    "calories": 150,
+    "meal_type": [
+      "breakfast"
+    ],
+    "fiber_g": 3,
+    "serving_grams": 100,
+    "household_unit": "cup",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Carbohydrates"
+  },
+  {
+    "food_id": 1104,
+    "name": "Whole Wheat Wrap",
+    "category": "carbohydrate",
+    "diet_tags": [
+      "balanced",
+      "high_protein",
+      "vegetarian"
+    ],
+    "allergy_tags": [
+      "gluten"
+    ],
+    "protein_g": 6,
+    "carbs_g": 32,
+    "fat_g": 4,
+    "calories": 190,
+    "meal_type": [
+      "breakfast",
+      "lunch"
+    ],
+    "fiber_g": 3,
+    "serving_grams": 100,
+    "household_unit": "cup",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Carbohydrates"
+  },
+  {
+    "food_id": 1105,
+    "name": "Quinoa",
+    "category": "carbohydrate",
+    "diet_tags": [
+      "balanced",
+      "mediterranean",
+      "vegetarian",
+      "gluten_free"
+    ],
+    "allergy_tags": [],
+    "protein_g": 4,
+    "carbs_g": 21,
+    "fat_g": 2,
+    "calories": 120,
+    "meal_type": [
+      "lunch",
+      "dinner"
+    ],
+    "fiber_g": 3,
+    "serving_grams": 100,
+    "household_unit": "cup",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Carbohydrates"
+  },
+  {
+    "food_id": 1201,
+    "name": "Avocado",
+    "category": "fat",
+    "diet_tags": [
+      "balanced",
+      "mediterranean",
+      "vegetarian",
+      "low_carb"
+    ],
+    "allergy_tags": [],
+    "protein_g": 2,
+    "carbs_g": 9,
+    "fat_g": 15,
+    "calories": 160,
+    "meal_type": [
+      "breakfast",
+      "lunch",
+      "snack"
+    ],
+    "fiber_g": 0,
+    "serving_grams": 28,
+    "household_unit": "small handful",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Fats"
+  },
+  {
+    "food_id": 1202,
+    "name": "Olive Oil",
+    "category": "fat",
+    "diet_tags": [
+      "balanced",
+      "mediterranean",
+      "vegetarian",
+      "low_carb"
+    ],
+    "allergy_tags": [],
+    "protein_g": 0,
+    "carbs_g": 0,
+    "fat_g": 14,
+    "calories": 120,
+    "meal_type": [
+      "lunch",
+      "dinner"
+    ],
+    "fiber_g": 0,
+    "serving_grams": 28,
+    "household_unit": "small handful",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Fats"
+  },
+  {
+    "food_id": 1203,
+    "name": "Almonds",
+    "category": "fat",
+    "diet_tags": [
+      "balanced",
+      "high_protein",
+      "vegetarian",
+      "low_carb"
+    ],
+    "allergy_tags": [
+      "nuts"
+    ],
+    "protein_g": 6,
+    "carbs_g": 6,
+    "fat_g": 14,
+    "calories": 164,
+    "meal_type": [
+      "snack"
+    ],
+    "fiber_g": 3,
+    "serving_grams": 28,
+    "household_unit": "small handful",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Fats"
+  },
+  {
+    "food_id": 1301,
+    "name": "Mixed Green Salad",
+    "category": "vegetable",
+    "diet_tags": [
+      "balanced",
+      "mediterranean",
+      "vegetarian",
+      "low_carb"
+    ],
+    "allergy_tags": [],
+    "protein_g": 2,
+    "carbs_g": 7,
+    "fat_g": 0,
+    "calories": 35,
+    "meal_type": [
+      "lunch",
+      "dinner"
+    ],
+    "fiber_g": 4,
+    "serving_grams": 100,
+    "household_unit": "serving",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Produce"
+  },
+  {
+    "food_id": 1302,
+    "name": "Steamed Broccoli",
+    "category": "vegetable",
+    "diet_tags": [
+      "balanced",
+      "high_protein",
+      "vegetarian",
+      "low_carb"
+    ],
+    "allergy_tags": [],
+    "protein_g": 3,
+    "carbs_g": 7,
+    "fat_g": 0,
+    "calories": 35,
+    "meal_type": [
+      "lunch",
+      "dinner"
+    ],
+    "fiber_g": 4,
+    "serving_grams": 100,
+    "household_unit": "serving",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Produce"
+  },
+  {
+    "food_id": 1303,
+    "name": "Grilled Zucchini",
+    "category": "vegetable",
+    "diet_tags": [
+      "balanced",
+      "mediterranean",
+      "vegetarian",
+      "low_carb"
+    ],
+    "allergy_tags": [],
+    "protein_g": 1,
+    "carbs_g": 4,
+    "fat_g": 0,
+    "calories": 20,
+    "meal_type": [
+      "lunch",
+      "dinner"
+    ],
+    "fiber_g": 4,
+    "serving_grams": 100,
+    "household_unit": "serving",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Produce"
+  },
+  {
+    "food_id": 1401,
+    "name": "Banana",
+    "category": "fruit",
+    "diet_tags": [
+      "balanced",
+      "high_protein",
+      "vegetarian"
+    ],
+    "allergy_tags": [],
+    "protein_g": 1,
+    "carbs_g": 27,
+    "fat_g": 0,
+    "calories": 105,
+    "meal_type": [
+      "breakfast",
+      "snack"
+    ],
+    "fiber_g": 4,
+    "serving_grams": 100,
+    "household_unit": "serving",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Produce"
+  },
+  {
+    "food_id": 1402,
+    "name": "Blueberries",
+    "category": "fruit",
+    "diet_tags": [
+      "balanced",
+      "mediterranean",
+      "vegetarian"
+    ],
+    "allergy_tags": [],
+    "protein_g": 1,
+    "carbs_g": 21,
+    "fat_g": 0,
+    "calories": 84,
+    "meal_type": [
+      "breakfast",
+      "snack"
+    ],
+    "fiber_g": 4,
+    "serving_grams": 100,
+    "household_unit": "serving",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Produce"
+  },
+  {
+    "food_id": 1501,
+    "name": "Whey Protein Shake",
+    "category": "supplement",
+    "diet_tags": [
+      "balanced",
+      "high_protein"
+    ],
+    "allergy_tags": [
+      "dairy"
+    ],
+    "protein_g": 24,
+    "carbs_g": 3,
+    "fat_g": 2,
+    "calories": 125,
+    "meal_type": [
+      "breakfast",
+      "snack"
+    ],
+    "fiber_g": 0,
+    "serving_grams": 100,
+    "household_unit": "serving",
+    "household_quantity": 1,
+    "halal_status": "halal",
+    "grocery_category": "Pantry"
+  }
+]

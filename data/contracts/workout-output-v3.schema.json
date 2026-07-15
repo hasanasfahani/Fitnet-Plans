@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fitnet.workout.output.v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["program_version", "program_summary", "plan_days", "progression_guidance", "recovery_guidance", "pain_safety_guidance", "repeat_instruction"],
+  "properties": {
+    "program_version": { "type": "string", "const": "fitnet.workout.output.v3" },
+    "program_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["goal", "split", "days_per_week", "session_duration_minutes", "workout_place", "available_equipment", "focus_muscles", "injuries", "disliked_exercises", "coaching_rationale"],
+      "properties": {
+        "goal": { "type": "string", "minLength": 1 },
+        "split": { "type": "string", "minLength": 1 },
+        "days_per_week": { "type": "integer", "minimum": 2, "maximum": 6 },
+        "session_duration_minutes": { "type": "integer", "minimum": 20, "maximum": 120 },
+        "workout_place": { "type": "string" },
+        "available_equipment": { "type": "array", "items": { "type": "string" } },
+        "focus_muscles": { "type": "array", "items": { "type": "string" } },
+        "injuries": { "type": "array", "items": { "type": "string" } },
+        "disliked_exercises": { "type": "array", "items": { "type": "string" } },
+        "coaching_rationale": { "type": "string", "minLength": 1, "maxLength": 1200 }
+      }
+    },
+    "plan_days": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["day_index", "day_name", "day_focus", "exercises"],
+        "properties": {
+          "day_index": { "type": "integer", "minimum": 1, "maximum": 6 },
+          "day_name": { "type": "string", "minLength": 1 },
+          "day_focus": { "type": "string", "minLength": 1, "maxLength": 160 },
+          "exercises": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 8,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["slot_id", "exercise_id", "exercise_name", "exercise_category", "movement_pattern", "muscle_group", "sets", "reps", "rest", "notes", "effort_guidance", "coaching_cue", "substitution_ids", "duplicate_reason"],
+              "properties": {
+                "slot_id": { "type": "string", "minLength": 1 },
+                "exercise_id": { "type": "integer", "minimum": 1 },
+                "exercise_name": { "type": "string", "minLength": 1 },
+                "exercise_category": { "enum": ["strength", "cardio"] },
+                "movement_pattern": { "type": "string" },
+                "muscle_group": { "type": "string" },
+                "sets": { "type": "integer", "minimum": 1, "maximum": 5 },
+                "reps": { "type": "string", "minLength": 1 },
+                "rest": { "type": "string" },
+                "notes": { "type": "string" },
+                "effort_guidance": { "type": "string", "minLength": 1, "maxLength": 180 },
+                "coaching_cue": { "type": "string", "minLength": 1, "maxLength": 180 },
+                "substitution_ids": { "type": "array", "maxItems": 3, "items": { "type": "integer", "minimum": 1 } },
+                "duplicate_reason": { "type": ["string", "null"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "progression_guidance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["starting_load", "increase_reps", "increase_load", "if_too_hard", "if_pain_occurs"],
+      "properties": {
+        "starting_load": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "increase_reps": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "increase_load": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "if_too_hard": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "if_pain_occurs": { "type": "string", "minLength": 1, "maxLength": 300 }
+      }
+    },
+    "recovery_guidance": { "type": "array", "minItems": 1, "maxItems": 5, "items": { "type": "string", "minLength": 1, "maxLength": 300 } },
+    "pain_safety_guidance": { "type": "array", "minItems": 1, "maxItems": 5, "items": { "type": "string", "minLength": 1, "maxLength": 300 } },
+    "repeat_instruction": { "type": "string", "minLength": 1, "maxLength": 500 }
+  }
+}

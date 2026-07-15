@@ -1,0 +1,21 @@
+{
+  "llm_generation_enabled": true,
+  "captcha": {
+    "enabled": false,
+    "challenge": "Type FITNET to continue",
+    "expected_answer": "FITNET"
+  },
+  "limits": {
+    "generation_attempts_per_hour": 3,
+    "generation_attempts_per_day": 6,
+    "email_submissions_per_day": 3,
+    "duplicate_generation_window_ms": 8000
+  },
+  "blocked_disposable_email_domains": [
+    "10minutemail.com",
+    "guerrillamail.com",
+    "mailinator.com",
+    "tempmail.com",
+    "yopmail.com"
+  ]
+}

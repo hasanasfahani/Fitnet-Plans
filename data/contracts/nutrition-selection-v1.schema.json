@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fitnet.nutrition.selection.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["selection_version", "days"],
+  "properties": {
+    "selection_version": {
+      "type": "string",
+      "const": "fitnet.nutrition.selection.v1"
+    },
+    "days": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["day_index", "meals"],
+        "properties": {
+          "day_index": { "type": "integer", "minimum": 1, "maximum": 7 },
+          "meals": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 6,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["meal_slot", "meal_id"],
+              "properties": {
+                "meal_slot": {
+                  "type": "string",
+                  "enum": ["breakfast", "lunch", "dinner", "snack"]
+                },
+                "meal_id": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
