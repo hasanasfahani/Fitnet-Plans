@@ -20505,5 +20505,1529 @@
       75,
       150
     ]
+  },
+  {
+    "exercise_id": 637,
+    "name": "Push-Up",
+    "category": "Chest",
+    "sub_muscles": [
+      "Triceps",
+      "Front Delts"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "push",
+    "exercise_type": "compound",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Push-Up",
+    "primary_muscle": "Chest",
+    "movement_family": "push",
+    "training_role": "horizontal_push",
+    "injury_flags": [],
+    "substitution_group": "chest:push:compound",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 3,
+    "time_multiplier": 1,
+    "ordering_priority": 1,
+    "recommended_rep_range": [
+      6,
+      12
+    ],
+    "recommended_rest_seconds": [
+      75,
+      150
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 638,
+    "name": "Wide Push-Up",
+    "category": "Chest",
+    "sub_muscles": [
+      "Triceps",
+      "Front Delts"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Intermediate",
+    "movement_pattern": "push",
+    "exercise_type": "compound",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Wide Push-Up",
+    "primary_muscle": "Chest",
+    "movement_family": "push",
+    "training_role": "horizontal_push",
+    "injury_flags": [],
+    "substitution_group": "chest:push:compound",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 3,
+    "time_multiplier": 1,
+    "ordering_priority": 1,
+    "recommended_rep_range": [
+      6,
+      12
+    ],
+    "recommended_rest_seconds": [
+      75,
+      150
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 639,
+    "name": "Pike Push-Up",
+    "category": "Shoulders",
+    "sub_muscles": [
+      "Front Delts",
+      "Triceps"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Intermediate",
+    "movement_pattern": "push",
+    "exercise_type": "compound",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Pike Push-Up",
+    "primary_muscle": "Shoulders",
+    "movement_family": "push",
+    "training_role": "vertical_push",
+    "injury_flags": [],
+    "substitution_group": "shoulders:push:compound",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 3,
+    "time_multiplier": 1,
+    "ordering_priority": 1,
+    "recommended_rep_range": [
+      6,
+      12
+    ],
+    "recommended_rest_seconds": [
+      75,
+      150
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 640,
+    "name": "Kneeling Pike Push-Up",
+    "category": "Shoulders",
+    "sub_muscles": [
+      "Front Delts",
+      "Triceps"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "push",
+    "exercise_type": "compound",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Kneeling Pike Push-Up",
+    "primary_muscle": "Shoulders",
+    "movement_family": "push",
+    "training_role": "vertical_push",
+    "injury_flags": [],
+    "substitution_group": "shoulders:push:compound",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 3,
+    "time_multiplier": 1,
+    "ordering_priority": 1,
+    "recommended_rep_range": [
+      6,
+      12
+    ],
+    "recommended_rest_seconds": [
+      75,
+      150
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 641,
+    "name": "Prone W Pull",
+    "category": "Back",
+    "sub_muscles": [
+      "Middle Back",
+      "Rear Delts"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "horizontal_pull",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Prone W Pull",
+    "primary_muscle": "Back",
+    "movement_family": "horizontal_pull",
+    "training_role": "horizontal_pull",
+    "injury_flags": [],
+    "substitution_group": "back:horizontal_pull:isolation",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 2,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 642,
+    "name": "Reverse Snow Angel",
+    "category": "Back",
+    "sub_muscles": [
+      "Middle Back",
+      "Rear Delts"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "horizontal_pull",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Reverse Snow Angel",
+    "primary_muscle": "Back",
+    "movement_family": "horizontal_pull",
+    "training_role": "horizontal_pull",
+    "injury_flags": [],
+    "substitution_group": "back:horizontal_pull:isolation",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 2,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 643,
+    "name": "Prone Lat Pull-Down",
+    "category": "Back",
+    "sub_muscles": [
+      "Lats",
+      "Middle Back"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "horizontal_pull",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Prone Lat Pull-Down",
+    "primary_muscle": "Back",
+    "movement_family": "horizontal_pull",
+    "training_role": "horizontal_pull",
+    "injury_flags": [],
+    "substitution_group": "back:horizontal_pull:isolation",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 2,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 644,
+    "name": "Prone T Raise",
+    "category": "Shoulders",
+    "sub_muscles": [
+      "Rear Delts",
+      "Upper Back"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "raise",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Prone T Raise",
+    "primary_muscle": "Shoulders",
+    "movement_family": "raise",
+    "training_role": "side_rear_delts",
+    "injury_flags": [],
+    "substitution_group": "shoulders:raise:isolation",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 2,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 645,
+    "name": "Prone Y Raise",
+    "category": "Shoulders",
+    "sub_muscles": [
+      "Rear Delts",
+      "Lower Traps"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "raise",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Prone Y Raise",
+    "primary_muscle": "Shoulders",
+    "movement_family": "raise",
+    "training_role": "side_rear_delts",
+    "injury_flags": [],
+    "substitution_group": "shoulders:raise:isolation",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 2,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 646,
+    "name": "Close-Grip Push-Up",
+    "category": "Triceps",
+    "sub_muscles": [
+      "Triceps",
+      "Chest"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Intermediate",
+    "movement_pattern": "push",
+    "exercise_type": "compound",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Close-Grip Push-Up",
+    "primary_muscle": "Triceps",
+    "movement_family": "push",
+    "training_role": "triceps",
+    "injury_flags": [],
+    "substitution_group": "triceps:push:compound",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 3,
+    "time_multiplier": 1,
+    "ordering_priority": 1,
+    "recommended_rep_range": [
+      6,
+      12
+    ],
+    "recommended_rest_seconds": [
+      75,
+      150
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 647,
+    "name": "Kneeling Close-Grip Push-Up",
+    "category": "Triceps",
+    "sub_muscles": [
+      "Triceps",
+      "Chest"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "push",
+    "exercise_type": "compound",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Kneeling Close-Grip Push-Up",
+    "primary_muscle": "Triceps",
+    "movement_family": "push",
+    "training_role": "triceps",
+    "injury_flags": [],
+    "substitution_group": "triceps:push:compound",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 3,
+    "time_multiplier": 1,
+    "ordering_priority": 1,
+    "recommended_rep_range": [
+      6,
+      12
+    ],
+    "recommended_rest_seconds": [
+      75,
+      150
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 648,
+    "name": "Bodyweight Squat",
+    "category": "Legs",
+    "sub_muscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "squat",
+    "exercise_type": "compound",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Bodyweight Squat",
+    "primary_muscle": "Legs",
+    "movement_family": "squat",
+    "training_role": "knee_dominant",
+    "injury_flags": [],
+    "substitution_group": "legs:squat:compound",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "bilateral",
+    "fatigue_cost": 4,
+    "time_multiplier": 1,
+    "ordering_priority": 1,
+    "recommended_rep_range": [
+      6,
+      12
+    ],
+    "recommended_rest_seconds": [
+      75,
+      150
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 649,
+    "name": "Bodyweight Split Squat",
+    "category": "Legs",
+    "sub_muscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "lunge",
+    "exercise_type": "compound",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Bodyweight Split Squat",
+    "primary_muscle": "Legs",
+    "movement_family": "squat",
+    "training_role": "unilateral_lower_body",
+    "injury_flags": [],
+    "substitution_group": "legs:squat:compound",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "unilateral",
+    "fatigue_cost": 5,
+    "time_multiplier": 1.35,
+    "ordering_priority": 1,
+    "recommended_rep_range": [
+      6,
+      12
+    ],
+    "recommended_rest_seconds": [
+      75,
+      150
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 650,
+    "name": "Bodyweight Reverse Lunge",
+    "category": "Legs",
+    "sub_muscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "lunge",
+    "exercise_type": "compound",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Bodyweight Reverse Lunge",
+    "primary_muscle": "Legs",
+    "movement_family": "lunge",
+    "training_role": "unilateral_lower_body",
+    "injury_flags": [],
+    "substitution_group": "legs:lunge:compound",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "unilateral",
+    "fatigue_cost": 5,
+    "time_multiplier": 1.35,
+    "ordering_priority": 1,
+    "recommended_rep_range": [
+      6,
+      12
+    ],
+    "recommended_rest_seconds": [
+      75,
+      150
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 651,
+    "name": "Bodyweight Glute Bridge",
+    "category": "Legs",
+    "sub_muscles": [
+      "Glutes",
+      "Hamstrings"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "hip_extension",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Bodyweight Glute Bridge",
+    "primary_muscle": "Legs",
+    "movement_family": "hip_extension",
+    "training_role": "hip_dominant",
+    "injury_flags": [],
+    "substitution_group": "legs:hip_extension:isolation",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 2,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 652,
+    "name": "Single-Leg Glute Bridge",
+    "category": "Legs",
+    "sub_muscles": [
+      "Glutes",
+      "Hamstrings"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Intermediate",
+    "movement_pattern": "hip_extension",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Single-Leg Glute Bridge",
+    "primary_muscle": "Legs",
+    "movement_family": "hip_extension",
+    "training_role": "hip_dominant",
+    "injury_flags": [],
+    "substitution_group": "legs:hip_extension:isolation",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "unilateral",
+    "fatigue_cost": 2,
+    "time_multiplier": 1.35,
+    "ordering_priority": 2,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 653,
+    "name": "Bodyweight Standing Calf Raise",
+    "category": "Legs",
+    "sub_muscles": [
+      "Calves"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "plantar_flexion",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Bodyweight Standing Calf Raise",
+    "primary_muscle": "Legs",
+    "movement_family": "plantar_flexion",
+    "training_role": "calves",
+    "injury_flags": [],
+    "substitution_group": "legs:plantar_flexion:isolation",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 2,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 654,
+    "name": "Single-Leg Calf Raise",
+    "category": "Legs",
+    "sub_muscles": [
+      "Calves"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Intermediate",
+    "movement_pattern": "plantar_flexion",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Single-Leg Calf Raise",
+    "primary_muscle": "Legs",
+    "movement_family": "plantar_flexion",
+    "training_role": "calves",
+    "injury_flags": [],
+    "substitution_group": "legs:plantar_flexion:isolation",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "unilateral",
+    "fatigue_cost": 2,
+    "time_multiplier": 1.35,
+    "ordering_priority": 2,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 655,
+    "name": "Dead Bug",
+    "category": "Core",
+    "sub_muscles": [
+      "Abdominals"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "core",
+    "exercise_type": "core",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Dead Bug",
+    "primary_muscle": "Core",
+    "movement_family": "core",
+    "training_role": "core",
+    "injury_flags": [],
+    "substitution_group": "core:core:core",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 4,
+    "recommended_rep_range": [
+      10,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 656,
+    "name": "Bird Dog",
+    "category": "Core",
+    "sub_muscles": [
+      "Abdominals",
+      "Lower Back"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "core",
+    "exercise_type": "core",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Bird Dog",
+    "primary_muscle": "Core",
+    "movement_family": "core",
+    "training_role": "core",
+    "injury_flags": [],
+    "substitution_group": "core:core:core",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 4,
+    "recommended_rep_range": [
+      10,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 657,
+    "name": "Forearm Plank",
+    "category": "Core",
+    "sub_muscles": [
+      "Abdominals"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "core",
+    "exercise_type": "core",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Forearm Plank",
+    "primary_muscle": "Core",
+    "movement_family": "core",
+    "training_role": "core",
+    "injury_flags": [],
+    "substitution_group": "core:core:core",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 4,
+    "recommended_rep_range": [
+      10,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 658,
+    "name": "Side Plank",
+    "category": "Core",
+    "sub_muscles": [
+      "Obliques"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Intermediate",
+    "movement_pattern": "core",
+    "exercise_type": "core",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Side Plank",
+    "primary_muscle": "Core",
+    "movement_family": "core",
+    "training_role": "core",
+    "injury_flags": [],
+    "substitution_group": "core:core:core",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 4,
+    "recommended_rep_range": [
+      10,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 659,
+    "name": "Bodyweight Good Morning",
+    "category": "Legs",
+    "sub_muscles": [
+      "Hamstrings",
+      "Glutes"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "hinge",
+    "exercise_type": "compound",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Bodyweight Good Morning",
+    "primary_muscle": "Legs",
+    "movement_family": "hinge",
+    "training_role": "hip_dominant",
+    "injury_flags": [],
+    "substitution_group": "legs:hinge:compound",
+    "selection_priority": 5,
+    "setup_complexity": "high",
+    "stability": "low",
+    "general_programming_value": "low",
+    "laterality": "bilateral",
+    "fatigue_cost": 4,
+    "time_multiplier": 1.15,
+    "ordering_priority": 1,
+    "recommended_rep_range": [
+      5,
+      10
+    ],
+    "recommended_rest_seconds": [
+      90,
+      180
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 660,
+    "name": "Bodyweight Hip Hinge",
+    "category": "Legs",
+    "sub_muscles": [
+      "Hamstrings",
+      "Glutes"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "hinge",
+    "exercise_type": "compound",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Bodyweight Hip Hinge",
+    "primary_muscle": "Legs",
+    "movement_family": "hinge",
+    "training_role": "hip_dominant",
+    "injury_flags": [],
+    "substitution_group": "legs:hinge:compound",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 3,
+    "time_multiplier": 1,
+    "ordering_priority": 1,
+    "recommended_rep_range": [
+      5,
+      10
+    ],
+    "recommended_rest_seconds": [
+      90,
+      180
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 661,
+    "name": "March in Place",
+    "category": "Cardio",
+    "sub_muscles": [
+      "Full Body"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "cardio",
+    "exercise_type": "cardio",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "March in Place",
+    "primary_muscle": "Cardio",
+    "movement_family": "cardio",
+    "training_role": "cardio",
+    "injury_flags": [],
+    "substitution_group": "cardio:cardio:cardio",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 3,
+    "time_multiplier": 1,
+    "ordering_priority": 5,
+    "recommended_rep_range": [
+      8,
+      25
+    ],
+    "recommended_rest_seconds": [
+      0,
+      0
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 662,
+    "name": "Low-Impact Step Jack",
+    "category": "Cardio",
+    "sub_muscles": [
+      "Full Body"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "cardio",
+    "exercise_type": "cardio",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Low-Impact Step Jack",
+    "primary_muscle": "Cardio",
+    "movement_family": "cardio",
+    "training_role": "cardio",
+    "injury_flags": [],
+    "substitution_group": "cardio:cardio:cardio",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 3,
+    "time_multiplier": 1,
+    "ordering_priority": 5,
+    "recommended_rep_range": [
+      8,
+      25
+    ],
+    "recommended_rest_seconds": [
+      0,
+      0
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 663,
+    "name": "Standing Knee Drive",
+    "category": "Cardio",
+    "sub_muscles": [
+      "Full Body"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "cardio",
+    "exercise_type": "cardio",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Standing Knee Drive",
+    "primary_muscle": "Cardio",
+    "movement_family": "cardio",
+    "training_role": "cardio",
+    "injury_flags": [],
+    "substitution_group": "cardio:cardio:cardio",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 3,
+    "time_multiplier": 1,
+    "ordering_priority": 5,
+    "recommended_rep_range": [
+      8,
+      25
+    ],
+    "recommended_rest_seconds": [
+      0,
+      0
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 664,
+    "name": "High-Knee March",
+    "category": "Cardio",
+    "sub_muscles": [
+      "Full Body"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Intermediate",
+    "movement_pattern": "cardio",
+    "exercise_type": "cardio",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "High-Knee March",
+    "primary_muscle": "Cardio",
+    "movement_family": "cardio",
+    "training_role": "cardio",
+    "injury_flags": [],
+    "substitution_group": "cardio:cardio:cardio",
+    "selection_priority": 3,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "moderate",
+    "laterality": "bilateral",
+    "fatigue_cost": 3,
+    "time_multiplier": 1,
+    "ordering_priority": 5,
+    "recommended_rep_range": [
+      8,
+      25
+    ],
+    "recommended_rest_seconds": [
+      0,
+      0
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 665,
+    "name": "Self-Resisted Biceps Curl",
+    "category": "Biceps",
+    "sub_muscles": [
+      "Biceps"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "elbow_flexion",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Self-Resisted Biceps Curl",
+    "primary_muscle": "Biceps",
+    "movement_family": "elbow_flexion",
+    "training_role": "biceps",
+    "injury_flags": [],
+    "substitution_group": "biceps:elbow_flexion:isolation",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 3,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 666,
+    "name": "Self-Resisted Hammer Curl",
+    "category": "Biceps",
+    "sub_muscles": [
+      "Biceps",
+      "Forearms"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "elbow_flexion",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Self-Resisted Hammer Curl",
+    "primary_muscle": "Biceps",
+    "movement_family": "elbow_flexion",
+    "training_role": "biceps",
+    "injury_flags": [],
+    "substitution_group": "biceps:elbow_flexion:isolation",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 3,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 667,
+    "name": "Wall Triceps Extension",
+    "category": "Triceps",
+    "sub_muscles": [
+      "Triceps"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Beginner",
+    "movement_pattern": "elbow_extension",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Wall Triceps Extension",
+    "primary_muscle": "Triceps",
+    "movement_family": "elbow_extension",
+    "training_role": "triceps",
+    "injury_flags": [],
+    "substitution_group": "triceps:elbow_extension:isolation",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 3,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
+  },
+  {
+    "exercise_id": 668,
+    "name": "Kneeling Bodyweight Triceps Extension",
+    "category": "Triceps",
+    "sub_muscles": [
+      "Triceps"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "difficulty": "Intermediate",
+    "movement_pattern": "elbow_extension",
+    "exercise_type": "isolation",
+    "allowed_places": [
+      "Home",
+      "Gym",
+      "Full Equipment Gym"
+    ],
+    "contraindications": [],
+    "source_payload": {
+      "source_file": "fitnet_bodyweight_additions_v1"
+    },
+    "review_status": "curated_for_limited_equipment",
+    "display_name": "Kneeling Bodyweight Triceps Extension",
+    "primary_muscle": "Triceps",
+    "movement_family": "elbow_extension",
+    "training_role": "triceps",
+    "injury_flags": [],
+    "substitution_group": "triceps:elbow_extension:isolation",
+    "selection_priority": 2,
+    "setup_complexity": "low",
+    "stability": "moderate",
+    "general_programming_value": "high",
+    "laterality": "bilateral",
+    "fatigue_cost": 1,
+    "time_multiplier": 1,
+    "ordering_priority": 3,
+    "recommended_rep_range": [
+      8,
+      20
+    ],
+    "recommended_rest_seconds": [
+      45,
+      90
+    ],
+    "metadata_version": "exercise_metadata_v5"
   }
 ]

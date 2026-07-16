@@ -109,7 +109,6 @@ const workoutOptions = {
   place: ["Full Equipment Gym", "Home", "Building Gym"],
   focusAreas: ["Full Body", "Glutes", "Chest", "Back", "Shoulders", "Arms", "Core", "Legs", "Cardio"],
   equipment: [
-    "Bodyweight",
     "Dumbbells",
     "Barbell",
     "Cable machine",
@@ -118,6 +117,12 @@ const workoutOptions = {
     "Machines",
     "Bench"
   ]
+};
+
+const workoutEquipmentByPlace = {
+  Home: ["Dumbbells", "Resistance bands", "Kettlebell", "Bench"],
+  "Building Gym": ["Dumbbells", "Barbell", "Cable machine", "Kettlebell", "Machines", "Bench"],
+  "Full Equipment Gym": []
 };
 
 const nutritionOptions = {
@@ -372,6 +377,7 @@ const arabicUi = {
   "Preparing download": "جارٍ تجهيز الملف",
   "Please verify that you are human before creating your plan.": "يرجى التحقق من أنك مستخدم حقيقي قبل إنشاء خطتك.",
   "Security check complete": "اكتمل التحقق الأمني",
+  "Bodyweight exercises are always included. Select every other item available to you.": "تمارين وزن الجسم مشمولة دائماً. اختر جميع المعدات الأخرى المتوفرة لديك.",
   "Download on the": "حمّله من",
   "Get it on": "احصل عليه من"
 };
@@ -500,7 +506,15 @@ function activeScreen() {
         workoutField("Session duration", "duration"),
         workoutField("Workout place", "place"),
         workoutMultiField("Focus areas, max 2", "focusAreas", 2),
-        shouldShowEquipmentField() ? workoutMultiField("Equipment", "equipment") : ""
+        shouldShowEquipmentField()
+          ? workoutMultiField(
+              "Available equipment",
+              "equipment",
+              null,
+              false,
+              "Bodyweight exercises are always included. Select every other item available to you."
+            )
+          : ""
       ].join("")
     );
   }
@@ -838,10 +852,13 @@ function workoutField(label, field) {
   );
 }
 
-function workoutMultiField(label, field, limit = null, withNone = false) {
+function workoutMultiField(label, field, limit = null, withNone = false, helper = "") {
+  const options = field === "equipment"
+    ? workoutEquipmentByPlace[state.workout.place] || []
+    : workoutOptions[field];
   return fieldGroup(
     label,
-    `<div class="option-grid compact">${workoutOptions[field]
+    `${helper ? `<p class="field-hint">${helper}</p>` : ""}<div class="option-grid compact">${options
       .map((item) =>
         optionButton({
           label: item,
@@ -2092,8 +2109,9 @@ document.addEventListener("click", (event) => {
     if (field === "days") {
       state.workout.split = "Auto";
     }
-    if (field === "place" && value === "Full Equipment Gym") {
-      state.workout.equipment = [];
+    if (field === "place") {
+      const allowedEquipment = workoutEquipmentByPlace[value] || [];
+      state.workout.equipment = state.workout.equipment.filter((item) => allowedEquipment.includes(item));
     }
     resetGeneratedWorkout();
     renderPreservingScroll();

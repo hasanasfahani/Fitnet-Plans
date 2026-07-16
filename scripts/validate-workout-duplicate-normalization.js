@@ -51,7 +51,7 @@ assert(Number(pair.target.exercise_id) !== Number(pair.source.exercise_id), "Avo
 assert(pair.target.duplicate_reason === null, "Replacement retained a duplicate reason");
 assert(!validate(avoidable).errors.some((error) => error.startsWith("duplicate_")), "Normalized resistance repeat still has duplicate errors");
 
-assert(appSource.includes('["failed", "partial_ready", "timed_out", "blocked"]'), "Copy debug panel is not enabled for partial-ready results");
+assert(!/copy debug|copyDebug/i.test(appSource), "Production UI still exposes the copy-debug control");
 
 console.log(JSON.stringify({
   status: "passed",
@@ -59,7 +59,7 @@ console.log(JSON.stringify({
   avoidable_resistance_repeat_replaced: true,
   missing_or_weak_reason_canonicalized: true,
   true_duplicate_validation_preserved: true,
-  partial_ready_copy_debug_enabled: true
+  production_copy_debug_removed: true
 }, null, 2));
 
 function validate(plan) {

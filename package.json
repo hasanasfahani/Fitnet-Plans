@@ -46,6 +46,7 @@
     "validate:workout-scenarios": "node scripts/validate-workout-scenarios.js",
     "validate:workout-programming-matrix": "node scripts/validate-workout-programming-matrix.js",
     "validate:workout-candidates": "node scripts/validate-workout-candidates.js",
+    "validate:workout-equipment-paths": "node scripts/validate-workout-equipment-paths.js",
     "validate:workout-prompt": "node scripts/validate-workout-prompt.js",
     "validate:workout-output-v3": "node scripts/validate-workout-output-v3.js",
     "validate:workout-quality": "node scripts/validate-workout-quality.js",

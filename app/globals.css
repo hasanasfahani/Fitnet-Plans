@@ -698,6 +698,14 @@ input:focus-visible {
   font-weight: 950;
 }
 
+.field-hint {
+  margin: -4px 0 0 !important;
+  color: var(--text-2);
+  font-size: 13px;
+  line-height: 1.45 !important;
+  font-weight: 650 !important;
+}
+
 .option-grid {
   display: grid;
   gap: 12px;

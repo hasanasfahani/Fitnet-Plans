@@ -117,12 +117,10 @@ for (const day of explicitEquipment.skeleton) {
     for (const candidate of explicitEquipment.candidate_map[slot.slot_id] || []) {
       assert(candidate.difficulty !== "Advanced", `Advanced exercise leaked into beginner candidates: ${candidate.exercise_id}`);
       assert(!(candidate.injury_flags || []).includes("Knee"), `Knee-flagged exercise leaked into candidates: ${candidate.exercise_id}`);
-      if ((candidate.equipment || []).length) {
-        assert(
-          candidate.equipment.some((item) => String(item).toLowerCase().includes("dumbbell")),
-          `Unselected equipment leaked into explicit Dumbbells candidates: ${candidate.exercise_id}`
-        );
-      }
+      assert(
+        (candidate.equipment || []).every((item) => /dumbbell|bodyweight|floor|mat/i.test(String(item))),
+        `Unselected equipment leaked into explicit Dumbbells candidates: ${candidate.exercise_id}`
+      );
     }
   }
 }

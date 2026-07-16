@@ -181,6 +181,11 @@ const steps = [
     command: ["npm", "run", "validate:workout-candidates"]
   },
   {
+    phase: "Workout equipment reliability",
+    label: "Location and equipment generation paths",
+    command: ["npm", "run", "validate:workout-equipment-paths"]
+  },
+  {
     phase: "Programming balance Step 7",
     label: "Role-aware structured AI coaching prompt",
     command: ["npm", "run", "validate:workout-prompt"]
