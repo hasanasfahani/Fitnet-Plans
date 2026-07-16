@@ -210,7 +210,9 @@
       "source_name": "Fitnet reviewed standard food reference"
     },
     "allergens": [],
-    "avoid_tags": [],
+    "avoid_tags": [
+      "red_meat"
+    ],
     "diet_tags": [],
     "halal_status": "requires_halal_certified_source",
     "sodium_risk": "low",
@@ -244,7 +246,9 @@
       "source_name": "Fitnet reviewed standard food reference"
     },
     "allergens": [],
-    "avoid_tags": [],
+    "avoid_tags": [
+      "red_meat"
+    ],
     "diet_tags": [],
     "halal_status": "requires_halal_certified_source",
     "sodium_risk": "low",

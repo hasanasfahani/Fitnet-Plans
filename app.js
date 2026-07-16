@@ -46,7 +46,6 @@ const state = {
     cookingTime: "Flexible",
     budget: "Flexible",
     preferences: [],
-    restrictionOther: "",
     foodsToAvoid: [],
     foodAvoidOther: ""
   },
@@ -277,7 +276,6 @@ const arabicUi = {
   "For your safety, this automated plan is not appropriate for the selected condition. Please consult a qualified healthcare professional.": "حرصاً على سلامتك، لا تناسب الخطة الآلية الحالة المحددة. يرجى استشارة مختص صحي مؤهل.",
   "Diet style": "النظام الغذائي",
   "Dietary restrictions": "القيود الغذائية",
-  "Other dietary restriction": "قيود غذائية أخرى",
   "Food to avoid": "أطعمة ترغب في تجنبها",
   "Other food to avoid": "أطعمة أخرى ترغب في تجنبها",
   "Type anything else": "اكتب أي تفاصيل أخرى",
@@ -740,10 +738,7 @@ function generationProfile() {
 function generationNutrition() {
   return {
     ...state.nutrition,
-    restrictions: [
-      ...state.nutrition.restrictions,
-      state.nutrition.restrictionOther.trim()
-    ].filter(Boolean),
+    restrictions: [...state.nutrition.restrictions],
     food_avoid: [
       ...state.nutrition.foodsToAvoid,
       state.nutrition.foodAvoidOther.trim()
@@ -919,15 +914,7 @@ function dietaryRestrictionsField() {
           withNone: true
         })
       )
-      .join("")}</div>
-    <label class="input-field soft-input">
-      <span>Other dietary restriction</span>
-      <input
-        data-action="nutritionRestrictionOther"
-        value="${escapeAttribute(state.nutrition.restrictionOther)}"
-        placeholder="Type anything else"
-      />
-    </label>`
+      .join("")}</div>`
   );
 }
 
@@ -1077,6 +1064,10 @@ function localizedGenerationError(error, kind = "generation", code = "", request
   if (state.language !== "ar") {
     if (code === "nutrition_safety_referral_required") {
       message = "An automated nutrition plan is not suitable for the selected profile. Please review the safety selections or consult a qualified healthcare professional.";
+    } else if (code === "unsupported_dietary_restriction") {
+      message = "Please select dietary restrictions from the available options.";
+    } else if (code === "nutrition_recipe_coverage_insufficient") {
+      message = "We cannot safely satisfy this exact nutrition combination yet. Please adjust one dietary selection and try again.";
     } else if (["workout_strategy_invalid", "workout_candidates_invalid"].includes(code)) {
       message = "We could not build a valid workout from these selections. Please adjust the workout preferences and try again.";
     } else {
@@ -1086,6 +1077,10 @@ function localizedGenerationError(error, kind = "generation", code = "", request
     const value = String(error || "").toLowerCase();
     if (code === "nutrition_safety_referral_required") {
       message = "لا تناسب خطة التغذية الآلية البيانات الصحية المحددة. راجع اختيارات السلامة أو استشر مختصاً صحياً مؤهلاً.";
+    } else if (code === "unsupported_dietary_restriction") {
+      message = "يرجى اختيار القيود الغذائية من الخيارات المتاحة.";
+    } else if (code === "nutrition_recipe_coverage_insufficient") {
+      message = "لا يمكننا تلبية هذه التركيبة الغذائية بأمان حالياً. عدّل أحد الخيارات الغذائية ثم حاول مرة أخرى.";
     } else if (["workout_strategy_invalid", "workout_candidates_invalid"].includes(code)) {
       message = "تعذر إنشاء برنامج تمارين صالح بهذه الاختيارات. عدّل تفضيلات التمارين ثم حاول مرة أخرى.";
     } else if (/timed out|taking longer|timeout/.test(value)) {
@@ -2165,13 +2160,6 @@ document.addEventListener("input", (event) => {
 
   if (event.target.dataset.action === "nutritionAvoidOther") {
     state.nutrition.foodAvoidOther = event.target.value;
-    resetGeneratedNutrition();
-    updateContinueButton();
-    return;
-  }
-
-  if (event.target.dataset.action === "nutritionRestrictionOther") {
-    state.nutrition.restrictionOther = event.target.value;
     resetGeneratedNutrition();
     updateContinueButton();
     return;

@@ -733,7 +733,9 @@
       "sesame"
     ],
     "restrictions": [],
-    "avoid_tags": [],
+    "avoid_tags": [
+      "red_meat"
+    ],
     "suitable_for_breakfast": true,
     "savory_breakfast": true,
     "contains_sweet_food": false,
@@ -3659,7 +3661,9 @@
     "budget_level": "medium",
     "allergens": [],
     "restrictions": [],
-    "avoid_tags": [],
+    "avoid_tags": [
+      "red_meat"
+    ],
     "suitable_for_breakfast": true,
     "savory_breakfast": true,
     "contains_sweet_food": false,
@@ -3997,7 +4001,9 @@
       "gluten",
       "dairy"
     ],
-    "avoid_tags": [],
+    "avoid_tags": [
+      "red_meat"
+    ],
     "suitable_for_breakfast": false,
     "savory_breakfast": false,
     "contains_sweet_food": false,
@@ -4156,7 +4162,7 @@
   },
   {
     "meal_id": "lunch_004",
-    "meal_name": "Spiced Chicken Onion Rice Bowl",
+    "meal_name": "Spiced Chicken Avocado Salad Bowl",
     "meal_type": "lunch",
     "cuisine_style": "Middle Eastern",
     "authenticity_level": "inspired",
@@ -4174,42 +4180,35 @@
       "halal",
       "balanced",
       "high_protein",
+      "low_carb",
       "dairy_free",
       "gluten_free",
       "mediterranean"
     ],
     "ingredients": [
       {
-        "ingredient_id": "chicken_thigh_cooked",
-        "name": "chicken thigh",
+        "ingredient_id": "chicken_breast_cooked",
+        "name": "chicken breast",
         "quantity_g": 180,
         "household_quantity": "1 fillet",
         "category": "Protein",
         "ingredient_role": "primary_protein"
       },
       {
-        "ingredient_id": "rice_brown_cooked",
-        "name": "brown rice",
-        "quantity_g": 180,
-        "household_quantity": "1 cup",
-        "category": "Carbohydrates",
-        "ingredient_role": "carb_base"
-      },
-      {
-        "ingredient_id": "onion",
-        "name": "Onion",
+        "ingredient_id": "mixed_salad",
+        "name": "Mixed salad",
         "quantity_g": 150,
-        "household_quantity": "2 small onions",
+        "household_quantity": "1 1/2 cups",
         "category": "Vegetables",
-        "ingredient_role": "vegetable"
+        "ingredient_role": "leafy_vegetable"
       },
       {
-        "ingredient_id": "ground_cumin",
-        "name": "Ground cumin",
-        "quantity_g": 2,
-        "household_quantity": "1 teaspoon",
-        "category": "Pantry",
-        "ingredient_role": "seasoning"
+        "ingredient_id": "avocado",
+        "name": "Avocado",
+        "quantity_g": 70,
+        "household_quantity": "1/2 avocado",
+        "category": "Fats",
+        "ingredient_role": "fat_source"
       },
       {
         "ingredient_id": "olive_oil",
@@ -4220,6 +4219,14 @@
         "ingredient_role": "fat_source"
       },
       {
+        "ingredient_id": "ground_cumin",
+        "name": "Ground cumin",
+        "quantity_g": 2,
+        "household_quantity": "1 teaspoon",
+        "category": "Pantry",
+        "ingredient_role": "seasoning"
+      },
+      {
         "ingredient_id": "garlic",
         "name": "Garlic",
         "quantity_g": 3,
@@ -4228,46 +4235,46 @@
         "ingredient_role": "seasoning"
       }
     ],
-    "calories": 731,
-    "protein_g": 54,
-    "carbs_g": 62,
-    "fat_g": 29,
-    "fiber_g": 6,
+    "calories": 520,
+    "protein_g": 60,
+    "carbs_g": 15,
+    "fat_g": 25,
+    "fiber_g": 8,
     "prep_time_minutes": 10,
     "cooking_time_minutes": 20,
     "total_time_minutes": 30,
     "cooking_method": [
-      "Season the chicken thigh with ground cumin and garlic, then cook it until the center reaches 74 C.",
-      "Reheat the brown rice separately.",
-      "Heat onion until tender.",
-      "Serve the chicken thigh and brown rice and onion together.",
-      "Add olive oil after plating."
+      "Season the chicken breast with ground cumin and garlic, then cook it until the center reaches 74 C.",
+      "Keep mixed salad chilled until plating.",
+      "Serve the chicken breast together, then add the mixed salad.",
+      "Add avocado and olive oil after plating."
     ],
     "recipe_specific_steps": [
-      "Season the chicken thigh with ground cumin and garlic, then cook it until the center reaches 74 C.",
-      "Reheat the brown rice separately.",
-      "Heat onion until tender.",
-      "Serve the chicken thigh and brown rice and onion together.",
-      "Add olive oil after plating."
+      "Season the chicken breast with ground cumin and garlic, then cook it until the center reaches 74 C.",
+      "Keep mixed salad chilled until plating.",
+      "Serve the chicken breast together, then add the mixed salad.",
+      "Add avocado and olive oil after plating."
     ],
     "preparation_style": "bowl",
     "cooking_technique": "assemble",
     "richness_level": "moderate",
     "sauce_limit_g": 45,
-    "primary_protein": "chicken_thigh_cooked",
+    "primary_protein": "chicken_breast_cooked",
     "protein_family": "poultry",
-    "carb_base": "rice_brown_cooked",
-    "fat_source": "olive_oil",
+    "carb_base": null,
+    "fat_source": "avocado",
     "fiber_sources": [
+      "mixed_salad",
+      "avocado",
       "ground_cumin",
       "garlic"
     ],
     "sodium_risk": "low",
     "sodium_source_ids": [],
     "required_core_ingredients": [
-      "chicken_thigh_cooked",
-      "rice_brown_cooked",
-      "onion",
+      "chicken_breast_cooked",
+      "mixed_salad",
+      "avocado",
       "olive_oil"
     ],
     "optional_ingredients": [],
@@ -4276,9 +4283,9 @@
       "garlic"
     ],
     "scalable_ingredients": [
-      "chicken_thigh_cooked",
-      "rice_brown_cooked",
-      "onion",
+      "chicken_breast_cooked",
+      "mixed_salad",
+      "avocado",
       "olive_oil"
     ],
     "non_scalable_ingredients": [
@@ -4287,8 +4294,8 @@
     ],
     "min_serving_multiplier": 0.75,
     "max_serving_multiplier": 1.25,
-    "min_practical_calories": 550,
-    "max_practical_calories": 904,
+    "min_practical_calories": 396,
+    "max_practical_calories": 636,
     "difficulty": "easy",
     "budget_level": "medium",
     "allergens": [],
@@ -4298,7 +4305,7 @@
     "savory_breakfast": false,
     "contains_sweet_food": false,
     "contains_breakfast_carbs": false,
-    "protein_source": "chicken_thigh_cooked",
+    "protein_source": "chicken_breast_cooked",
     "approved_substitutions": []
   },
   {
@@ -5102,7 +5109,7 @@
   },
   {
     "meal_id": "lunch_010",
-    "meal_name": "Tuna Hummus Mezze Bowl",
+    "meal_name": "Tuna Hummus Corn-Tortilla Plate",
     "meal_type": "lunch",
     "cuisine_style": "Middle Eastern",
     "authenticity_level": "inspired",
@@ -5120,7 +5127,6 @@
       "halal",
       "balanced",
       "high_protein",
-      "low_carb",
       "dairy_free",
       "gluten_free",
       "mediterranean"
@@ -5133,6 +5139,14 @@
         "household_quantity": "1 can",
         "category": "Protein",
         "ingredient_role": "primary_protein"
+      },
+      {
+        "ingredient_id": "corn_tortilla",
+        "name": "Corn tortilla",
+        "quantity_g": 85,
+        "household_quantity": "3 tortillas",
+        "category": "Carbohydrates",
+        "ingredient_role": "carb_base"
       },
       {
         "ingredient_id": "mixed_salad",
@@ -5175,35 +5189,38 @@
         "ingredient_role": "seasoning"
       }
     ],
-    "calories": 307,
-    "protein_g": 40,
-    "carbs_g": 11,
-    "fat_g": 11,
-    "fiber_g": 4,
+    "calories": 492,
+    "protein_g": 45,
+    "carbs_g": 49,
+    "fat_g": 13,
+    "fiber_g": 10,
     "prep_time_minutes": 10,
     "cooking_time_minutes": 12,
     "total_time_minutes": 30,
     "cooking_method": [
       "Keep the tuna in water chilled.",
+      "Warm the corn tortilla separately.",
       "Keep mixed salad chilled until plating.",
-      "Serve the tuna in water together, then add the mixed salad.",
+      "Serve the tuna in water and corn tortilla together, then add the mixed salad.",
       "Add hummus and olive oil after plating."
     ],
     "recipe_specific_steps": [
       "Keep the tuna in water chilled.",
+      "Warm the corn tortilla separately.",
       "Keep mixed salad chilled until plating.",
-      "Serve the tuna in water together, then add the mixed salad.",
+      "Serve the tuna in water and corn tortilla together, then add the mixed salad.",
       "Add hummus and olive oil after plating."
     ],
     "preparation_style": "bowl",
     "cooking_technique": "assemble",
-    "richness_level": "moderate",
+    "richness_level": "light",
     "sauce_limit_g": 45,
     "primary_protein": "tuna_water_drained",
     "protein_family": "fish",
-    "carb_base": null,
+    "carb_base": "corn_tortilla",
     "fat_source": "hummus",
     "fiber_sources": [
+      "corn_tortilla",
       "mixed_salad",
       "hummus",
       "ground_cumin",
@@ -5216,6 +5233,7 @@
     ],
     "required_core_ingredients": [
       "tuna_water_drained",
+      "corn_tortilla",
       "mixed_salad",
       "hummus",
       "olive_oil"
@@ -5227,6 +5245,7 @@
     ],
     "scalable_ingredients": [
       "tuna_water_drained",
+      "corn_tortilla",
       "mixed_salad",
       "hummus",
       "olive_oil"
@@ -5237,8 +5256,8 @@
     ],
     "min_serving_multiplier": 0.75,
     "max_serving_multiplier": 1.25,
-    "min_practical_calories": 232,
-    "max_practical_calories": 333,
+    "min_practical_calories": 373,
+    "max_practical_calories": 562,
     "difficulty": "easy",
     "budget_level": "low",
     "allergens": [
@@ -5714,7 +5733,9 @@
     "budget_level": "medium",
     "allergens": [],
     "restrictions": [],
-    "avoid_tags": [],
+    "avoid_tags": [
+      "red_meat"
+    ],
     "suitable_for_breakfast": false,
     "savory_breakfast": false,
     "contains_sweet_food": false,
@@ -7318,7 +7339,9 @@
     "budget_level": "medium",
     "allergens": [],
     "restrictions": [],
-    "avoid_tags": [],
+    "avoid_tags": [
+      "red_meat"
+    ],
     "suitable_for_breakfast": false,
     "savory_breakfast": false,
     "contains_sweet_food": false,
@@ -7635,7 +7658,7 @@
   },
   {
     "meal_id": "dinner_001",
-    "meal_name": "Grilled Chicken Tahini Plate",
+    "meal_name": "Grilled Chicken Cauliflower Tahini Plate",
     "meal_type": "dinner",
     "cuisine_style": "Middle Eastern",
     "authenticity_level": "inspired",
@@ -7653,6 +7676,7 @@
       "halal",
       "balanced",
       "high_protein",
+      "low_carb",
       "dairy_free",
       "gluten_free",
       "mediterranean"
@@ -7667,20 +7691,12 @@
         "ingredient_role": "primary_protein"
       },
       {
-        "ingredient_id": "rice_basmati_cooked",
-        "name": "basmati rice",
-        "quantity_g": 180,
-        "household_quantity": "1 cup",
-        "category": "Carbohydrates",
-        "ingredient_role": "carb_base"
-      },
-      {
-        "ingredient_id": "mixed_salad",
-        "name": "Mixed salad",
+        "ingredient_id": "cauliflower",
+        "name": "Cauliflower",
         "quantity_g": 150,
-        "household_quantity": "1 1/2 cups",
+        "household_quantity": "1 1/4 cups",
         "category": "Vegetables",
-        "ingredient_role": "leafy_vegetable"
+        "ingredient_role": "vegetable"
       },
       {
         "ingredient_id": "tahini",
@@ -7715,38 +7731,36 @@
         "ingredient_role": "seasoning"
       }
     ],
-    "calories": 761,
-    "protein_g": 66,
-    "carbs_g": 63,
-    "fat_g": 26,
+    "calories": 524,
+    "protein_g": 62,
+    "carbs_g": 12,
+    "fat_g": 25,
     "fiber_g": 6,
     "prep_time_minutes": 10,
     "cooking_time_minutes": 20,
     "total_time_minutes": 30,
     "cooking_method": [
       "Season the chicken breast with ground cumin and garlic, then cook it until the center reaches 74 C.",
-      "Reheat the basmati rice separately.",
-      "Keep mixed salad chilled until plating.",
-      "Serve the chicken breast and basmati rice together, then add the mixed salad.",
+      "Heat cauliflower until tender.",
+      "Serve the chicken breast and cauliflower together.",
       "Add tahini and olive oil after plating."
     ],
     "recipe_specific_steps": [
       "Season the chicken breast with ground cumin and garlic, then cook it until the center reaches 74 C.",
-      "Reheat the basmati rice separately.",
-      "Keep mixed salad chilled until plating.",
-      "Serve the chicken breast and basmati rice together, then add the mixed salad.",
+      "Heat cauliflower until tender.",
+      "Serve the chicken breast and cauliflower together.",
       "Add tahini and olive oil after plating."
     ],
     "preparation_style": "bowl",
     "cooking_technique": "assemble",
-    "richness_level": "light",
+    "richness_level": "moderate",
     "sauce_limit_g": 45,
     "primary_protein": "chicken_breast_cooked",
     "protein_family": "poultry",
-    "carb_base": "rice_basmati_cooked",
+    "carb_base": null,
     "fat_source": "tahini",
     "fiber_sources": [
-      "mixed_salad",
+      "cauliflower",
       "tahini",
       "ground_cumin",
       "garlic"
@@ -7755,8 +7769,7 @@
     "sodium_source_ids": [],
     "required_core_ingredients": [
       "chicken_breast_cooked",
-      "rice_basmati_cooked",
-      "mixed_salad",
+      "cauliflower",
       "tahini",
       "olive_oil"
     ],
@@ -7767,8 +7780,7 @@
     ],
     "scalable_ingredients": [
       "chicken_breast_cooked",
-      "rice_basmati_cooked",
-      "mixed_salad",
+      "cauliflower",
       "tahini",
       "olive_oil"
     ],
@@ -7778,8 +7790,8 @@
     ],
     "min_serving_multiplier": 0.75,
     "max_serving_multiplier": 1.25,
-    "min_practical_calories": 572,
-    "max_practical_calories": 903,
+    "min_practical_calories": 395,
+    "max_practical_calories": 647,
     "difficulty": "easy",
     "budget_level": "medium",
     "allergens": [
@@ -7949,7 +7961,9 @@
     "restrictions": [
       "dairy"
     ],
-    "avoid_tags": [],
+    "avoid_tags": [
+      "red_meat"
+    ],
     "suitable_for_breakfast": false,
     "savory_breakfast": false,
     "contains_sweet_food": false,
@@ -7977,6 +7991,7 @@
       "halal",
       "balanced",
       "high_protein",
+      "low_carb",
       "dairy_free",
       "gluten_free",
       "mediterranean"
@@ -7989,14 +8004,6 @@
         "household_quantity": "1 fillet",
         "category": "Protein",
         "ingredient_role": "primary_protein"
-      },
-      {
-        "ingredient_id": "rice_brown_cooked",
-        "name": "brown rice",
-        "quantity_g": 180,
-        "household_quantity": "1 cup",
-        "category": "Carbohydrates",
-        "ingredient_role": "carb_base"
       },
       {
         "ingredient_id": "bell_pepper",
@@ -8039,11 +8046,11 @@
         "ingredient_role": "seasoning"
       }
     ],
-    "calories": 691,
-    "protein_g": 57,
-    "carbs_g": 61,
-    "fat_g": 25,
-    "fiber_g": 8,
+    "calories": 470,
+    "protein_g": 52,
+    "carbs_g": 15,
+    "fat_g": 24,
+    "fiber_g": 5,
     "prep_time_minutes": 10,
     "cooking_time_minutes": 20,
     "total_time_minutes": 30,
@@ -8051,14 +8058,12 @@
       "Preheat the oven to 200 C and line a baking tray.",
       "Season the white fish with ground cumin and garlic, then place it on the tray with the bell pepper.",
       "Bake until fully cooked and the center reaches 63 C.",
-      "Reheat the brown rice separately.",
       "Finish with tahini after plating."
     ],
     "recipe_specific_steps": [
       "Preheat the oven to 200 C and line a baking tray.",
       "Season the white fish with ground cumin and garlic, then place it on the tray with the bell pepper.",
       "Bake until fully cooked and the center reaches 63 C.",
-      "Reheat the brown rice separately.",
       "Finish with tahini after plating."
     ],
     "preparation_style": "oven",
@@ -8067,7 +8072,7 @@
     "sauce_limit_g": 45,
     "primary_protein": "white_fish_cooked",
     "protein_family": "fish",
-    "carb_base": "rice_brown_cooked",
+    "carb_base": null,
     "fat_source": "tahini",
     "fiber_sources": [
       "bell_pepper",
@@ -8079,7 +8084,6 @@
     "sodium_source_ids": [],
     "required_core_ingredients": [
       "white_fish_cooked",
-      "rice_brown_cooked",
       "bell_pepper",
       "tahini",
       "olive_oil"
@@ -8091,7 +8095,6 @@
     ],
     "scalable_ingredients": [
       "white_fish_cooked",
-      "rice_brown_cooked",
       "bell_pepper",
       "tahini",
       "olive_oil"
@@ -8102,8 +8105,8 @@
     ],
     "min_serving_multiplier": 0.75,
     "max_serving_multiplier": 1.25,
-    "min_practical_calories": 520,
-    "max_practical_calories": 858,
+    "min_practical_calories": 354,
+    "max_practical_calories": 581,
     "difficulty": "easy",
     "budget_level": "medium",
     "allergens": [
@@ -8421,7 +8424,9 @@
       "sesame"
     ],
     "restrictions": [],
-    "avoid_tags": [],
+    "avoid_tags": [
+      "red_meat"
+    ],
     "suitable_for_breakfast": false,
     "savory_breakfast": false,
     "contains_sweet_food": false,
@@ -9662,7 +9667,9 @@
     "budget_level": "medium",
     "allergens": [],
     "restrictions": [],
-    "avoid_tags": [],
+    "avoid_tags": [
+      "red_meat"
+    ],
     "suitable_for_breakfast": false,
     "savory_breakfast": false,
     "contains_sweet_food": false,
@@ -10617,7 +10624,9 @@
     "restrictions": [
       "gluten"
     ],
-    "avoid_tags": [],
+    "avoid_tags": [
+      "red_meat"
+    ],
     "suitable_for_breakfast": false,
     "savory_breakfast": false,
     "contains_sweet_food": false,
@@ -10627,7 +10636,7 @@
   },
   {
     "meal_id": "dinner_020",
-    "meal_name": "Salmon Cauliflower Quinoa Bowl",
+    "meal_name": "Salmon Cauliflower Herb Bowl",
     "meal_type": "dinner",
     "cuisine_style": "International",
     "authenticity_level": "generic",
@@ -10645,6 +10654,7 @@
       "halal",
       "balanced",
       "high_protein",
+      "low_carb",
       "dairy_free",
       "gluten_free"
     ],
@@ -10656,14 +10666,6 @@
         "household_quantity": "1 fillet",
         "category": "Protein",
         "ingredient_role": "primary_protein"
-      },
-      {
-        "ingredient_id": "quinoa_cooked",
-        "name": "quinoa",
-        "quantity_g": 180,
-        "household_quantity": "1 cup",
-        "category": "Carbohydrates",
-        "ingredient_role": "carb_base"
       },
       {
         "ingredient_id": "cauliflower",
@@ -10706,38 +10708,35 @@
         "ingredient_role": "seasoning"
       }
     ],
-    "calories": 702,
-    "protein_g": 51,
-    "carbs_g": 49,
-    "fat_g": 33,
-    "fiber_g": 10,
+    "calories": 486,
+    "protein_g": 43,
+    "carbs_g": 11,
+    "fat_g": 30,
+    "fiber_g": 5,
     "prep_time_minutes": 10,
     "cooking_time_minutes": 20,
     "total_time_minutes": 30,
     "cooking_method": [
       "Season the salmon with paprika and black pepper, then cook it until the center reaches 63 C.",
-      "Reheat the quinoa separately.",
       "Heat cauliflower until tender.",
-      "Serve the salmon and quinoa and cauliflower together.",
+      "Serve the salmon and cauliflower together.",
       "Add lemon juice and olive oil after plating."
     ],
     "recipe_specific_steps": [
       "Season the salmon with paprika and black pepper, then cook it until the center reaches 63 C.",
-      "Reheat the quinoa separately.",
       "Heat cauliflower until tender.",
-      "Serve the salmon and quinoa and cauliflower together.",
+      "Serve the salmon and cauliflower together.",
       "Add lemon juice and olive oil after plating."
     ],
     "preparation_style": "bowl",
     "cooking_technique": "assemble",
-    "richness_level": "moderate",
+    "richness_level": "rich",
     "sauce_limit_g": 45,
     "primary_protein": "salmon_cooked",
     "protein_family": "fish",
-    "carb_base": "quinoa_cooked",
+    "carb_base": null,
     "fat_source": "olive_oil",
     "fiber_sources": [
-      "quinoa_cooked",
       "cauliflower",
       "paprika",
       "black_pepper"
@@ -10746,7 +10745,6 @@
     "sodium_source_ids": [],
     "required_core_ingredients": [
       "salmon_cooked",
-      "quinoa_cooked",
       "cauliflower",
       "lemon_juice",
       "olive_oil"
@@ -10758,7 +10756,6 @@
     ],
     "scalable_ingredients": [
       "salmon_cooked",
-      "quinoa_cooked",
       "cauliflower",
       "olive_oil"
     ],
@@ -10769,8 +10766,8 @@
     ],
     "min_serving_multiplier": 0.75,
     "max_serving_multiplier": 1.25,
-    "min_practical_calories": 529,
-    "max_practical_calories": 865,
+    "min_practical_calories": 367,
+    "max_practical_calories": 595,
     "difficulty": "easy",
     "budget_level": "high",
     "allergens": [
@@ -11542,7 +11539,9 @@
     "budget_level": "medium",
     "allergens": [],
     "restrictions": [],
-    "avoid_tags": [],
+    "avoid_tags": [
+      "red_meat"
+    ],
     "suitable_for_breakfast": false,
     "savory_breakfast": false,
     "contains_sweet_food": false,

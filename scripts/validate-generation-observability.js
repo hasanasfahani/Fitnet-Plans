@@ -35,6 +35,12 @@ const safetyError = Object.assign(new Error("clinical_referral:private-medical-s
 assert.strictEqual(failureStage(safetyError, "plan_generation"), "nutrition_eligibility");
 assert.deepStrictEqual(validationCategories(safetyError), ["safety_eligibility"]);
 assert.deepStrictEqual(validationSignals(safetyError), []);
+const coverageError = Object.assign(new Error("weekly_variety:insufficient_unique_recipes:lunch"), {
+  code: "nutrition_recipe_coverage_insufficient",
+  status_code: 422
+});
+assert.strictEqual(failureStage(coverageError, "plan_generation"), "nutrition_recipe_coverage");
+assert.deepStrictEqual(validationCategories(coverageError), ["candidate_availability", "nutrition_quality"]);
 assert.strictEqual(providerFailureClass(new Error("upstream request timed out")), "timeout");
 assert.deepStrictEqual(
   validationSignals({ code: "workout_candidates_invalid", message: "candidate_shortage:horizontal_pull:private-id, quality:score_below_threshold:73" }),

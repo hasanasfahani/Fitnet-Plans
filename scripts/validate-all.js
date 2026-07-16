@@ -56,6 +56,11 @@ const steps = [
     command: ["npm", "run", "validate:nutrition-scenarios"]
   },
   {
+    phase: "Nutrition supported-input release gate",
+    label: "Diet, allergy, restriction, meal-count, cooking, budget, and safety matrix",
+    command: ["npm", "run", "validate:nutrition-supported-matrix"]
+  },
+  {
     phase: "Nutrition recipe refinement",
     label: "Savory low-carbohydrate breakfasts and culinary instructions",
     command: ["npm", "run", "validate:nutrition-breakfast-quality"]

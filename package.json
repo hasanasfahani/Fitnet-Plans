@@ -19,6 +19,7 @@
     "validate:nutrition-quality": "node scripts/validate-nutrition-quality-gate.js",
     "validate:nutrition-pdf": "node scripts/validate-nutrition-pdf-content.js",
     "validate:nutrition-scenarios": "node scripts/validate-nutrition-scenarios.js",
+    "validate:nutrition-supported-matrix": "node scripts/validate-nutrition-supported-matrix.js",
     "validate:nutrition-breakfast-quality": "node scripts/validate-nutrition-breakfast-quality.js",
     "audit:workout-inputs": "node scripts/audit-workout-inputs.js",
     "validate:workout-strategy": "node scripts/validate-workout-strategy.js",

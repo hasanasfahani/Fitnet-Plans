@@ -14,6 +14,7 @@ async function main() {
   const splitCanonicalization = await testSplitCanonicalization();
   const arabicLanguagePipeline = await testArabicWorkoutLanguagePipeline();
   const arabicNutritionSafetyLocalization = await testArabicNutritionSafetyLocalization();
+  const nutritionCoveragePreflight = await testNutritionCoverageBeforeProviderUse();
 
   console.log(JSON.stringify({
     status: "passed",
@@ -21,8 +22,77 @@ async function main() {
     provider_failure: providerFailure,
     split_canonicalization: splitCanonicalization,
     arabic_language_pipeline: arabicLanguagePipeline,
-    arabic_nutrition_safety_localization: arabicNutritionSafetyLocalization
+    arabic_nutrition_safety_localization: arabicNutritionSafetyLocalization,
+    nutrition_coverage_preflight: nutritionCoveragePreflight
   }, null, 2));
+}
+
+async function testNutritionCoverageBeforeProviderUse() {
+  const scenarioRoot = path.join(root, "tmp", "generation-boundary-nutrition-coverage");
+  const dataDir = path.join(scenarioRoot, "data");
+  fs.rmSync(scenarioRoot, { recursive: true, force: true });
+  fs.mkdirSync(dataDir, { recursive: true });
+  for (const file of ["exercise_library.json", "food_library.json", "ingredient_library.json", "security-policy.json"]) {
+    fs.copyFileSync(path.join(root, "data", file), path.join(dataDir, file));
+  }
+  fs.writeFileSync(
+    path.join(dataDir, "meal_library.json"),
+    JSON.stringify(meals.map((meal) => ({ ...meal, budget_level: "high" })))
+  );
+
+  const base = createMockLlmServices({ exercises, meals });
+  let workoutCalls = 0;
+  let nutritionCalls = 0;
+  const services = {
+    ...base,
+    async selectWorkoutPlanV3(args) {
+      workoutCalls += 1;
+      return base.selectWorkoutPlanV3(args);
+    },
+    async selectNutritionPlanV2(args) {
+      nutritionCalls += 1;
+      return base.selectNutritionPlanV2(args);
+    }
+  };
+  const api = createFitnetApi({ root: scenarioRoot, persistSessions: false, services, pdfSigningSecret: "test-secret" });
+  const response = await Promise.resolve(api.handleApiRequest({
+    method: "POST",
+    pathname: "/api/generate",
+    headers: { "user-agent": "fitnet-coverage-validator", "x-forwarded-for": "127.0.0.88" },
+    body: {
+      goal: "Lose Weight",
+      plan_type: "Workout + Nutrition",
+      profile: { gender: "Female", birth_date: "1993-01-01", height_cm: 165, weight_kg: 70, experience: "Intermediate" },
+      workout: { days: "4", duration: "45 minutes", place: "Full Equipment Gym", split: "Auto", focusAreas: ["Full Body"], equipment: [], injuries: ["None"] },
+      nutrition: { meals: "4", activityLevel: "Mostly sitting", safetyFlags: ["None"], dietStyle: "Balanced", restrictions: ["None"], allergies: ["None"], cookingTime: "Flexible", budget: "Low", preferences: [], foodsToAvoid: [] }
+    }
+  }));
+
+  assert(response.status === 422, `Coverage failure returned ${response.status}`);
+  assert(response.body.error === "nutrition_recipe_coverage_insufficient", `Unexpected coverage error: ${response.body.error}`);
+  assert(workoutCalls === 0 && nutritionCalls === 0, `Coverage failure used provider calls: workout=${workoutCalls}, nutrition=${nutritionCalls}`);
+
+  const unsupportedResponse = await Promise.resolve(api.handleApiRequest({
+    method: "POST",
+    pathname: "/api/generate",
+    headers: { "user-agent": "fitnet-coverage-validator", "x-forwarded-for": "127.0.0.89" },
+    body: {
+      goal: "Lose Weight",
+      plan_type: "Nutrition Only",
+      profile: { gender: "Female", birth_date: "1993-01-01", height_cm: 165, weight_kg: 70 },
+      nutrition: { meals: "4", activityLevel: "Mostly sitting", safetyFlags: ["None"], dietStyle: "Balanced", restrictions: ["Keto except weekends"], allergies: ["None"], cookingTime: "Flexible", budget: "Flexible", preferences: [], foodsToAvoid: [] }
+    }
+  }));
+  assert(unsupportedResponse.status === 422, `Unsupported restriction returned ${unsupportedResponse.status}`);
+  assert(unsupportedResponse.body.error === "unsupported_dietary_restriction", `Unexpected restriction error: ${unsupportedResponse.body.error}`);
+  assert(workoutCalls === 0 && nutritionCalls === 0, "Unsupported restriction reached a provider");
+  fs.rmSync(scenarioRoot, { recursive: true, force: true });
+  return {
+    response_code: response.body.error,
+    unsupported_restriction_code: unsupportedResponse.body.error,
+    workout_provider_calls: workoutCalls,
+    nutrition_provider_calls: nutritionCalls
+  };
 }
 
 async function testArabicNutritionSafetyLocalization() {
