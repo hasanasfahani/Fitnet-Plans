@@ -6,15 +6,26 @@
       "maxDuration": 300,
       "includeFiles": "data/**"
     },
+    "api/internal-logs.js": {
+      "maxDuration": 10
+    },
     "api/index.py": {
       "maxDuration": 120,
       "includeFiles": "{scripts,assets,data,vendor}/**"
     }
   },
   "rewrites": [
+    { "source": "/internal", "destination": "/internal/index.html" },
     { "source": "/api/render-pdf", "destination": "/api" }
   ],
   "headers": [
+    {
+      "source": "/internal",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, private" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
+      ]
+    },
     {
       "source": "/(.*)",
       "headers": [

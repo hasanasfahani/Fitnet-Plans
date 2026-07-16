@@ -266,6 +266,11 @@ const steps = [
     command: ["npm", "run", "validate:security"]
   },
   {
+    phase: "Internal observability",
+    label: "Protected sanitized seven-day generation monitor",
+    command: ["npm", "run", "validate:internal-dashboard"]
+  },
+  {
     phase: "Phase 8",
     label: "APIs",
     command: ["npm", "run", "validate:api"]

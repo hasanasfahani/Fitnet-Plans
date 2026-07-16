@@ -2,7 +2,7 @@
 
 Fitnet Plans is a bilingual workout and nutrition plan generator prepared for Vercel. It generates a validated plan synchronously, shows the result to the customer, and renders each PDF on demand from a short-lived signed payload.
 
-Generated plans, profiles, PDFs, leads, and email addresses are not stored. If the customer refreshes or closes the result page, the plan is lost and must be generated again. Upstash Redis stores only pseudonymous rate-limit counters.
+Generated plans, profiles, PDFs, leads, and email addresses are not stored. If the customer refreshes or closes the result page, the plan is lost and must be generated again. Upstash Redis stores pseudonymous rate-limit counters and sanitized generation diagnostics. Diagnostics contain no profile answers, medical selections, prompts, or plan content and expire after seven days.
 
 ## Run locally
 
@@ -38,8 +38,15 @@ At minimum, configure:
   - Vercel Marketplace aliases `UPSTASH_REDIS_REST_KV_REST_API_URL` and `UPSTASH_REDIS_REST_KV_REST_API_TOKEN` are also accepted.
 - `PDF_SIGNING_SECRET` (a long random value used by both Vercel Functions)
 - `RATE_LIMIT_SALT` (a different long random value is recommended)
+- `INTERNAL_ADMIN_KEY` (a separate long random value protecting `/internal`)
 
 No database, Vercel Blob, or email provider is required for the current stateless release.
+
+## Internal generation monitor
+
+After deployment, open `https://plans.fitnetapp.com/internal` and enter `INTERNAL_ADMIN_KEY`. The dashboard shows recent success, failure, partial, and security-block events with their stage, error code, duration, and Fitnet reference number. It stores at most 500 sanitized events and automatically removes records older than seven days.
+
+Generate the key locally with `openssl rand -hex 32`, add it as a sensitive Vercel environment variable for Production, and redeploy. Do not reuse `PDF_SIGNING_SECRET` or `RATE_LIMIT_SALT`.
 
 ## Deploy to Vercel
 

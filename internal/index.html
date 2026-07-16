@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>Fitnet Internal Monitor</title>
+    <link rel="stylesheet" href="/internal/internal.css?v=20260717-1" />
+  </head>
+  <body>
+    <main class="shell">
+      <section id="login-view" class="login-view">
+        <form id="login-form" class="login-card">
+          <img class="logo" src="/assets/fitnet-colorful.png" alt="Fitnet" />
+          <div>
+            <p class="eyebrow">Internal access</p>
+            <h1>Generation monitor</h1>
+            <p class="muted">Enter the internal admin key to view sanitized generation activity.</p>
+          </div>
+          <label>
+            <span>Admin key</span>
+            <input id="admin-key" type="password" autocomplete="current-password" required />
+          </label>
+          <button class="primary-button" type="submit">Open dashboard</button>
+          <p id="login-error" class="form-error" role="alert" hidden></p>
+        </form>
+      </section>
+
+      <section id="dashboard-view" class="dashboard" hidden>
+        <header class="topbar">
+          <div class="brand-block">
+            <img class="logo compact" src="/assets/fitnet-colorful.png" alt="Fitnet" />
+            <div>
+              <p class="eyebrow">Internal monitor</p>
+              <h1>Plan generation</h1>
+            </div>
+          </div>
+          <div class="header-actions">
+            <button id="refresh-button" class="secondary-button" type="button">Refresh</button>
+            <button id="logout-button" class="text-button" type="button">Log out</button>
+          </div>
+        </header>
+
+        <section class="summary-grid" aria-label="Generation summary">
+          <article class="summary-card"><span>Recent attempts</span><strong id="total-count">0</strong></article>
+          <article class="summary-card success"><span>Successful</span><strong id="success-count">0</strong></article>
+          <article class="summary-card failed"><span>Failed</span><strong id="failed-count">0</strong></article>
+          <article class="summary-card blocked"><span>Blocked</span><strong id="blocked-count">0</strong></article>
+        </section>
+
+        <section class="activity-card">
+          <div class="activity-heading">
+            <div>
+              <h2>Generation activity</h2>
+              <p id="last-updated" class="muted">Not loaded yet</p>
+            </div>
+            <div class="filters" role="group" aria-label="Filter generation activity">
+              <button class="filter active" data-filter="all" type="button">All</button>
+              <button class="filter" data-filter="failed" type="button">Failures</button>
+              <button class="filter" data-filter="success" type="button">Successful</button>
+              <button class="filter" data-filter="blocked" type="button">Blocked</button>
+            </div>
+          </div>
+
+          <div id="loading-state" class="state-message" hidden>Loading generation activity…</div>
+          <div id="dashboard-error" class="state-message error" role="alert" hidden></div>
+          <div id="empty-state" class="state-message" hidden>No generation records match this filter.</div>
+
+          <div id="activity-content" hidden>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Plan</th>
+                    <th>Stage</th>
+                    <th>Error</th>
+                    <th>Duration</th>
+                    <th>Reference</th>
+                  </tr>
+                </thead>
+                <tbody id="activity-rows"></tbody>
+              </table>
+            </div>
+            <div id="activity-cards" class="activity-cards"></div>
+          </div>
+        </section>
+
+        <footer>Only sanitized metadata is retained. Records expire automatically after seven days.</footer>
+      </section>
+    </main>
+    <script src="/internal/internal.js?v=20260717-1"></script>
+  </body>
+</html>

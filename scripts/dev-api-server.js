@@ -111,7 +111,11 @@ function serveStatic(request, response, pathname) {
     send(response, { status: 405, headers: securityHeaders(), body: "Method not allowed" });
     return;
   }
-  const relative = pathname === "/" ? "index.html" : decodeURIComponent(pathname).replace(/^\/+/, "");
+  const relative = pathname === "/"
+    ? "index.html"
+    : ["/internal", "/internal/"].includes(pathname)
+    ? "internal/index.html"
+    : decodeURIComponent(pathname).replace(/^\/+/, "");
   const file = path.resolve(root, relative);
   if (!file.startsWith(`${root}${path.sep}`) || !isPublicFile(relative) || !fs.existsSync(file) || !fs.statSync(file).isFile()) {
     send(response, { status: 404, headers: securityHeaders(), body: "Not found" });
@@ -120,14 +124,14 @@ function serveStatic(request, response, pathname) {
   response.writeHead(200, {
     ...securityHeaders(),
     "content-type": mimeType(file),
-    "cache-control": relative === "index.html" ? "no-cache" : "public, max-age=3600"
+    "cache-control": relative.endsWith(".html") ? "no-cache" : "public, max-age=3600"
   });
   if (request.method === "HEAD") return response.end();
   fs.createReadStream(file).pipe(response);
 }
 
 function isPublicFile(relative) {
-  return relative === "index.html" || relative === "app.js" || /^(app|assets|data|lib)\//.test(relative);
+  return relative === "index.html" || relative === "app.js" || /^(app|assets|data|internal|lib)\//.test(relative);
 }
 
 function isAllowedOrigin(request) {

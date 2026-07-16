@@ -1,6 +1,7 @@
 const { createFitnetApi } = require("../lib/api-core");
 const { createProductionServices } = require("../lib/production-services");
 const { checkGenerationRateLimit } = require("../lib/vercel-security");
+const { recordInternalGenerationEvent } = require("../lib/internal-generation-log");
 const {
   createGenerationRequestId,
   failureStage,
@@ -78,6 +79,16 @@ module.exports = async function handler(request, response) {
         duration_ms: Date.now() - startedAt,
         ...context
       });
+      await saveInternalEvent({
+        requestId,
+        context,
+        status: "blocked",
+        stage,
+        errorCode: "turnstile_failed",
+        statusCode: 403,
+        durationMs: Date.now() - startedAt,
+        validationCategories: ["security_verification"]
+      });
       return response.status(403).json({
         error: "turnstile_failed",
         message: "Please complete the security check and try again.",
@@ -95,6 +106,16 @@ module.exports = async function handler(request, response) {
         reason: rateLimit.reason,
         duration_ms: Date.now() - startedAt,
         ...context
+      });
+      await saveInternalEvent({
+        requestId,
+        context,
+        status: "blocked",
+        stage,
+        errorCode: rateLimit.reason,
+        statusCode: 429,
+        durationMs: Date.now() - startedAt,
+        validationCategories: ["rate_limit"]
       });
       response.setHeader("Retry-After", String(rateLimit.retry_after_seconds));
       return response.status(429).json({
@@ -118,6 +139,16 @@ module.exports = async function handler(request, response) {
       duration_ms: Date.now() - startedAt,
       ...context
     });
+    await saveInternalEvent({
+      requestId,
+      context,
+      status: partial ? "partial" : "success",
+      stage: "completed",
+      errorCode: partial ? "partial_generation" : null,
+      statusCode: 200,
+      durationMs: Date.now() - startedAt,
+      validationCategories: partial ? Object.values(planFailureCategories(result.plan_errors)).flat() : []
+    });
     return response.status(200).json({ ...result, request_id: requestId });
   } catch (error) {
     const status = Number(error.status_code || 500);
@@ -135,6 +166,16 @@ module.exports = async function handler(request, response) {
       duration_ms: Date.now() - startedAt,
       ...context
     });
+    await saveInternalEvent({
+      requestId,
+      context,
+      status: "failed",
+      stage: resolvedStage,
+      errorCode: code,
+      statusCode: status,
+      durationMs: Date.now() - startedAt,
+      validationCategories: validationCategories(error)
+    });
     return response.status(status).json({
       error: code,
       message: status >= 500 ? "We could not prepare your plan right now. Please try again." : error.message,
@@ -142,6 +183,29 @@ module.exports = async function handler(request, response) {
     });
   }
 };
+
+async function saveInternalEvent({ requestId, context, status, stage, errorCode, statusCode, durationMs, validationCategories }) {
+  try {
+    await recordInternalGenerationEvent({
+      request_id: requestId,
+      timestamp: new Date().toISOString(),
+      status,
+      plan_type: context.plan_type,
+      language: context.language,
+      requested_plans: context.requested_plans,
+      stage,
+      error_code: errorCode,
+      status_code: statusCode,
+      duration_ms: durationMs,
+      validation_categories: validationCategories
+    });
+  } catch (error) {
+    logGenerationEvent("warn", "generation.internal_log_failed", {
+      request_id: requestId,
+      error_code: error.code || "internal_log_unavailable"
+    });
+  }
+}
 
 function parseBody(body) {
   if (!body) return {};
